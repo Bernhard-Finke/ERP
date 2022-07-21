@@ -1,38 +1,9 @@
-# installs standard R libraries
-list.of.packages <- c("devtools", "shiny", "dplyr", "tidyr", "ggplot2", "RSQLite", "UpSetR" , "igraph", "ggrepel", "corrplot")
-new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-if(length(new.packages)) install.packages(new.packages)
-
-# check which non-standard R libraries need to be installed, then install
-list.of.dev.packages <- c( "synaptome.db", "BiocManager", "graph", "WGCNA", "clusterCons", "rSpectral", "AnNet")
-new.dev.packages <- list.of.dev.packages[!(list.of.dev.packages %in% installed.packages()[,"Package"])]
-
-if ("synaptome.db" %in% new.dev.packages){
-    devtools::install_github('lptolik/synaptome.db',ref = "nonBioconductorLFS")
-}
-
-
-if ("BiocManager" %in% new.dev.packages){
-    if (!requireNamespace("BiocManager", quietly = TRUE))
-        install.packages("BiocManager")
-}
-
-if ("org.Hs.eg.db" %in% new.dev.packages){
-    BiocManager::install("org.Hs.eg.db")
-}
-if ("WGCNA" %in% new.dev.packages){
-    BiocManager::install("WGCNA")
-}
-if ("clusterCons" %in% new.dev.packages){
-    devtools::install_github("biomedicalinformaticsgroup/clusterCons",ref = "main")
-}
+# # installs standard R libraries
+# list.of.packages <- c("devtools", "shiny", "dplyr", "tidyr", "ggplot2", "RSQLite", "UpSetR" , "igraph", "ggrepel", "corrplot")
+# new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+# if(length(new.packages)) install.packages(new.packages)
 
 source('AnNetFuncs.R')
-
-library(synaptome.db)
-library(WGCNA)
-library(org.Hs.eg.db)
-library(clusterCons)
 
 
 library(shiny)
@@ -52,19 +23,19 @@ pre_cluster <- read.graph("clusters/pre_cluster.gml", format=c("gml"))
 post_cluster <- read.graph("clusters/post_cluster.gml", format=c("gml"))
 syn_cluster <- read.graph("clusters/syn_cluster.gml", format=c("gml"))
 
-
-# read pre-calculated consensus matrices
-fc_pre_matrix <- readRDS(file="matrices/fc_pre_matrix.rds")
-fc_post_matrix <- readRDS(file="matrices/fc_post_matrix.rds")
-fc_syn_matrix <- readRDS(file="matrices/fc_syn_matrix.rds")
-wt_pre_matrix <- readRDS(file="matrices/wt_pre_matrix.rds")
-wt_post_matrix <- readRDS(file="matrices/wt_post_matrix.rds")
-infomap_pre_matrix <- readRDS(file="matrices/infomap_pre_matrix.rds")
-infomap_post_matrix <- readRDS(file="matrices/infomap_post_matrix.rds")
-infomap_syn_matrix <- readRDS(file="matrices/infomap_syn_matrix.rds")
-louvain_pre_matrix <- readRDS(file="matrices/louvain_pre_matrix.rds")
-louvain_post_matrix <- readRDS(file="matrices/louvain_post_matrix.rds")
-louvain_syn_matrix <- readRDS(file="matrices/louvain_syn_matrix.rds")
+# 
+# # read pre-calculated consensus matrices
+# fc_pre_matrix <- readRDS(file="matrices/fc_pre_matrix.rds")
+# fc_post_matrix <- readRDS(file="matrices/fc_post_matrix.rds")
+# fc_syn_matrix <- readRDS(file="matrices/fc_syn_matrix.rds")
+# wt_pre_matrix <- readRDS(file="matrices/wt_pre_matrix.rds")
+# wt_post_matrix <- readRDS(file="matrices/wt_post_matrix.rds")
+# infomap_pre_matrix <- readRDS(file="matrices/infomap_pre_matrix.rds")
+# infomap_post_matrix <- readRDS(file="matrices/infomap_post_matrix.rds")
+# infomap_syn_matrix <- readRDS(file="matrices/infomap_syn_matrix.rds")
+# louvain_pre_matrix <- readRDS(file="matrices/louvain_pre_matrix.rds")
+# louvain_post_matrix <- readRDS(file="matrices/louvain_post_matrix.rds")
+# louvain_syn_matrix <- readRDS(file="matrices/louvain_syn_matrix.rds")
 
 # code to connect to SQLite database and define necessary data frame for analysis in figure 1
 con <- dbConnect(drv=RSQLite::SQLite(), dbname="synaptic.proteome_SR_20210408.db.sqlite")
@@ -207,9 +178,10 @@ GenerateFig2c <- function(loc, clust){
         gg_before = syn_cluster
         paste_loc = "syn"
     }
-
+    
     gg <- calcCentrality(gg_before)
-    conmat <- get(paste(clust, paste_loc, "matrix", sep="_"))
+    conmat <- readRDS(paste("matrices/", clust, "_" , paste_loc, "_matrix.rds", sep = ""))
+    #conmat <- get(paste(clust, paste_loc, "matrix", sep="_"))
     bm <- getBridgeness(gg,clust,conmat)
     retList <- list("graph" = gg, "matrix" = conmat, "bridge" = bm)
     return(retList)
@@ -337,28 +309,28 @@ ui <- shinyUI(fluidPage(
     fluidRow(
         
         column(5,
-            selectInput(
-                inputId = "fig1",
-                label = "Download dataset as csv",
-                choices = c("1a,1b", "1c,1d", "1e,1f", "1g", "1h"),
-                selected = "1a,1b",
-                multiple = FALSE
-            ),
-            downloadButton("downloaddata"),
-            h5("             ")
+               selectInput(
+                   inputId = "fig1",
+                   label = "Download dataset as csv",
+                   choices = c("1a,1b", "1c,1d", "1e,1f", "1g", "1h"),
+                   selected = "1a,1b",
+                   multiple = FALSE
+               ),
+               downloadButton("downloaddata"),
+               h5("             ")
         ),
         column(5,
-            selectInput(
-                inputId = "fig2",
-                label = "Download figure as png",
-                choices = c("1a,1b", "1c,1d", "1e,1f", "1g"),
-                selected = "1a,1b",
-                multiple = FALSE
+               selectInput(
+                   inputId = "fig2",
+                   label = "Download figure as png",
+                   choices = c("1a,1b", "1c,1d", "1e,1f", "1g"),
+                   selected = "1a,1b",
+                   multiple = FALSE
                ),
-            downloadButton("downloadfig")
-            
+               downloadButton("downloadfig")
+               
         )
-
+        
     ),
     
     sidebarLayout(
@@ -476,11 +448,10 @@ ui <- shinyUI(fluidPage(
             plotOutput("fig1h"),
             h5('Selection "BrainRegion = All, Method = All, Evidence = 1" corresponds to plot 1h in the original paper.')
         )
-        
     ),
-    
+
     sidebarLayout(
-        
+
         sidebarPanel(
             # selector for localisation
             selectLocalisationNoAll(1),
@@ -489,7 +460,7 @@ ui <- shinyUI(fluidPage(
             # selector for centrality
             selectCentrality(1)
         ),
-        
+
         mainPanel(
             h4(title2c),
             plotOutput("fig2c", width = 800, height = 600),
@@ -497,14 +468,14 @@ ui <- shinyUI(fluidPage(
                in the original paper, however the spectral modularity clustering method is not available in this executable paper.')
         )
     ),
-    
+
     sidebarLayout(
-        
+
         sidebarPanel(
             # selector for localisation
             selectLocalisationNoAll(2),
         ),
-        
+
         mainPanel(
             h4(title2d),
             plotOutput("fig2d"),
@@ -612,19 +583,25 @@ server <- shinyServer(function(input, output) {
     
     output$fig1h <- renderPlot({fig1h()})
     
-    
-    fig2c <- reactive({
+    getdata2c <- reactive({
         data2c <- GenerateFig2c(input$LocalisationnoAll1, tolower(input$Cluster1))
+    })
+
+    fig2c <- reactive({
+        data2c <- getdata2c()
+        if (exists("conmat")){
+            rm(conmat)
+        }
         gg <- data2c$graph
         conmat <- data2c$matrix
         bm <- data2c$bridge
         #VIPs=c('8495','22999','8927','8573','26059','8497','27445','8499')
         VIPs=c('81876','10890','51552','5874','5862','11021','54734','5865','5864',
-                           '9522','192683','10067','10396','9296','527','9114','537','535',
-                           '528','51382','534','51606','523','80331','114569','127262','57084',
-                           '57030','388662','6853','6854','8224','9900','9899','9145','9143',
-                           '6855','132204','6857','127833','6861','529','526','140679','7781',
-                           '81615','6844','6843')
+               '9522','192683','10067','10396','9296','527','9114','537','535',
+               '528','51382','534','51606','523','80331','114569','127262','57084',
+               '57030','388662','6853','6854','8224','9900','9899','9145','9143',
+               '6855','132204','6857','127833','6861','529','526','140679','7781',
+               '81615','6844','6843')
         indx <- match(V(gg)$name,VIPs)
         group <- ifelse(is.na(indx), 0,1)
         MainDivSize <- 0.8
@@ -664,36 +641,36 @@ server <- shinyServer(function(input, output) {
             geom_vline(xintercept=0.5,colour="grey40",size=MainDivSize,linetype=2,show.legend=F)+
             geom_hline(yintercept=0.5,colour="grey40",size=MainDivSize,linetype=2,show.legend=F)
     })
-    
+
     output$fig2c <- renderPlot({fig2c()})
-    
+
     centralityInput <- reactive({
         switch(input$Centrality1,
-        "Semi-Local Centrality (SL)" = "SL",
-        "Degree Centrality (DEG)" = "DEG",
-        "Betweenness Centrality (BET)" = "BET",
-        "Closeness Centrality (CC)" = "CC", 
-        "mean Shortest Path Centrality (mnSP)" = "mnSP",
-        "Page Rank Centrality (PR)" = "PR", 
-        "Single-destination Shortest Path Centrality (sdSP)" = "sdSP"
-               )
+               "Semi-Local Centrality (SL)" = "SL",
+               "Degree Centrality (DEG)" = "DEG",
+               "Betweenness Centrality (BET)" = "BET",
+               "Closeness Centrality (CC)" = "CC",
+               "mean Shortest Path Centrality (mnSP)" = "mnSP",
+               "Page Rank Centrality (PR)" = "PR",
+               "Single-destination Shortest Path Centrality (sdSP)" = "sdSP"
+        )
     })
-    
+
     fig2d <- reactive({
         data2d <- GenerateFig2d(input$LocalisationnoAll2)
         corrplot(data2d, type="upper", tl.col = "black", tl.srt = 45, tl.cex = 1)
     })
-    
+
     output$fig2d <- renderPlot({fig2d()})
     
     
     datasetInput <- reactive({
         switch(input$fig1,
-        "1a,1b" = GenerateFig1a1b(input$Localisation1, input$BrainRegion1, input$Method1),
-        "1c,1d" = GenerateFig1c1d(input$Localisation2, input$BrainRegion2, input$Method2, input$NumPapers2),
-        "1e,1f" = GenerateFig1e1f(input$Localisation3, input$BrainRegion3, input$Method3, input$NumPapers3),
-        "1g" = GenerateFig1e1f(input$Localisation4, input$BrainRegion4, input$Method4, input$NumPapers4),
-        "1h" = GenerateFig1h(input$BrainRegion5, input$Method5, input$NumPapers5)
+               "1a,1b" = GenerateFig1a1b(input$Localisation1, input$BrainRegion1, input$Method1),
+               "1c,1d" = GenerateFig1c1d(input$Localisation2, input$BrainRegion2, input$Method2, input$NumPapers2),
+               "1e,1f" = GenerateFig1e1f(input$Localisation3, input$BrainRegion3, input$Method3, input$NumPapers3),
+               "1g" = GenerateFig1e1f(input$Localisation4, input$BrainRegion4, input$Method4, input$NumPapers4),
+               "1h" = GenerateFig1h(input$BrainRegion5, input$Method5, input$NumPapers5)
         )
     })
     

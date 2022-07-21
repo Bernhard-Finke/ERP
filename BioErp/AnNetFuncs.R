@@ -12,7 +12,7 @@ removeVertexTerm <- function(GG,NAME){
   
 }
 
-getClustering<-function(gg,alg=c('lec','wt','fc','infomap','louvain','sgG1','sgG2','sgG5','spectral')){
+getClustering<-function(gg,alg=c('lec','wt','fc','infomap','louvain','sgG1','sgG2','sgG5')){
   alg <- match.arg(alg)
   lec<-function(gg){
     lec     <- igraph::leading.eigenvector.community(gg)
@@ -29,9 +29,7 @@ getClustering<-function(gg,alg=c('lec','wt','fc','infomap','louvain','sgG1','sgG
              sgG2=igraph::spinglass.community(gg,
                                               spins=as.numeric(500),gamma=2),
              sgG5=igraph::spinglass.community(gg,
-                                              spins=as.numeric(500),gamma=5),
-             spectral=rSpectral::spectral_igraph_communities(gg,
-                                                             Cn_min=5,fix_neig = 1)
+                                              spins=as.numeric(500),gamma=5)
   )
   return(cl)
 }
