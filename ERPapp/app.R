@@ -1,17 +1,22 @@
-list.of.packages <- c("shiny", "dplyr", "tidyr", "ggplot2", "RSQLite", "UpSetR", "devtools", "igraph", "ggrepel")
+# installs standard R libraries
+list.of.packages <- c("devtools", "shiny", "dplyr", "tidyr", "ggplot2", "RSQLite", "UpSetR" , "igraph", "ggrepel", "corrplot")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
-list.of.dev.packages <- c( "synaptome.db", "BiocManager", "WGCNA", "clusterCons", "AnNet")
-new.dev.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+# check which non-standard R libraries need to be installed, then install
+list.of.dev.packages <- c( "synaptome.db", "BiocManager", "graph", "WGCNA", "clusterCons", "rSpectral", "AnNet")
+new.dev.packages <- list.of.dev.packages[!(list.of.dev.packages %in% installed.packages()[,"Package"])]
 
 if ("synaptome.db" %in% new.dev.packages){
     devtools::install_github('lptolik/synaptome.db',ref = "nonBioconductorLFS")
 }
+
+
 if ("BiocManager" %in% new.dev.packages){
     if (!requireNamespace("BiocManager", quietly = TRUE))
         install.packages("BiocManager")
 }
+
 if ("org.Hs.eg.db" %in% new.dev.packages){
     BiocManager::install("org.Hs.eg.db")
 }
@@ -21,14 +26,13 @@ if ("WGCNA" %in% new.dev.packages){
 if ("clusterCons" %in% new.dev.packages){
     devtools::install_github("biomedicalinformaticsgroup/clusterCons",ref = "main")
 }
+
+source('AnNetFuncs.R')
+
 library(synaptome.db)
 library(WGCNA)
 library(org.Hs.eg.db)
 library(clusterCons)
-
-if ("AnNet" %in% new.dev.packages){
-    devtools::install_github("lptolik/AnNet",ref = "develop")
-}
 
 
 library(shiny)
@@ -37,27 +41,32 @@ library(tidyr)
 library(ggplot2)
 library(RSQLite)
 library(UpSetR)
-library(AnNet)
 library(igraph)
 library(ggrepel)
-
-pre_cluster <- read.graph("pre_cluster.gml", format=c("gml"))
-post_cluster <- read.graph("post_cluster.gml", format=c("gml"))
-
-gg <- calcCentrality(post_cluster)
-
-wt_post <- makeConsensusMatrix(gg, N=100, mask=10, alg="wt", type=2)
-fc_post <- makeConsensusMatrix(gg, N=100, mask=10, alg="fc", type=2)
-infomap_post <- makeConsensusMatrix(gg, N=100, mask=10, alg="infomap", type=2)
-louvain_post <- makeConsensusMatrix(gg, N=100, mask=10, alg="louvain", type=2)
-# next
-sgG1_pre <- makeConsensusMatrix(gg, N=100, mask=10, alg="sgG1", type=2)
-sgG2_pre <- makeConsensusMatrix(gg, N=100, mask=10, alg="sgG2", type=2)
-sgG5_pre <- makeConsensusMatrix(gg, N=100, mask=10, alg="sgG5", type=2)
-
-saveRDS(fc_post, file="fc_post_matrix.rds")
+library(corrplot)
 
 
+
+# read pre-calculated clusters
+pre_cluster <- read.graph("clusters/pre_cluster.gml", format=c("gml"))
+post_cluster <- read.graph("clusters/post_cluster.gml", format=c("gml"))
+syn_cluster <- read.graph("clusters/syn_cluster.gml", format=c("gml"))
+
+
+# read pre-calculated consensus matrices
+fc_pre_matrix <- readRDS(file="matrices/fc_pre_matrix.rds")
+fc_post_matrix <- readRDS(file="matrices/fc_post_matrix.rds")
+fc_syn_matrix <- readRDS(file="matrices/fc_syn_matrix.rds")
+wt_pre_matrix <- readRDS(file="matrices/wt_pre_matrix.rds")
+wt_post_matrix <- readRDS(file="matrices/wt_post_matrix.rds")
+infomap_pre_matrix <- readRDS(file="matrices/infomap_pre_matrix.rds")
+infomap_post_matrix <- readRDS(file="matrices/infomap_post_matrix.rds")
+infomap_syn_matrix <- readRDS(file="matrices/infomap_syn_matrix.rds")
+louvain_pre_matrix <- readRDS(file="matrices/louvain_pre_matrix.rds")
+louvain_post_matrix <- readRDS(file="matrices/louvain_post_matrix.rds")
+louvain_syn_matrix <- readRDS(file="matrices/louvain_syn_matrix.rds")
+
+# code to connect to SQLite database and define necessary data frame for analysis in figure 1
 con <- dbConnect(drv=RSQLite::SQLite(), dbname="synaptic.proteome_SR_20210408.db.sqlite")
 
 
@@ -71,27 +80,8 @@ GeneDF <- as.data.frame(GeneDFraw) %>% merge(Methods, by.x="MethodID", by.y="ID"
 
 dbDisconnect(con)
 
-scale <- function(x, VALUE=NULL){
-    
-    x = as.numeric(as.vector(x))
-    
-    xmin <- min(x,na.rm=T)
-    xmax <- max(x,na.rm=T)
-    
-    if( is.null(VALUE) ){
-        
-        x  <- x-xmin
-        x  <- ifelse(!is.na(x), x/(xmax-xmin), NA) 
-        
-        return(x)
-    }
-    
-    value = as.numeric(as.vector(value)[1])
-    value = value-xmin
-    value = ifelse(!is.na(value), value/(xmax-xmin), NA) 
-    return(value)
-}
 
+# get all genes with a given localisation, brain region, and sequencing method
 GenerateSubset <- function(loc, reg, met){
     subset <- data.frame(GeneDF)
     if (loc != "All"){
@@ -106,26 +96,32 @@ GenerateSubset <- function(loc, reg, met){
     return(subset)
 }
 
+# determine number of papers all genes in a specific subset have been identified in
 GetNumPapersSubset <- function(loc, reg, met){
     subset <- GenerateSubset(loc, reg, met)
     PaperDF <- subset %>% group_by(GeneID) %>% summarise(NumPapers = length(unique(Paper)))
     return(merge(subset, PaperDF, by.x="GeneID", by.y="GeneID", all=TRUE))
 }
 
+# get all genes with a given localisation, brain region, and sequencing method and identified in at least numpap papers
 SubsetNumPapers <- function(loc, reg, met, numpap){
     subset <- GetNumPapersSubset(loc, reg, met)
     return(subset[subset$NumPapers >= as.numeric(numpap), ])
 }
 
+# generate empty plot when selection contains no known proteins
 text <- "No proteins in current selection"
 EmptyPlot <- ggplot() + annotate("text", x = 4, y = 25, size=8, label = text) +  theme_void()
 
 
+# titles for figures
 title1a1b <- "Fig 1a and 1b in original paper: Discovery rate of new proteins across all studies, \n where the number of proteins is plotted against the frequency of identification"
 title1c1d <- "Fig 1c and 1d in original paper:  Contribution of each study \n to the total number of genes in each category"
 title1e1f <- "Fig 1e and 1f in original paper: Accumulation of new genes (black) \n compared to the total datasets (blue) over years"
 title1g <- "Fig 1g in original paper: Non-linear fit predicting the total size of consensus genes"
 title1h <- "Fig 1h in original paper: Overlap of three synaptic datasets: presynaptic, \n postsynaptic and synaptosomal. Bars correspond to the number of unique genes in each \n compartment and their intersections"
+title2c <- "Fig 3c in original paper: Bridging proteins, estimated using a given clustering \n algorithm are plotted against a given centrality measure"
+title2d <- "Fig 3d in original paper:  Correlation plot for diferent centrality measures \n estimated for selected network"
 
 GenerateFig1a1b <- function(loc, reg, met){
     df <- GetNumPapersSubset(loc, reg, met)
@@ -198,12 +194,52 @@ GenerateFig1h <- function(reg, met, numpap){
     return(output)
 }
 
-GenerateFig2c <- function(loc){
-    gg <- calcCentrality(presynaptic)
-    conmat<- makeConsensusMatrix(gg, N=100, mask=10, alg="louvain", type=2)
-    bm<-getBridgeness(gg,'louvain',conmat)
-    return(conmat, bm)
+GenerateFig2c <- function(loc, clust){
+    if (loc == "Postsynaptic"){
+        gg_before = post_cluster
+        paste_loc = "post"
+    }
+    else if (loc == "Presynaptic"){
+        gg_before = pre_cluster
+        paste_loc = "pre"
+    }
+    else if (loc == "Synaptosome"){
+        gg_before = syn_cluster
+        paste_loc = "syn"
+    }
+
+    gg <- calcCentrality(gg_before)
+    conmat <- get(paste(clust, paste_loc, "matrix", sep="_"))
+    bm <- getBridgeness(gg,clust,conmat)
+    retList <- list("graph" = gg, "matrix" = conmat, "bridge" = bm)
+    return(retList)
 }
+
+
+GenerateFig2d <- function(loc){
+    if (loc == "Postsynaptic"){
+        gg = post_cluster
+    }
+    else if (loc == "Presynaptic"){
+        gg = pre_cluster
+    }
+    else if (loc == "Synaptosome"){
+        gg = syn_cluster
+    }
+    num_rows <- length(as.numeric(igraph::get.vertex.attribute(gg,"sdSP",V(gg))))
+    cent_measure <- c("SL", "DEG", "BET", "CC", "mnSP", "PR", "sdSP")
+    
+    centrality_df <- data.frame(matrix(nrow=num_rows, ncol=length(cent_measure)))
+    for (i in 1:length(cent_measure)){
+        cent <- as.numeric(igraph::get.vertex.attribute(gg,cent_measure[i],V(gg)))
+        centrality_df[i] <- cent
+    }
+    colnames(centrality_df) <- cent_measure
+    cor_mat <- cor(centrality_df, use="complete.obs")
+    
+    return(cor_mat)
+}
+
 
 
 selectLocalisation <- function(id){
@@ -252,6 +288,41 @@ selectNumPapers <- function(id, num=1){
         choices = c(1, 2, 3
         ), 
         selected = num,
+        multiple = FALSE
+    )
+}
+
+selectClustering <- function(id){
+    # selector for clustering method
+    selectInput(
+        inputId = paste("Cluster", id, sep=""),
+        label = "Clustering method",
+        choices = c("Louvain", "Infomap", "fc", "wt"),
+        selected = "Louvain",
+        multiple = FALSE
+    )
+}
+
+selectCentrality <- function(id){
+    # selector for centrality measure
+    selectInput(
+        inputId = paste("Centrality", id, sep=""),
+        label = "Centrality measure",
+        choices = c("Semi-Local Centrality (SL)", "Degree Centrality (DEG)", "Betweenness Centrality (BET)", 
+                    "Closeness Centrality (CC)", "mean Shortest Path Centrality (mnSP)", "Page Rank Centrality (PR)", 
+                    "Single-destination Shortest Path Centrality (sdSP)"),
+        selected = "SL",
+        multiple = FALSE
+    )
+}
+
+selectLocalisationNoAll <- function(id){
+    # selector for Localisation (does not include option All)
+    selectInput(
+        inputId = paste("LocalisationnoAll", id, sep=""),
+        label = "Sub-cellular Localisation",
+        choices =  c("Postsynaptic", "Presynaptic", "Synaptosome"),
+        selected = "Postsynaptic",
         multiple = FALSE
     )
 }
@@ -411,12 +482,34 @@ ui <- shinyUI(fluidPage(
     sidebarLayout(
         
         sidebarPanel(
-            selectRegion(6)
+            # selector for localisation
+            selectLocalisationNoAll(1),
+            # selector for clustering algorithm
+            selectClustering(1),
+            # selector for centrality
+            selectCentrality(1)
         ),
         
         mainPanel(
-            h4("bleep bloop"),
-            plotOutput("fig2c")
+            h4(title2c),
+            plotOutput("fig2c", width = 800, height = 600),
+            h5('Selection "Localisation = Postsynaptic, Centrality Measure = Semi-Local Centrality (SL)" corresponds roughly to plot 3c
+               in the original paper, however the spectral modularity clustering method is not available in this executable paper.')
+        )
+    ),
+    
+    sidebarLayout(
+        
+        sidebarPanel(
+            # selector for localisation
+            selectLocalisationNoAll(2),
+        ),
+        
+        mainPanel(
+            h4(title2d),
+            plotOutput("fig2d"),
+            h5('Selection "Localisation = Postsynaptic" corresonds roughly to plot 3d in the original paper, however different centrality
+               measures are given here.')
         )
     )
 ))
@@ -521,15 +614,23 @@ server <- shinyServer(function(input, output) {
     
     
     fig2c <- reactive({
-        
-        bm<-getBridgeness(gg,'louvain',conmat)
-        VIPs=c('8495','22999','8927','8573','26059','8497','27445','8499')
+        data2c <- GenerateFig2c(input$LocalisationnoAll1, tolower(input$Cluster1))
+        gg <- data2c$graph
+        conmat <- data2c$matrix
+        bm <- data2c$bridge
+        #VIPs=c('8495','22999','8927','8573','26059','8497','27445','8499')
+        VIPs=c('81876','10890','51552','5874','5862','11021','54734','5865','5864',
+                           '9522','192683','10067','10396','9296','527','9114','537','535',
+                           '528','51382','534','51606','523','80331','114569','127262','57084',
+                           '57030','388662','6853','6854','8224','9900','9899','9145','9143',
+                           '6855','132204','6857','127833','6861','529','526','140679','7781',
+                           '81615','6844','6843')
         indx <- match(V(gg)$name,VIPs)
         group <- ifelse(is.na(indx), 0,1)
         MainDivSize <- 0.8
-        Xlab <- "Semilocal Centrality (SL)"
+        Xlab <- input$Centrality1
         Ylab <- "Bridgeness"
-        X <- as.numeric(igraph::get.vertex.attribute(gg,"SL",V(gg)))
+        X <- as.numeric(igraph::get.vertex.attribute(gg,centralityInput(),V(gg)))
         X <- scale(X)
         Y <- as.numeric(as.vector(bm[,dim(bm)[2]]))
         lbls <- ifelse(!is.na(indx),V(gg)$GeneName,"")
@@ -538,7 +639,7 @@ server <- shinyServer(function(input, output) {
         dt_res <- dt[dt$vips==0,]
         baseColor="royalblue2"
 
-        ggplot(dt,aes(x=X,y=Y,label=name))+#geom_point()+
+        ggplot(dt,aes(x=X,y=Y,label=name))+
             geom_point(data=dt_vips,
                        aes(x=X,y=Y),colour=baseColor,size = 7,shape=15,show.legend=F)+
             geom_point(data=dt_res,
@@ -546,10 +647,10 @@ server <- shinyServer(function(input, output) {
             geom_label_repel(aes(label=as.vector(lbls)),
                              fontface='bold',color='black',fill='white',box.padding=0.1,
                              point.padding=NA,label.padding=0.15,segment.color='black',
-                             force=1,size=rel(3.8),show.legend=F,max.overlaps=200)+
-            labs(x=Xlab,y=Ylab,title=sprintf("%s","louvain"))+
+                             force=1,size=rel(3.8),show.legend=F,max.overlaps=400)+
             scale_x_continuous(expand = c(0, 0), limits = c(0, 1)) +
             scale_y_continuous(expand = c(0, 0), limits = c(0, 1))+
+            xlab(Xlab) + ylab(Ylab) +
             theme(
                 axis.title.x=element_text(face="bold",size=rel(2.5)),
                 axis.title.y=element_text(face="bold",size=rel(2.5)),
@@ -565,6 +666,25 @@ server <- shinyServer(function(input, output) {
     })
     
     output$fig2c <- renderPlot({fig2c()})
+    
+    centralityInput <- reactive({
+        switch(input$Centrality1,
+        "Semi-Local Centrality (SL)" = "SL",
+        "Degree Centrality (DEG)" = "DEG",
+        "Betweenness Centrality (BET)" = "BET",
+        "Closeness Centrality (CC)" = "CC", 
+        "mean Shortest Path Centrality (mnSP)" = "mnSP",
+        "Page Rank Centrality (PR)" = "PR", 
+        "Single-destination Shortest Path Centrality (sdSP)" = "sdSP"
+               )
+    })
+    
+    fig2d <- reactive({
+        data2d <- GenerateFig2d(input$LocalisationnoAll2)
+        corrplot(data2d, type="upper", tl.col = "black", tl.srt = 45, tl.cex = 1)
+    })
+    
+    output$fig2d <- renderPlot({fig2d()})
     
     
     datasetInput <- reactive({
