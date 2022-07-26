@@ -1,7 +1,7 @@
 # installs standard R libraries
-list.of.packages <- c("devtools", "shiny", "dplyr", "tidyr", "ggplot2", "RSQLite", "UpSetR" , "igraph", "ggrepel", "corrplot", "DT")
-new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-if(length(new.packages)) install.packages(new.packages)
+#list.of.packages <- c("devtools", "shiny", "dplyr", "tidyr", "ggplot2", "RSQLite", "UpSetR" , "igraph", "ggrepel", "corrplot", "DT", "randomcoloR")
+#new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+#if(length(new.packages)) install.packages(new.packages)
 
 source('AnNetFuncs.R')
 
@@ -16,23 +16,8 @@ library(igraph)
 library(ggrepel)
 library(corrplot)
 library(DT)
-#library(randomcoloR)
+library(randomcoloR)
 
-# gg <- pre_cluster
-# mem.df<-data.frame(names=V(gg)$name,membership=as.numeric(V(gg)$louvain))
-# palette <- distinctColorPalette(max(as.numeric(mem.df$membership)))
-# lay<-layoutByCluster(gg,mem.df,layout = layout_nicely)
-# plot(gg,vertex.size=3,layout=layout_nicely,
-#      vertex.label=NA,
-#      vertex.color=palette[as.numeric(mem.df$membership)],
-#      edge.color='grey95')
-# legend('topright',legend=names(table(mem.df$membership)),col=palette,pch=19,ncol = 2)
-# 
-# idx<-match(V(gg)$name,mem.df$names)
-# cgg<-getCommunityGraph(gg,mem.df$membership[idx])
-# D0 = unname(degree(cgg))
-# plot(cgg, vertex.size=sqrt(V(cgg)$size), vertex.cex = 0.8,
-#      vertex.color=round(log(D0))+1,layout=layout_with_kk)
 
 
 # read pre-calculated clusters
@@ -104,7 +89,8 @@ to the number of unique genes in each
 title2c <- "Fig 3c: Bridging proteins, estimated using a given clustering \n algorithm are plotted against a given centrality measure"
 title2d <- "Fig 3d:  Correlation plot for diferent centrality measures \n estimated for selected network"
 title2e <- "Fig 3e: Disease-disease relationship for selected interactome(s). Where significance q-values < selected, is delineated by the dashed line."
-
+title2f <- "Fig 3f: Colocalization of chosen disease on selected network"
+titletab2f <- "Table 3f: Overrepresentation analysis for chosen disease for each cluster.\n p-values < 0.01 highlighted in green, p-values < 0.05 highlighted in blue."
 
 GenerateFig1a1b <- function(loc, reg, met){
     df <- GetNumPapersSubset(loc, reg, met)
@@ -240,6 +226,40 @@ GenerateFig2e <- function(loc, dis){
     
 }
 
+
+GenerateFig2f <- function(loc, clust, dis){
+    gg <- get(paste(loc, "cluster", sep="_"))
+    if (dis == "None"){
+        mem.df<-data.frame(names=V(gg)$name,membership=as.numeric(vertex_attr(gg, clust)))
+    }
+    else{
+        hasDisease <- function(x){grepl(dis, x)}
+        mem.df<-data.frame(names=V(gg)$name,membership=as.numeric(vertex_attr(gg, clust)), disease=sapply(V(gg)$TopOntoOVG, hasDisease))
+    }
+    return(list("graph" = gg, "mem.df" = mem.df))
+}
+
+
+GenerateTab2f <- function(mem.df){
+    if ("disease" %in% colnames(mem.df)){
+        b <- sum(mem.df$disease)
+        c <- length(mem.df$disease)
+        pval.df <-mem.df %>% group_by(membership) %>% summarise(num.disease.genes = sum(disease), num.total.genes = length(disease)) %>%
+            mutate(b = b, c = c)
+        pval <- c()
+        for (i in 1:length(pval.df$membership)){
+            pval <- append(pval, min(1-cumsum(dhyper(0:(pval.df$num.disease.genes[i]-1),pval.df$b[i],(pval.df$c[i]-pval.df$b[i]),
+                                                     pval.df$num.total.genes[i]))))
+        }
+        pval.df <- pval.df %>% mutate(p.value = pval) %>% select(-c(c, b))
+    }
+    else{
+        pval.df <- data.frame("Disease" = "No disease selected")
+    }
+    return(pval.df)
+}
+
+
 locShorttoLong <- function(loc){
     return(switch(loc,
            "post" = "Postsynaptic",
@@ -275,376 +295,415 @@ selectLocalisationNoAll <- function(id, multi=FALSE, select="Postsynaptic"){
 
 ui <- shinyUI(fluidPage(
     
-    titlePanel("Executable Research Paper: A unified resource and configurable model of the synapse proteome and its role in disease"),
-    
-    h2("Original Paper Authors:"),
-    
-    h4("Oksana Sorokina, Colin Mclean, Mike D. R. Croning, Katharina F. Heil, Emilia Wysocka, Xin He, David Sterratt, Seth G. N. Grant, T. Ian Simpson, J. Douglas Armstrong"),
-    
-    h1("Abstract"),
-    
-    h4(HTML("<b>Genes encoding synaptic proteins are highly associated with neuronal disorders many of which show clinical co-morbidity. We integrated
+    tags$style(HTML("
+            .figs {
+                align: center;
+                display:block;
+                padding:9.5px;
+                margin:0 0 2px;
+                margin-top:2px;
+                line-height:20px;
+                border:3px solid rgba(0,0,0,0.15);
+                border-radius:4px; 
+            }
+            .all {
+                width: 900px;
+                margin: auto;
+            }
+            h1,h2,h3,h4,h5 {
+                line-height: 25px;
+            }    
+                    ")),
+    div(class="all",     
+        titlePanel(HTML("Executable Research Paper: <a href='https://www.nature.com/articles/s41598-021-88945-7'>A unified resource and configurable model of the synapse proteome and its role in disease</a>")),
+        
+        h2("Original Paper Authors:"),
+        
+        h4("Oksana Sorokina, Colin Mclean, Mike D. R. Croning, Katharina F. Heil, Emilia Wysocka, Xin He, David Sterratt, Seth G. N. Grant, T. Ian Simpson, J. Douglas Armstrong"),
+        
+        h2("Executable Paper Author:"),
+        
+        h4("Bernhard Finke"),
+        
+        h1("Abstract"),
+        
+        h4("Genes encoding synaptic proteins are highly associated with neuronal disorders many of which show clinical co-morbidity. We integrated
        58 published synaptic proteomic datasets that describe over 8000 proteins and combined them with direct protein-protein interactions and
        functional metadata to build a network resource that reveals the shared and unique protein components that underpin multiple disorders. 
-       All the data are provided in a flexible and accessible format to encourage custom use.</b>")),
-    
-    fluidRow(
+       All the data are provided in a flexible and accessible format to encourage custom use."),
         
-        column(5,
-               selectInput(
-                   inputId = "down",
-                   label = "Download dataset as csv",
-                   choices = c("1a,1b", "1c,1d", "1e,1f", "1g", "1h", "3c (Cluster Graph)" = "3c(g)",
-                               "3c (Consensus matrix)" = "3c(m)", "3c (Bridgeness)" = "3c(b)",
-                               "3d", "3e"),
-                   selected = "1a,1b",
-                   multiple = FALSE
-               )
+        h1("Download Specific Dataset"),
+        
+        fluidRow(
+            
+            column(5,
+                   h4(HTML("The button on the right allows the user to download the data which goes into generating each of the figures in the executable research paper.
+                       The full SQLite proteomic database can be found <a href='https://datashare.ed.ac.uk/handle/10283/3877'>here</a>."))
+            ),
+            column(6,
+                   selectInput(
+                       inputId = "down",
+                       label = "Choose Figure",
+                       choices = c("1a,1b", "1c,1d", "1e,1f", "1g", "1h", "3c (Cluster Graph)" = "3c(g)",
+                                   "3c (Consensus matrix)" = "3c(m)", "3c (Bridgeness)" = "3c(b)",
+                                   "3d", "3e", "3f", "Table 3f"),
+                       selected = "1a,1b",
+                       multiple = FALSE
+                   ),
+                   downloadButton("downloaddata")
+            )
+            
         ),
-        column(3,
-               downloadButton("downloaddata"),
-               h1("             "))
         
-    ),
-    
-    h1("Introduction"),
-    
-    h4("At neuronal synapses, the proteomes in presynaptic and postsynaptic compartments form complex and highly dynamic molecular networks.
+        h1("Introduction"),
+        
+        h4("At neuronal synapses, the proteomes in presynaptic and postsynaptic compartments form complex and highly dynamic molecular networks.
        These networks mediate signal transduction and plasticity processes that underpin normal (and abnormal) information processing in the brain.
        We systematically curated proteomic datasets dating from 2000 to 2020, to produce a comprehensive index of the proteins (and their genes) 
        expressed at the mammalian synapse (see Methods for details). This resulted in 58 papers, which when combined, describe a landscape of 8087 
        synaptic genes."),
-    
-    h4(HTML("The set includes 29 post synaptic proteome (PSP) studies (2000 to 2019) contributing a total of 5560 mouse and human unique gene identifiers;
+        
+        h4(HTML("The set includes 29 post synaptic proteome (PSP) studies (2000 to 2019) contributing a total of 5560 mouse and human unique gene identifiers;
        18 presynaptic studies (2004 to 2020) describe 2772 unique human and mouse gene IDs, and 11 studies that span the whole synaptosome and report 
        7198 unique genes (<a href='#studyTable'>Table 1</a>, <a href='https://www.nature.com/articles/s41598-021-88945-7#MOESM4'>Supplementary Table 1</a>).")),
-    
-    h3(HTML("<b>Table 1</b>: Studies included in the database. Dark grey corresponds to postsynaptic, light grey-to presynaptic,
+        
+        h3(HTML("<b>Table 1</b>: Studies included in the database. Dark grey corresponds to postsynaptic, light grey-to presynaptic,
         and green-to synaptosomal studies:")),
-    
-    fluidRow(
-        column(12,
-               dataTableOutput('studyTable')
-               )
-    ),
-    
-    h4("Each study was annotated with relevant metadata including GO function, disease association and cross-ref to SynGo. Orthologues were mapped 
+        
+        fluidRow(
+            column(12,
+                   dataTableOutput('studyTable')
+            )
+        ),
+        
+        h4("Each study was annotated with relevant metadata including GO function, disease association and cross-ref to SynGo. Orthologues were mapped 
        across human, mouse and rat and each mapped onto stable identifiers (MGI, Entrez and Uniprot)."),
-    
-    h4(HTML("High throughput proteomic techniques are powerful, but they are noisy, and contamination is always a concern. A large number (2091 for PSP 
+        
+        h4(HTML("High throughput proteomic techniques are powerful, but they are noisy, and contamination is always a concern. A large number (2091 for PSP 
        and 1434 for presynapse, Fig. <a href='#fig1a1b'>1A,B</a>) of proteins have been observed just once. While single hits may be accounted for lack of sensitivity with 
        low abundance molecules, it could also indicate the presence of false positive components brought in by experimental uncertainty.")),
-    
-    h1(HTML("<b>Figure 1</b>")),
-    
-    imageOutput('fig1png', height=650),
-    
-    h5(HTML('<b>(A)</b> Discovery rate of new PSD proteins across 29 postsynaptic studies, where the number of proteins is plotted against the frequency of 
-       identification. 2091 PSP proteins have been observed just once. The most frequently found proteins (i.e. detected in 22, or more, studies out 
-       of the 29) include very well-known PSD proteins, for example: DLG4 (28/29), CAMK2A (27/29), INA (26/29), SPTBN1, CAMK2B, DLG2, NSF, GRIN2B, 
-       GRIN1 (25/29), BIAP2, BSN (24/29) (full list in <a href="https://www.nature.com/articles/s41598-021-88945-7#MOESM5">Supplementary Table 2</a>). <b>(B)</b> 
-       Discovery rate of new proteins analysed across 18 presynaptic studies. More than half of the proteins in the presynaptic proteome (1251) have been observed just once.
-       The most frequent presynaptic genes include AP2B1, HSPA8, GNAO1, ACTB (15/17), STX1B, ATP6V0A1, STXBP1, ATP1A3, ATP6V1E1, SYT1, GNB1, TUBA1A, VAMP2, NSF, DNM1 (14/17) 
-       with full statistics available in <a href="https://www.nature.com/articles/s41598-021-88945-7#MOESM6">Supplementary Table 3</a>. <b>(C)</b> Contribution of each of 29
-       studies to the total number of PSP genes (purple-total number of genes, yellow-identified 
-       in this study). Two major jumps in the gross number of proteins identified occur in 2008, when 1249 new proteins were reported by [14] and in 2014 
-       with 2588 new proteins added by [20]. <b>(D)</b> Contribution of each of 18 studies to the total number of presynaptic genes (purple-total number of genes, 
-       yellow-identified in this study): two jumps in newly discovered proteins correspond to studies in years 2010 and 2014. <b>(E)</b> Accumulation of the new 
-       PSP genes (black) compared to the total datasets (blue) over years. <b>(F)</b> Accumulation of new presynaptic genes (black) compared to the total datasets 
-       (blue) over years. <b>(G)</b> Non-linear fit predicting the total size of "consensus" PSP (genes found in two and more studies, 3499) (P = 2.36E-11, residual 
-       standard error: 192.7 on 12 degrees of freedom) by year 2023 which, when compared to the current number (3438) indicates that our knowledge on PSP 
-       components, based on currently available methodologies, is close to saturation. <b>(H)</b> Overlap of three synaptic datasets: presynaptic, postsynaptic and 
-       synaptosomal. Bars correspond to the number of unique genes in each compartment and their intersections.')),
-    
-    sidebarLayout(
         
-        sidebarPanel(
-            # selector for localisation
-            selectInput(
-                inputId = "Localisation1",
-                label = "Sub-cellular Localisation",
-                choices =  c("Postsynaptic (Fig 1a)" = "Postsynaptic","Presynaptic (Fig 1b)" = "Presynaptic",
-                             "Synaptosome", "All"),
-                selected = "Postsynaptic",
-                multiple = FALSE
+        div(class="figs", 
+            
+        h1(HTML("<b>Figure 1</b>")), 
+        
+        imageOutput('fig1png', height=650), 
+        
+        h5(HTML('<b>(A)</b> Discovery rate of new PSD proteins across 29 postsynaptic studies, where the number of proteins is plotted against the frequency of 
+       identification. 2091 PSP proteins have been observed just once. The most frequently found proteins (i.e. detected in 22, or more, studies 
+       out of the 29) include very well-known PSD proteins, for example: DLG4 (28/29), CAMK2A (27/29), INA (26/29), SPTBN1, CAMK2B, 
+       DLG2, NSF, GRIN2B, GRIN1 (25/29), BIAP2, BSN (24/29) (full list in <a href="https://www.nature.com/articles/s41598-021-88945-7#MOESM5">Supplementary Table 2</a>). <b>(B)</b> Discovery rate of new proteins analysed 
+       across 18 presynaptic studies. More than half of the proteins in the presynaptic proteome (1251) have been observed just once.The most 
+       frequent presynaptic genes include AP2B1, HSPA8, GNAO1, ACTB (15/17), STX1B, ATP6V0A1, STXBP1, ATP1A3, ATP6V1E1, SYT1, 
+       GNB1, TUBA1A, VAMP2, NSF, DNM1 (14/17) with full statistics available in <a href="https://www.nature.com/articles/s41598-021-88945-7#MOESM6">Supplementary Table 3</a>. <b>(C)</b> Contribution of each of 29
+       studies to the total number of PSP genes (purple-total number of genes, yellow-identified in this study). Two major jumps in the gross 
+       number of proteins identified occur in 2008, when 1249 new proteins were reported by [14] and in 2014 with 2588 new proteins added by 
+       [20]. <b>(D)</b> Contribution of each of 18 studies to the total number of presynaptic genes (purple-total number of genes, yellow-identified 
+       in this study): two jumps in newly discovered proteins correspond to studies in years 2010 and 2014. <b>(E)</b> Accumulation of the new 
+       PSP genes (black) compared to the total datasets (blue) over years. <b>(F)</b> Accumulation of new presynaptic genes (black) compared to the 
+       total datasets (blue) over years. <b>(G)</b> Non-linear fit predicting the total size of "consensus" PSP (genes found in two and more studies, 3499) 
+       (P = 2.36E-11, residual standard error: 192.7 on 12 degrees of freedom) by year 2023 which, when compared to the current number (3438) 
+       indicates that our knowledge on PSP components, based on currently available methodologies, is close to saturation. <b>(H)</b> Overlap of three 
+       synaptic datasets: presynaptic, postsynaptic and synaptosomal. Bars correspond to the number of unique genes in each compartment and 
+       their intersections.'))),
+        
+        h1("Executable Implementations of Figure 1"),
+        
+        h4("This section contains executable and interactive versions of the plots contained above in figure 1.
+       Selectors are labeled to indicate which selection will give the exact version contained in the original paper."),
+        
+        sidebarLayout(
+            
+            sidebarPanel(
+                # selector for localisation
+                selectInput(
+                    inputId = "Localisation1",
+                    label = "Sub-cellular Localisation",
+                    choices =  c("Postsynaptic (Fig 1a)" = "Postsynaptic","Presynaptic (Fig 1b)" = "Presynaptic",
+                                 "Synaptosome", "All"),
+                    selected = "Postsynaptic",
+                    multiple = FALSE
+                ),
+                # selector for brain region
+                selectInput(
+                    inputId = "BrainRegion1",
+                    label = "Brain Region",
+                    choices = c("All (Fig 1a & 1b)" = "All", "Brain", "Forebrain", "Midbrain", "Cerebellum", "Hypothalamus",
+                                "Hippocampus", "Striatum", "Cerebral cortex", "Frontal lobe", "Occipital lobe",
+                                "Temporal lobe", "Parietal Lobe", "Telencephalon", "Prefrontal cortex", 
+                                "Motor cortex", "Visual cortex"
+                    ), 
+                    selected = "All",
+                    multiple = FALSE
+                ),
+                # selector for method
+                selectInput(
+                    inputId = "Method1",
+                    label = "Method",
+                    choices = c("Target", "Shotgun", "All (Fig 1a & 1b)" = "All"
+                    ), 
+                    selected = "All",
+                    multiple = FALSE
+                )
             ),
-            # selector for brain region
-            selectInput(
-                inputId = "BrainRegion1",
-                label = "Brain Region",
-                choices = c("All (Fig 1a & 1b)" = "All", "Brain", "Forebrain", "Midbrain", "Cerebellum", "Hypothalamus",
-                            "Hippocampus", "Striatum", "Cerebral cortex", "Frontal lobe", "Occipital lobe",
-                            "Temporal lobe", "Parietal Lobe", "Telencephalon", "Prefrontal cortex", 
-                            "Motor cortex", "Visual cortex"
-                ), 
-                selected = "All",
-                multiple = FALSE
+            
+            mainPanel(
+                h4(title1a1b),
+                # fig1a1b goes here
+                plotOutput("fig1a1b")
+            )
+            
+        ),
+        
+        sidebarLayout(
+            
+            sidebarPanel(
+                # selector for localisation
+                selectInput(
+                    inputId = "Localisation2",
+                    label = "Sub-cellular Localisation",
+                    choices =  c("Postsynaptic (Fig 1c)" = "Postsynaptic","Presynaptic (Fig 1d)" = "Presynaptic",
+                                 "Synaptosome", "All"),
+                    selected = "Postsynaptic",
+                    multiple = FALSE
+                ),
+                # selector for brain region
+                selectInput(
+                    inputId = "BrainRegion2",
+                    label = "Brain Region",
+                    choices = c("All (Fig 1c & 1d)" = "All", "Brain", "Forebrain", "Midbrain", "Cerebellum", "Hypothalamus",
+                                "Hippocampus", "Striatum", "Cerebral cortex", "Frontal lobe", "Occipital lobe",
+                                "Temporal lobe", "Parietal Lobe", "Telencephalon", "Prefrontal cortex", 
+                                "Motor cortex", "Visual cortex"
+                    ), 
+                    selected = "All",
+                    multiple = FALSE
+                ),
+                # selector for method
+                selectInput(
+                    inputId = "Method2",
+                    label = "Method",
+                    choices = c("Target", "Shotgun", "All (Fig 1c & 1d)" = "All"
+                    ), 
+                    selected = "All",
+                    multiple = FALSE
+                ),
+                # selector for number of papers
+                selectInput(
+                    inputId = "NumPapers2",
+                    label = "Evidence (in >= n papers)",
+                    choices = c("1 (Fig 1c & 1d)" = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                    ), 
+                    selected = 1,
+                    multiple = FALSE
+                )
             ),
-            # selector for method
-            selectInput(
-                inputId = "Method1",
-                label = "Method",
-                choices = c("Target", "Shotgun", "All (Fig 1a & 1b)" = "All"
-                ), 
-                selected = "All",
-                multiple = FALSE
+            
+            mainPanel(
+                h4(title1c1d),
+                # fig1c1d goes here
+                plotOutput("fig1c1d")
+            )
+            
+        ),
+        
+        sidebarLayout(
+            
+            sidebarPanel(
+                # selector for localisation
+                selectInput(
+                    inputId = "Localisation3",
+                    label = "Sub-cellular Localisation",
+                    choices =  c("Postsynaptic (Fig 1e)" = "Postsynaptic","Presynaptic (Fig 1f)" = "Presynaptic",
+                                 "Synaptosome", "All"),
+                    selected = "Postsynaptic",
+                    multiple = FALSE
+                ),
+                # selector for brain region
+                selectInput(
+                    inputId = "BrainRegion3",
+                    label = "Brain Region",
+                    choices = c("All (Fig 1e & 1f)" = "All", "Brain", "Forebrain", "Midbrain", "Cerebellum", "Hypothalamus",
+                                "Hippocampus", "Striatum", "Cerebral cortex", "Frontal lobe", "Occipital lobe",
+                                "Temporal lobe", "Parietal Lobe", "Telencephalon", "Prefrontal cortex", 
+                                "Motor cortex", "Visual cortex"
+                    ), 
+                    selected = "All",
+                    multiple = FALSE
+                ),
+                # selector for method
+                selectInput(
+                    inputId = "Method3",
+                    label = "Method",
+                    choices = c("Target", "Shotgun", "All (Fig 1e & 1f)" = "All"
+                    ), 
+                    selected = "All",
+                    multiple = FALSE
+                ),
+                # selector for number of papers
+                selectInput(
+                    inputId = "NumPapers3",
+                    label = "Evidence (in >= n papers)",
+                    choices = c("1 (Fig 1e & 1f)" = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                    ), 
+                    selected = 1,
+                    multiple = FALSE
+                )
+            ),
+            
+            mainPanel(
+                h4(title1e1f),
+                # fig1e1f goes here
+                plotOutput("fig1e1f")
+            )
+            
+        ),
+        
+        sidebarLayout(
+            
+            sidebarPanel(
+                # selector for localisation
+                selectInput(
+                    inputId = "Localisation4",
+                    label = "Sub-cellular Localisation",
+                    choices =  c("Postsynaptic (Fig 1g)" = "Postsynaptic","Presynaptic" = "Presynaptic",
+                                 "Synaptosome", "All"),
+                    selected = "Postsynaptic",
+                    multiple = FALSE
+                ),
+                # selector for brain region
+                selectInput(
+                    inputId = "BrainRegion4",
+                    label = "Brain Region",
+                    choices = c("All (Fig 1g)" = "All", "Brain", "Forebrain", "Midbrain", "Cerebellum", "Hypothalamus",
+                                "Hippocampus", "Striatum", "Cerebral cortex", "Frontal lobe", "Occipital lobe",
+                                "Temporal lobe", "Parietal Lobe", "Telencephalon", "Prefrontal cortex", 
+                                "Motor cortex", "Visual cortex"
+                    ), 
+                    selected = "All",
+                    multiple = FALSE
+                ),
+                # selector for method
+                selectInput(
+                    inputId = "Method4",
+                    label = "Method",
+                    choices = c("Target", "Shotgun", "All (Fig 1g)" = "All"
+                    ), 
+                    selected = "All",
+                    multiple = FALSE
+                ),
+                # selector for number of papers
+                selectInput(
+                    inputId = "NumPapers4",
+                    label = "Evidence (in >= n papers)",
+                    choices = c(1, "2 (Fig 1g)" = 2, 3, 4, 5, 6, 7, 8, 9, 10
+                    ), 
+                    selected = 2,
+                    multiple = FALSE
+                ),
+                # selector for fit type
+                selectInput(
+                    inputId = "fitType",
+                    label = "Type of Fit",
+                    choices = c("Logistic (Fig 1g)" = "Logistic", "Linear"
+                    ), 
+                    selected = "Logistic",
+                    multiple = FALSE
+                )
+            ),
+            
+            mainPanel(
+                h4(title1g),
+                # fig1g goes here
+                plotOutput("fig1g")
+            )
+            
+        ),
+        
+        sidebarLayout(
+            
+            sidebarPanel(
+                # selector for brain region
+                selectInput(
+                    inputId = "BrainRegion5",
+                    label = "Brain Region",
+                    choices = c("All (Fig 1h)" = "All", "Brain", "Forebrain", "Midbrain", "Cerebellum", "Hypothalamus",
+                                "Hippocampus", "Striatum", "Cerebral cortex", "Frontal lobe", "Occipital lobe",
+                                "Temporal lobe", "Parietal Lobe", "Telencephalon", "Prefrontal cortex", 
+                                "Motor cortex", "Visual cortex"
+                    ), 
+                    selected = "All",
+                    multiple = FALSE
+                ),
+                # selector for method
+                selectInput(
+                    inputId = "Method5",
+                    label = "Method",
+                    choices = c("Target", "Shotgun", "All (Fig 1h)" = "All"
+                    ), 
+                    selected = "All",
+                    multiple = FALSE
+                ),
+                # selector for number of papers
+                selectInput(
+                    inputId = "NumPapers5",
+                    label = "Evidence (in >= n papers)",
+                    choices = c("1 (Fig 1h)" = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                    ), 
+                    selected = 1,
+                    multiple = FALSE
+                )
+            ),
+            
+            mainPanel(
+                h4(title1h),
+                # fig1h goes here
+                plotOutput("fig1h")
             )
         ),
         
-        mainPanel(
-            h4(title1a1b),
-            # fig1a1b goes here
-            plotOutput("fig1a1b")
-            )
-        
-    ),
-    
-    sidebarLayout(
-        
-        sidebarPanel(
-            # selector for localisation
-            selectInput(
-                inputId = "Localisation2",
-                label = "Sub-cellular Localisation",
-                choices =  c("Postsynaptic (Fig 1c)" = "Postsynaptic","Presynaptic (Fig 1d)" = "Presynaptic",
-                             "Synaptosome", "All"),
-                selected = "Postsynaptic",
-                multiple = FALSE
-            ),
-            # selector for brain region
-            selectInput(
-                inputId = "BrainRegion2",
-                label = "Brain Region",
-                choices = c("All (Fig 1c & 1d)" = "All", "Brain", "Forebrain", "Midbrain", "Cerebellum", "Hypothalamus",
-                            "Hippocampus", "Striatum", "Cerebral cortex", "Frontal lobe", "Occipital lobe",
-                            "Temporal lobe", "Parietal Lobe", "Telencephalon", "Prefrontal cortex", 
-                            "Motor cortex", "Visual cortex"
-                ), 
-                selected = "All",
-                multiple = FALSE
-            ),
-            # selector for method
-            selectInput(
-                inputId = "Method2",
-                label = "Method",
-                choices = c("Target", "Shotgun", "All (Fig 1c & 1d)" = "All"
-                ), 
-                selected = "All",
-                multiple = FALSE
-            ),
-            # selector for number of papers
-            selectInput(
-                inputId = "NumPapers2",
-                label = "Evidence (in >= n papers)",
-                choices = c("1 (Fig 1c & 1d)" = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-                ), 
-                selected = 1,
-                multiple = FALSE
-            )
-        ),
-        
-        mainPanel(
-            h4(title1c1d),
-            # fig1c1d goes here
-            plotOutput("fig1c1d")
-            )
-        
-    ),
-    
-    sidebarLayout(
-        
-        sidebarPanel(
-            # selector for localisation
-            selectInput(
-                inputId = "Localisation3",
-                label = "Sub-cellular Localisation",
-                choices =  c("Postsynaptic (Fig 1e)" = "Postsynaptic","Presynaptic (Fig 1f)" = "Presynaptic",
-                             "Synaptosome", "All"),
-                selected = "Postsynaptic",
-                multiple = FALSE
-            ),
-            # selector for brain region
-            selectInput(
-                inputId = "BrainRegion3",
-                label = "Brain Region",
-                choices = c("All (Fig 1e & 1f)" = "All", "Brain", "Forebrain", "Midbrain", "Cerebellum", "Hypothalamus",
-                            "Hippocampus", "Striatum", "Cerebral cortex", "Frontal lobe", "Occipital lobe",
-                            "Temporal lobe", "Parietal Lobe", "Telencephalon", "Prefrontal cortex", 
-                            "Motor cortex", "Visual cortex"
-                ), 
-                selected = "All",
-                multiple = FALSE
-            ),
-            # selector for method
-            selectInput(
-                inputId = "Method3",
-                label = "Method",
-                choices = c("Target", "Shotgun", "All (Fig 1e & 1f)" = "All"
-                ), 
-                selected = "All",
-                multiple = FALSE
-            ),
-            # selector for number of papers
-            selectInput(
-                inputId = "NumPapers3",
-                label = "Evidence (in >= n papers)",
-                choices = c("1 (Fig 1e & 1f)" = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-                ), 
-                selected = 1,
-                multiple = FALSE
-            )
-        ),
-        
-        mainPanel(
-            h4(title1e1f),
-            # fig1e1f goes here
-            plotOutput("fig1e1f")
-            )
-        
-    ),
-    
-    sidebarLayout(
-        
-        sidebarPanel(
-            # selector for localisation
-            selectInput(
-                inputId = "Localisation4",
-                label = "Sub-cellular Localisation",
-                choices =  c("Postsynaptic (Fig 1g)" = "Postsynaptic","Presynaptic" = "Presynaptic",
-                             "Synaptosome", "All"),
-                selected = "Postsynaptic",
-                multiple = FALSE
-            ),
-            # selector for brain region
-            selectInput(
-                inputId = "BrainRegion4",
-                label = "Brain Region",
-                choices = c("All (Fig 1g)" = "All", "Brain", "Forebrain", "Midbrain", "Cerebellum", "Hypothalamus",
-                            "Hippocampus", "Striatum", "Cerebral cortex", "Frontal lobe", "Occipital lobe",
-                            "Temporal lobe", "Parietal Lobe", "Telencephalon", "Prefrontal cortex", 
-                            "Motor cortex", "Visual cortex"
-                ), 
-                selected = "All",
-                multiple = FALSE
-            ),
-            # selector for method
-            selectInput(
-                inputId = "Method4",
-                label = "Method",
-                choices = c("Target", "Shotgun", "All (Fig 1g)" = "All"
-                ), 
-                selected = "All",
-                multiple = FALSE
-            ),
-            # selector for number of papers
-            selectInput(
-                inputId = "NumPapers4",
-                label = "Evidence (in >= n papers)",
-                choices = c(1, "2 (Fig 1g)" = 2, 3, 4, 5, 6, 7, 8, 9, 10
-                ), 
-                selected = 2,
-                multiple = FALSE
-            ),
-            # selector for fit type
-            selectInput(
-                inputId = "fitType",
-                label = "Type of Fit",
-                choices = c("Logistic (Fig 1g)" = "Logistic", "Linear"
-                ), 
-                selected = "Logistic",
-                multiple = FALSE
-            )
-        ),
-        
-        mainPanel(
-            h4(title1g),
-            # fig1g goes here
-            plotOutput("fig1g")
-        )
-        
-    ),
-    
-    sidebarLayout(
-        
-        sidebarPanel(
-            # selector for brain region
-            selectInput(
-                inputId = "BrainRegion5",
-                label = "Brain Region",
-                choices = c("All (Fig 1h)" = "All", "Brain", "Forebrain", "Midbrain", "Cerebellum", "Hypothalamus",
-                            "Hippocampus", "Striatum", "Cerebral cortex", "Frontal lobe", "Occipital lobe",
-                            "Temporal lobe", "Parietal Lobe", "Telencephalon", "Prefrontal cortex", 
-                            "Motor cortex", "Visual cortex"
-                ), 
-                selected = "All",
-                multiple = FALSE
-            ),
-            # selector for method
-            selectInput(
-                inputId = "Method5",
-                label = "Method",
-                choices = c("Target", "Shotgun", "All (Fig 1h)" = "All"
-                ), 
-                selected = "All",
-                multiple = FALSE
-            ),
-            # selector for number of papers
-            selectInput(
-                inputId = "NumPapers5",
-                label = "Evidence (in >= n papers)",
-                choices = c("1 (Fig 1h)" = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-                ), 
-                selected = 1,
-                multiple = FALSE
-            )
-        ),
-        
-        mainPanel(
-            h4(title1h),
-            # fig1h goes here
-            plotOutput("fig1h")
-        )
-    ),
-    
-    h4(HTML('The rate of growth with respect to newly discovered proteins for PSP appears to be slowing (Fig. 1<a href="#fig1c1d">C</a>,<a href="#fig1e1f">E</a>) and therefore 
+        h4(HTML('The rate of growth with respect to newly discovered proteins for PSP appears to be slowing (Fig. 1<a href="#fig1c1d">C</a>,<a href="#fig1e1f">E</a>) and therefore 
     there is now an opportunity to define a more reliable subset. Following the approach described in [11], we selected genes found in two or more independent studies to designate
     the "consensus" PSP. This resulted in 3,438 genes, which is ~ 7 times larger than reported by [11] and described a subset of synaptic proteins for which have higher confidence. 
     In this subset we observe the increment of new genes per year decreases after 2008 and drops completely after 2014 (<a href="#fig1c1d">Fig. 1C</a>). Based on this, we predict a
     total number of consensus PSP genes found to be 3499 (<a href="#fig1g">Fig. 1G</a>) by year 2023 which, when compared to the current number indicates that our knowledge on 
     PSP components, based on currently available methodologies, is close to saturation.')),
-    
-    h4(HTML('It is different for the presynaptic compartment, where the recent trend in newly identified genes indicates that saturation has not been achieved yet (Fig. 1<a 
+        
+        h4(HTML('It is different for the presynaptic compartment, where the recent trend in newly identified genes indicates that saturation has not been achieved yet (Fig. 1<a 
     href="#fig1c1d">D</a>,<a href="#fig1e1f">F</a>). For instance, the latest study by Taoufiq et al. [47] brought in over 400 new genes to our presynaptic list.')),
-    
-    h4(HTML('The overlap of proteins found in pre- and post-synaptic datasets, and proteins identified in synaptosomal studies is shown at <a href="#fig1h">Fig. 1H</a> and
+        
+        h4(HTML('The overlap of proteins found in pre- and post-synaptic datasets, and proteins identified in synaptosomal studies is shown at <a href="#fig1h">Fig. 1H</a> and
             <a href="https://www.nature.com/articles/s41598-021-88945-7#MOESM3">Fig. 1 in Supplementary Methods.</a>')),
-    
-    h4('To reconstruct protein-protein interaction (PPI) networks for the pre- and post-synaptic proteomes we used human PPI data filtered for the highest confidence direct and 
+        
+        h4('To reconstruct protein-protein interaction (PPI) networks for the pre- and post-synaptic proteomes we used human PPI data filtered for the highest confidence direct and 
        physical interactions from BioGRID [58], Intact [59] and DIP [60]. The resulting PSP network contains 4817 nodes and 27,788 edges in the Largest Connected Component (LCC). 
        The presynaptic network is significantly smaller and comprises 2221 nodes and 8678 edges in the LCC.'),
-    
-    h4(HTML('The resulting network model is embedded into a SQLite implementation allowing users to derive custom network models based on meta-data including species, disease 
+        
+        h4(HTML('The resulting network model is embedded into a SQLite implementation allowing users to derive custom network models based on meta-data including species, disease 
        association, synaptic compartment, brain region, and method of extraction <a href="#fig2png">(Fig. 2)</a>. The database with manual is available from 
        <a href="https://www.nature.com/articles/s41598-021-88945-7#MOESM7">Supplementary Materials</a> and from <a href="https://doi.org/10.7488/ds/3017">Edinburgh DataShare</a>, 
        along with a SQLite Studio manual and Rmd file for querying under the R environment, a screencast walk-through demonstrating use-cases can also be found 
        <a href="https://youtu.be/oaW9Yr9AkXM">here</a>.')),
-    
-    h1("Figure 2"),
-    
-    imageOutput('fig2png', height=500),
-    
-    h5(HTML("Structure of the SQLite database, which includes 58 synaptic studies covering 8087 unique genes and 407,643 direct protein interactions. Grey ovals on the top show the 
-       annotated metadata: left-for nodes/ genes, which include brain region, subcellular compartment, method of extraction, disease and GO function annotation and link to published
-       quantitative models; right-for edges/PPIs, which include PSI-MI type and method. The orange ovals in the bottom illustrate the possible outcomes of the database, including: 
-       (1) information for specific protein/gene, and (2) information that could be obtained from PPI network, e.g., protein's topological importance, community to disease 
-       relationship, and disease-disease comorbidity. The database is available as a <a href='https://www.nature.com/articles/s41598-021-88945-7#MOESM1'>Supplementary File</a> and
-            from <a href='https://doi.org/10.7488/ds/3017'>Edinburgh DataShare.</a>")),
-    
-    h4('The dataset can be used to answer frequent questions such as "What is known about my favourite gene? Is it pre- or postsynaptic? Which brain region was it identified in?".
+        
+        div(class="figs",
+        
+        h1("Figure 2"), 
+        
+        imageOutput('fig2png', height=500), 
+        
+        h5(HTML("Structure of the SQLite database, which includes 58 synaptic studies covering 8087 unique genes and 407,643 direct protein interactions. Grey 
+    ovals on the top show the annotated metadata: left-for nodes/ genes, which include brain region, subcellular compartment, method of 
+    extraction, disease and GO function annotation and link to published quantitative models; right-for edges/PPIs, which include PSI-MI type 
+    and method. The orange ovals in the bottom illustrate the possible outcomes of the database, including: (1) information for specific 
+    protein/gene, and (2) information that could be obtained from PPI network, e.g., protein's topological importance, community to disease 
+    relationship, and disease-disease comorbidity. The database is available as a <a href='https://www.nature.com/articles/s41598-021-88945-7#MOESM1'>Supplementary File</a> and from <a href='https://doi.org/10.7488/ds/3017'>Edinburgh DataShare.</a>")),),
+        
+        
+        h4('The dataset can be used to answer frequent questions such as "What is known about my favourite gene? Is it pre- or postsynaptic? Which brain region was it identified in?".
        Beyond that, users can extend these queries to extract custom networks based on bespoke subsets of molecules. Worked examples that are easy to customise are shown in the 
        Supplementary files.'),
-    
-    h4(HTML("The underlying principle of a systems biology approach is that structural features (pathways and subnetworks) underpin network functionality and given a network, one should
+        
+        h4(HTML("The underlying principle of a systems biology approach is that structural features (pathways and subnetworks) underpin network functionality and given a network, one should
        be able to extract these features. Clustering algorithms [61,62] are commonly used to identify local communities within the network under the assumption that shared network 
        topology correlates with shared function (and dysfunction). However, the more important question is how the different communities are organised to enable a controllable flow 
        of signals across the large network. Using the PSP network as example, we identified 1029 \"Bridging\" proteins as those known to interact locally with neighbours in the 
@@ -655,243 +714,303 @@ ui <- shinyUI(fluidPage(
        diseases including: APP (AD&Epi&ASD&PD&HTN&MS&FTD), VDAC1 (AD&PD&MS), and MAPK14 (AD&SCH&HD&HTN&MS), which supports the functional/disease importance of \"bridging\" proteins.
        Indeed, we found significant overrepresentation for specific diseases such as AD (P = 3.4E-6), HTN (P = 2.1E-5), HD (P = 5.2E-5), PD (P = 2.6E-3) 
        (<a href='https://www.nature.com/articles/s41598-021-88945-7#MOESM5'>Supplementary Table 2</a>).")),
-       
-       
-    h1("Figure 3"),
-    
-    imageOutput('fig3png', height=650),
-    
-    h5(HTML("<b>(A)</b> Community structure of the PSP network using the Spectral modularity method. Communities are coloured using the average gene-community probability values: bluer 
-       coloured a community is, the more probable the genes are of belonging to that community on average. Nodes coloured magenta highlight the core PSD95 interactors [25], which 
-       is also highlighted magenta in the Bridgeness plot in <b>(C)</b>. <b>(B)</b> Graph entropy plots: (main) Global graph entropy rate (SR) plot comparing the structure of the PSP network 
-       (0.668) against 1000 randomised Erdos-Renyi (E-R = 0.989 + - 0.0005) and Power-Law (P-L = 0.9127 + - 0.0032, \u03B1PSP = 2.41) models of similar size, (Enlarged) Evidence for 
-       scale-free structure in PSP network using a perturbation analysis (10], plotted is the SR values after each protein is perturbed through over-expression (SR_UP = red) and
-       under-expression (SR_OWN = green), against the log of the proteins degree,. <b>(C)</b> Bridging proteins, estimated using the Spectral clustering algorithm are plotted against 
-       semi-local centrality (Methods), allowing their categorisation: Region 1, proteins having a 'global' rather than 'local' influence in the network (also been called 
-       bottle-neck bridges, connector or kinless hubs [12] (DLG4, GRIN2B, CAMK2A, etc.). Region 2, proteins having 'global' and 'local' influence (EGFR, HRAS, NRAS, etc.). 
-       Region 3, proteins centred within the community they belong to, but also communicating with a few other specific communities (GRIN1, GRIA2-4). Region 4, proteins with 
-       'local' impact , primarily within one or two communities (local or party hubs [9]. <b>(D)</b> Correlation plot for different centrality measures estimated for PSP network.: SP - a 
-       protein's shortest path value, SR_UP-Entropy rate when protein is over expressed, SR_DOWN-entropy rate when protein is under expressed, COUNT - number of protein 
-       identifications in the studies, Bet - protein's betweenness centrality value, Degree-protein degree, PR- Page Rank, BRIDGESpectral -protein Bridgeness value, CNorm 
-       - Protein's local centrality value, Closeness - protein's closeness value; correlation between SR_UP and Bridgeness indicates that genes with higher Bridgeness values 
-       also lower the graphs entropy when active/overexpressed, which allows the signal to pass more freely (<a href='https://www.nature.com/articles/s41598-021-88945-7#MOESM5'>Supplementary 
-       Table 2</a>). <b>(E)</b> left: Disease-disease relationship for presynaptic (red) and PSD full (blue) and PSD consensus (green) interactome. Where significance q-values < 0.05 is 
-       delineated by the dashed line. Schizophrenia (SCH), Autistic Spectrum Disorder (ASD), Autistic Disorder (AUT), Bipolar Disorder (BD), Intellectual Disability (ID), Alzheimer disease 
-       (AD), Epilepsy Syndrome (Epi), Parkinson's Disease (PD), Frontotemporal Dementia (FTD), Huntington's Disease (HD) and Multiple Sclerosis (MS) are considered; right: randomisation 
-       studies for disease-disease pairs overlap, yellow arrow shows the measured value of Z-score compared to 10,000 AD-HTN, PD-HTN and AD-PD random models. <b>(F)</b> Colocalization of 
-       AD and HTN on the PSP network by propagating these gene-disease associations (GDA) through the network using the Belief Propagation DC-SBM algorithm [13]. The 
-       colocalization of AD and HTN shared common molecular pathways in communities 31 and 43, which were also found enriched for axon guidance, stress-activated MAPK 
-       cascade and response to oxidative stress GO BP terms.")),
-
-    sidebarLayout(
-
-        sidebarPanel(
-            # selector for localisation
-            selectLocalisationNoAll(1),
-            # selector for clustering algorithm
-            selectClustering(1),
-            # selector for centrality
-            selectInput(
-                inputId = "Centrality1",
-                label = "Centrality measure",
-                choices = c("Semi-Local Centrality (SL)", "Degree Centrality (DEG)", "Betweenness Centrality (BET)", 
-                            "Closeness Centrality (CC)", "mean Shortest Path Centrality (mnSP)", "Page Rank Centrality (PR)", 
-                            "Single-destination Shortest Path Centrality (sdSP)"),
-                selected = "SL",
-                multiple = FALSE
+        
+        
+        div(class="figs", 
+        
+        h1("Figure 3"), 
+        
+        imageOutput('fig3png', height=600), 
+        
+        h5(HTML("<b>(A)</b> Community structure of the PSP network using the Spectral modularity method. Communities are coloured using the average gene-
+    community probability values: bluer coloured a community is, the more probable the genes are of belonging to that community on average. 
+    Nodes coloured magenta highlight the core PSD95 interactors [25], which is also highlighted magenta in the Bridgeness plot in <b>(C)</b>. 
+    <b>(B)</b> Graph entropy plots: (main) Global graph entropy rate (SR) plot comparing the structure of the PSP network (0.668) against 1000 
+    randomised Erdos-Renyi (E-R = 0.989 + - 0.0005) and Power-Law (P-L = 0.9127 + - 0.0032, \u03B1PSP = 2.41) models of similar size, (Enlarged) 
+    Evidence for scale-free structure in PSP network using a perturbation analysis (10], plotted is the SR values after each protein is perturbed 
+    through over-expression (SR_UP = red) and under-expression (SR_OWN = green), against the log of the proteins degree,. <b>(C)</b> Bridging 
+    proteins, estimated using the Spectral clustering algorithm are plotted against semi-local centrality (Methods), allowing their categorisation: 
+    Region 1, proteins having a 'global' rather than 'local' influence in the network (also been called bottle-neck bridges, connector or kinless 
+    hubs [12] (DLG4, GRIN2B, CAMK2A, etc.). Region 2, proteins having 'global' and 'local' influence (EGFR, HRAS, NRAS, etc.). Region 3, 
+    proteins centred within the community they belong to, but also communicating with a few other specific communities (GRIN1, GRIA2-4). 
+    Region 4, proteins with 'local' impact , primarily within one or two communities (local or party hubs [9]. <b>(D)</b> Correlation plot for 
+    different centrality measures estimated for PSP network.: SP - a protein's shortest path value, SR_UP-Entropy rate when protein is over 
+    expressed, SR_DOWN-entropy rate when protein is under expressed, COUNT - number of protein identifications in the studies, Bet - 
+    protein's betweenness centrality value, Degree-protein degree, PR- Page Rank, BRIDGESpectral -protein Bridgeness value, CNorm - 
+    Protein's local centrality value, Closeness - protein's closeness value; correlation between SR_UP and Bridgeness indicates that genes with 
+    higher Bridgeness values also lower the graphs entropy when active/overexpressed, which allows the signal to pass more freely 
+    (<a href='https://www.nature.com/articles/s41598-021-88945-7#MOESM5'>Supplementary Table 2</a>). <b>(E)</b> left: Disease-disease relationship for presynaptic (red) and PSD full (blue) and PSD consensus (green) 
+    interactome. Where significance q-values < 0.05 is delineated by the dashed line. Schizophrenia (SCH), Autistic Spectrum Disorder (ASD),
+    Autistic Disorder (AUT), Bipolar Disorder (BD), Intellectual Disability (ID), Alzheimer disease (AD), Epilepsy Syndrome (Epi), 
+    Parkinson's Disease (PD), Frontotemporal Dementia (FTD), Huntington's Disease (HD) and Multiple Sclerosis (MS) are considered; right: 
+    randomisation studies for disease-disease pairs overlap, yellow arrow shows the measured value of Z-score compared to 10,000 AD-HTN, 
+    PD-HTN and AD-PD random models. <b>(F)</b> Colocalization of AD and HTN on the PSP network by propagating these gene-disease 
+    associations (GDA) through the network using the Belief Propagation DC-SBM algorithm [13]. The colocalization of AD and HTN shared 
+    common molecular pathways in communities 31 and 43, which were also found enriched for axon guidance, stress-activated MAPK cascade 
+    and response to oxidative stress GO BP terms."))),
+        
+        
+        h1("Executable Implementations of Figure 3"),
+        
+        h4("This section contains executable and interactive versions of the plots contained above in figure 3.
+       Some differences exist between the figures in the paper and the executable ones found here. One reason for
+       this is that the graph visualisation platform 'Gephi' was used to create many of the figures in the original
+       paper, while this implementation uses only R. For figures 3c and 3f, the original clustering algorithm used was
+       Spectral clustering, which is not available in this executable paper. In figures 3c and 3d, different centrality measures
+       are given. In figure 3c, the highlighted core genes were hand-picked in the original paper, while here they represent genes found
+       in almost all of the papers. In figure 3e, postsynaptic consensus genes are not available. Figure 3f does not
+       allow for annotating GO biological processes. Additionally, the authors of the original paper deemed figure 3a to
+       be infeasible to include in the executable paper, while figure 3b is not included as replicating the figure was determined to be superfluous.
+       Additionally, as figure 3c can take up to 30 seconds to load, it does not auto-load with the webpage, but can be loaded by the user using the supplied button."),
+        
+        sidebarLayout(
+            
+            sidebarPanel(
+                # selector for localisation
+                selectLocalisationNoAll(1),
+                # selector for clustering algorithm
+                selectClustering(1),
+                # selector for centrality
+                selectInput(
+                    inputId = "Centrality1",
+                    label = "Centrality measure",
+                    choices = c("Semi-Local Centrality (SL)", "Degree Centrality (DEG)", "Betweenness Centrality (BET)", 
+                                "Closeness Centrality (CC)", "mean Shortest Path Centrality (mnSP)", "Page Rank Centrality (PR)", 
+                                "Single-destination Shortest Path Centrality (sdSP)"),
+                    selected = "SL",
+                    multiple = FALSE
+                ),
+                # selector for VIPs
+                selectInput(
+                    inputId = "vips",
+                    label = "Highlight core genes (seen in all but n papers)",
+                    choices = c(0, 1, 2, 3, 4, 5),
+                    selected = 1,
+                    multiple = FALSE
+                ),
+                # click to run the figure
+                actionButton("run2c", "Click to execute figure 3c")
             ),
-            # selector for VIPs
-            selectInput(
-                inputId = "vips",
-                label = "Highlight core genes (seen in all but n papers)",
-                choices = c(0, 1, 2, 3, 4, 5),
-                selected = 1,
-                multiple = FALSE
-            ),
-            # click to run the figure
-            actionButton("run2c", "Click to execute figure 3c")
-        ),
-
-        mainPanel(
-            h4(title2c),
-            plotOutput("fig2c", width = 800, height = 600),
-            h5('Selection "Localisation = Postsynaptic, Centrality Measure = Semi-Local Centrality (SL)" corresponds roughly to plot 3c
-               in the original paper, however the spectral modularity clustering method is not available in this executable paper.')
-        )
-    ),
-
-    sidebarLayout(
-
-        sidebarPanel(
-            # selector for localisation
-            selectLocalisationNoAll(2),
-        ),
-
-        mainPanel(
-            h4(title2d),
-            plotOutput("fig2d"),
-            h5('Selection "Localisation = Postsynaptic" corresonds roughly to plot 3d in the original paper, however different centrality
-               measures are given here.')
-        )
-    ),
-    
-    sidebarLayout(
-
-        sidebarPanel(
-            # selector for localisation
-            selectLocalisationNoAll(3, TRUE, c("post", "pre")),
-            # selector for diseases
-            selectInput(
-                inputId = "Diseases1",
-                label = "Diseases",
-                choices = c("AD", "BD", "AUT", "SC", "ASD", "Epi", "ID", "HTN",
-                            "HD", "PD", "FTD", "MS"),
-                selected = c("AD", "BD", "SC", "ASD", "Epi", "ID", "HTN",
-                            "HD", "PD", "FTD", "MS"),
-                multiple = TRUE
-            ),
-            numericInput(
-                inputId = "xlimit",
-                label = "Upper x limit",
-                value = 60,
-                min = 10
-            ),
-            numericInput(
-                inputId = "qval",
-                label = "Q-value significance thresholf",
-                value = 0.05,
-                min = 1e-100,
-                max = 1
+            
+            mainPanel(
+                h4(title2c),
+                plotOutput("fig2c", width = 800, height = 600)
             )
         ),
-
-        mainPanel(
-            h4(title2e),
-            uiOutput("fig2e.ui", height = 1000)
-        )
-    ),
-    
-    h4('There are many complex co-morbidities between psychiatric disorders at the population and the genetic level but for most the 
+        
+        sidebarLayout(
+            
+            sidebarPanel(
+                # selector for localisation
+                selectLocalisationNoAll(2),
+            ),
+            
+            mainPanel(
+                h4(title2d),
+                plotOutput("fig2d")
+            )
+        ),
+        
+        sidebarLayout(
+            
+            sidebarPanel(
+                # selector for localisation
+                selectLocalisationNoAll(3, TRUE, c("post", "pre")),
+                # selector for diseases
+                selectInput(
+                    inputId = "Diseases1",
+                    label = "Diseases",
+                    choices = c("AD", "BD", "AUT", "SC", "ASD", "Epi", "ID", "HTN",
+                                "HD", "PD", "FTD", "MS"),
+                    selected = c("AD", "BD", "SC", "ASD", "Epi", "ID", "HTN",
+                                 "HD", "PD", "FTD", "MS"),
+                    multiple = TRUE
+                ),
+                # selector for upper x lim
+                numericInput(
+                    inputId = "xlimit",
+                    label = "Upper x limit",
+                    value = 60,
+                    min = 10
+                ),
+                # selector for q-value threshold
+                numericInput(
+                    inputId = "qval",
+                    label = "Q-value significance threshold",
+                    value = 0.05,
+                    min = 1e-100,
+                    max = 1
+                ),
+                # selector for sorting
+                selectInput(
+                    inputId = "order",
+                    label = "Sort by q-value",
+                    choices = c('mean', 'median', 'max', 'min'),
+                    selected = 'mean',
+                    multiple = FALSE
+                )
+            ),
+            
+            mainPanel(
+                h4(title2e),
+                uiOutput("fig2e.ui", height = 1000)
+            )
+        ),
+        
+        sidebarLayout(
+            
+            sidebarPanel(
+                # selector for localisation
+                selectLocalisationNoAll(4),
+                # selector for clustering algorithm
+                selectClustering(2),
+                # selector for diseases
+                selectInput(
+                    inputId = "Diseases2",
+                    label = "Disease",
+                    choices = c("None (highlight clusters)" = "None", "AD", "BD", "AUT", "SC", "ASD", "Epi", "ID", "HTN",
+                                "HD", "PD", "FTD", "MS"),
+                    selected = "None",
+                    multiple = FALSE
+                )
+            ),
+            
+            mainPanel(
+                h4(title2f),
+                plotOutput('fig2f', width=600, height=600)
+            )
+        ),
+        
+        fluidRow(
+            h4(titletab2f, align='center'),
+            column(12,
+                   dataTableOutput('diseaseTable')
+            )
+        ),
+        
+        
+        
+        h4('There are many complex co-morbidities between psychiatric disorders at the population and the genetic level but for most the 
        molecular basis remains elusive. The network perspective can be used to obtain a different view by linking topology and phenotype together. Gene-disease
        association data is noisy and far from complete, but we can partly compensate by measuring, for each disease, the distance from each protein in the 
        network to its nearest known associated protein, which can be extended to disease pairs [66] to dissect how these different neurological diseases 
        coalesce at the synapse.'),
-    
-    h4('Using PSP (both full and consensus) and presynaptic networks we found clear evidence of network overlap between well-known co-morbid neuro-psychiatric/developmental 
+        
+        h4('Using PSP (both full and consensus) and presynaptic networks we found clear evidence of network overlap between well-known co-morbid neuro-psychiatric/developmental 
        disorders in both postsynaptic and presynaptic models (q-values shown for PSP/presynaptic networks), including BD-SCH (P = 2.0E-49/4.39E-16), BD-ASD 
        (P = 7.12E-20/1.28E-7), and ASD/SCH (P = 6.17E-16/1.12E-5). Similarly, overlap was observed for common neurodegenerative diseases/conditions AD and PD (P = 
        3.04E-6/1.32E-6).'),
-    
-    h4(HTML('We also observed compartment-specific overlaps for Epilepsy with PD (P = 0.53/2.12E-3) and BD (P = 0.54/9.73E-4), which is significant only in the presynaptic network 
+        
+        h4(HTML('We also observed compartment-specific overlaps for Epilepsy with PD (P = 0.53/2.12E-3) and BD (P = 0.54/9.73E-4), which is significant only in the presynaptic network 
        (<a href="#fig2e">Fig. 3E</a>).')),
-    
-    h4(HTML('In both postsynaptic and presynaptic models, we found overlap for Hypertension (HTN) with AD (P = 8.6E-4/1.0E-2, and with MS (P = 8.79E-5/2.12E-3) (<a href="#fig2e">Fig. 3E</a>). The 
+        
+        h4(HTML('In both postsynaptic and presynaptic models, we found overlap for Hypertension (HTN) with AD (P = 8.6E-4/1.0E-2, and with MS (P = 8.79E-5/2.12E-3) (<a href="#fig2e">Fig. 3E</a>). The 
        AD-HTN link is not, in itself, new but commonly considered as a cardiovascular mechanism with a neurological impact. However, the network view reveals a new potential
        mechanistic link at the synapse. Although we found significant overlaps between AD-HTN and AD-PD, we did not see evidence for a PD-HTN link (P = 0.17/0.36), which 
        indicates the potential shared mechanistic pathway between AD and HTN, which is different to the pathways shared between AD and PD (<a href="#fig2e">Fig. 3E</a>).')),
-    
-    h4(HTML("To further dissect the potential sharing of pathways between AD and HTN in the PSP network (<a href='#fig2f'>Fig. 3F</a>), we employed Belief Propagation to propagate these GDA's 
+        
+        h4(HTML("To further dissect the potential sharing of pathways between AD and HTN in the PSP network (<a href='#fig2f'>Fig. 3F</a>), we employed Belief Propagation to propagate these GDA's 
     through the network's edges, and a Degree-Corrected Block Model (DC-SBM) to model its effect on network clustering [67]. Under a prior assumption of no correlation between the 
        GDA's and the network communities, we found evidence for the co-localization of AD and HTN (C = 31 P = 4.69E-5 and C = 43 P = 1.6E-11). Functionally, these communities
        are enriched for synaptic transmission, axon guidance (C = 31, GO:0007268 = 5.8E-3, GO:0007411 = 7.46E-5), stress activated MAPK cascade and response to oxidative 
        stress (C = 43, GO:0051403 = 1.92E-5, GO:0006979 = 5.34E-5).")),
-    
-    h4('The presented synapse proteome dataset is the largest, most complete and up to date and is freely available with lightweight tools to allow anyone to extract relevant 
+        
+        h4('The presented synapse proteome dataset is the largest, most complete and up to date and is freely available with lightweight tools to allow anyone to extract relevant 
        subsets. It compliments previously published curated dataset of synaptic genes SynGO [68], and both resources could be used jointly as we have cross-referenced the common
        genes. By mirroring the methods used it would be straightforward for any user to add in their own datasets for comparison.'),
-    
-    h1("References"),
-    
-    tags$ol(tags$li("Husi, H. et al. Proteomic analysis of NMDA receptor-adhesion protein signaling complexes. Nat. Neurosci. 3(7), 661-669 (2000)."), 
-            tags$li("Walikonis, R. S. et al. Identifcation of proteins in the postsynaptic density fraction by mass spectrometry. J. Neurosci. 20(11), 4069-4080 (2000)."),
-            tags$li("Peng, J. et al. Semiquantitative proteomic analysis of rat forebrain postsynaptic density fractions by mass spectrometry. J. Biol. Chem. 279(20), 21003-21011 (2004)"),
-            tags$li("Satoh, K. et al. Identification of activity-regulated proteins in the postsynaptic density fraction. Genes Cells 7(2), 187-197 (2002)."),
-            tags$li("Yoshimura, Y. et al. Molecular constituents of the postsynaptic density fraction revealed by proteomic analysis using multidimensional liquid chromatography-tandem mass 
+        
+        h1("References"),
+        
+        tags$ol(tags$li("Husi, H. et al. Proteomic analysis of NMDA receptor-adhesion protein signaling complexes. Nat. Neurosci. 3(7), 661-669 (2000)."), 
+                tags$li("Walikonis, R. S. et al. Identifcation of proteins in the postsynaptic density fraction by mass spectrometry. J. Neurosci. 20(11), 4069-4080 (2000)."),
+                tags$li("Peng, J. et al. Semiquantitative proteomic analysis of rat forebrain postsynaptic density fractions by mass spectrometry. J. Biol. Chem. 279(20), 21003-21011 (2004)"),
+                tags$li("Satoh, K. et al. Identification of activity-regulated proteins in the postsynaptic density fraction. Genes Cells 7(2), 187-197 (2002)."),
+                tags$li("Yoshimura, Y. et al. Molecular constituents of the postsynaptic density fraction revealed by proteomic analysis using multidimensional liquid chromatography-tandem mass 
                     spectrometry. J. Neurochem. 88(3), 759-768 (2004)."),
-            tags$li("Farr, C. D. et al. Proteomic analysis of native metabotropic glutamate receptor 5 protein complexes reveals novel molecular constituents. J.
+                tags$li("Farr, C. D. et al. Proteomic analysis of native metabotropic glutamate receptor 5 protein complexes reveals novel molecular constituents. J.
                     Neurochem. 91(2), 438-450 (2004)."),
-            tags$li("Jordan, B. A. et al. Identification and verifcation of novel rodent postsynaptic density proteins. Mol. Cell Proteom. 3(9), 857-871(2004)."),
-            tags$li("Li, K. W. et al. Proteomics analysis of rat brain postsynaptic density. Implications of the diverse protein functional groups for the integration of synaptic physiology.
+                tags$li("Jordan, B. A. et al. Identification and verifcation of novel rodent postsynaptic density proteins. Mol. Cell Proteom. 3(9), 857-871(2004)."),
+                tags$li("Li, K. W. et al. Proteomics analysis of rat brain postsynaptic density. Implications of the diverse protein functional groups for the integration of synaptic physiology.
                     J. Biol. Chem. 279(2), 987-1002 (2004)."),
-            tags$li("Trinidad, J. C. et al. Phosphorylation state of postsynaptic density proteins. J. Neurochem. 92(6), 1306-1316 (2005)."),
-            tags$li("Cheng, D. et al. Relative and absolute quantifcation of postsynaptic density proteome isolated from rat forebrain and cerebellum. Mol. Cell
+                tags$li("Trinidad, J. C. et al. Phosphorylation state of postsynaptic density proteins. J. Neurochem. 92(6), 1306-1316 (2005)."),
+                tags$li("Cheng, D. et al. Relative and absolute quantifcation of postsynaptic density proteome isolated from rat forebrain and cerebellum. Mol. Cell
                     Proteom. 5(6), 1158-1170 (2006)."),
-            tags$li("Collins, M. O. et al. Molecular characterization and comparison of the components and multiprotein complexes in the postsynaptic proteome. J. Neurochem. 
+                tags$li("Collins, M. O. et al. Molecular characterization and comparison of the components and multiprotein complexes in the postsynaptic proteome. J. Neurochem. 
                     97(Suppl 1), 16-23 (2006)."),
-            tags$li("Dosemeci, A. et al. Preparation of postsynaptic density fraction from hippocampal slices and proteomic analysis. Biochem. Biophys. Res. Commun. 339(2), 687-694 (2006)."),
-            tags$li("Dosemeci, A. et al. Composition of the synaptic PSD-95 complex. Mol. Cell Proteom. 6(10), 1749-1760 (2007)."),
-            tags$li("Trinidad, J. C. et al. Quantitative analysis of synaptic phosphorylation and protein expression. Mol. Cell Proteom. 7(4), 684-696 (2008)."),
-            tags$li("Selimi, F. et al. Proteomic studies of a single CNS synapse type: The parallel fiber/purkinje cell synapse. PLoS Biol. 7(4), e83 (2009)."),
-            tags$li("Fernandez, E. et al. Targeted tandem affinity purification of PSD-95 recovers core postsynaptic complexes and schizophrenia susceptibility proteins. 
+                tags$li("Dosemeci, A. et al. Preparation of postsynaptic density fraction from hippocampal slices and proteomic analysis. Biochem. Biophys. Res. Commun. 339(2), 687-694 (2006)."),
+                tags$li("Dosemeci, A. et al. Composition of the synaptic PSD-95 complex. Mol. Cell Proteom. 6(10), 1749-1760 (2007)."),
+                tags$li("Trinidad, J. C. et al. Quantitative analysis of synaptic phosphorylation and protein expression. Mol. Cell Proteom. 7(4), 684-696 (2008)."),
+                tags$li("Selimi, F. et al. Proteomic studies of a single CNS synapse type: The parallel fiber/purkinje cell synapse. PLoS Biol. 7(4), e83 (2009)."),
+                tags$li("Fernandez, E. et al. Targeted tandem affinity purification of PSD-95 recovers core postsynaptic complexes and schizophrenia susceptibility proteins. 
                     Mol. Syst. Biol. 5, 269 (2009)."),
-            tags$li("Bayes, A. et al. Characterization of the proteome, diseases and evolution of the human postsynaptic density. Nat. Neurosci. 14(1), 19-21 (2011)."),
-            tags$li("Bayes, A. et al. Comparative study of human and mouse postsynaptic proteomes fnds high compositional conservation and abundance differences for key synaptic proteins. 
+                tags$li("Bayes, A. et al. Characterization of the proteome, diseases and evolution of the human postsynaptic density. Nat. Neurosci. 14(1), 19-21 (2011)."),
+                tags$li("Bayes, A. et al. Comparative study of human and mouse postsynaptic proteomes fnds high compositional conservation and abundance differences for key synaptic proteins. 
                     PLoS ONE 7(10), e46683 (2012)."),
-            tags$li("Schwenk, J. et al. High-resolution proteomics unravel architecture and molecular diversity of native AMPA receptor complexes. Neuron 74(4), 621-633 (2012)."),
-            tags$li("Distler, U. et al. In-depth protein profiling of the postsynaptic density from mouse hippocampus using data-independent acquisition proteomics. 
+                tags$li("Schwenk, J. et al. High-resolution proteomics unravel architecture and molecular diversity of native AMPA receptor complexes. Neuron 74(4), 621-633 (2012)."),
+                tags$li("Distler, U. et al. In-depth protein profiling of the postsynaptic density from mouse hippocampus using data-independent acquisition proteomics. 
                     Proteomics 14(21-22), 2607-2613 (2014)."),
-            tags$li("Bayes, A. et al. Human post-mortem synapse proteome integrity screening for proteomic studies of postsynaptic complexes. Mol. Brain 7, 88 (2014)."),
-            tags$li("Seo, T. K. & Torne, J. L. Information criteria for comparing partition schemes. Syst. Biol. 67(4), 616-632 (2018)."),
-            tags$li("Focking, M. et al. Proteomic analysis of the postsynaptic density implicates synaptic function and energy pathways in bipolar disorder. Transl. Psychiatry 6(11), e959 
+                tags$li("Bayes, A. et al. Human post-mortem synapse proteome integrity screening for proteomic studies of postsynaptic complexes. Mol. Brain 7, 88 (2014)."),
+                tags$li("Seo, T. K. & Torne, J. L. Information criteria for comparing partition schemes. Syst. Biol. 67(4), 616-632 (2018)."),
+                tags$li("Focking, M. et al. Proteomic analysis of the postsynaptic density implicates synaptic function and energy pathways in bipolar disorder. Transl. Psychiatry 6(11), e959 
                     (2016)."),
-            tags$li("Li, J. et al. Long-term potentiation modulates synaptic phosphorylation networks and reshapes the structure of the postsynaptic interactome. Sci. Signal.
+                tags$li("Li, J. et al. Long-term potentiation modulates synaptic phosphorylation networks and reshapes the structure of the postsynaptic interactome. Sci. Signal.
                     9(440), 8 (2016)."),
-            tags$li("Fernandez, E. et al. Arc requires PSD95 for assembly into postsynaptic complexes involved with neural dysfunction and intelligence. Cell Rep. 21(3), 679-691 (2017)."),
-            tags$li("Roy, M. et al. Proteomic analysis of postsynaptic proteins in regions of the human neocortex. Nat. Neurosci. 21(1), 130-138 (2018)."),
-            tags$li("Li, J. et al. Spatiotemporal profle of postsynaptic interactomes integrates components of complex brain disorders. Nat. Neurosci. 20(8), 1150-1161 (2017)."),
-            tags$li("Roy, M. et al. Regional diversity in the postsynaptic proteome of the mouse brain. Proteomes 6, 3 (2018)."),
-            tags$li("Wilson, R. S. et al. Development of targeted mass spectrometry-based approaches for quantitation of proteins enriched in the postsynaptic density
+                tags$li("Fernandez, E. et al. Arc requires PSD95 for assembly into postsynaptic complexes involved with neural dysfunction and intelligence. Cell Rep. 21(3), 679-691 (2017)."),
+                tags$li("Roy, M. et al. Proteomic analysis of postsynaptic proteins in regions of the human neocortex. Nat. Neurosci. 21(1), 130-138 (2018)."),
+                tags$li("Li, J. et al. Spatiotemporal profle of postsynaptic interactomes integrates components of complex brain disorders. Nat. Neurosci. 20(8), 1150-1161 (2017)."),
+                tags$li("Roy, M. et al. Regional diversity in the postsynaptic proteome of the mouse brain. Proteomes 6, 3 (2018)."),
+                tags$li("Wilson, R. S. et al. Development of targeted mass spectrometry-based approaches for quantitation of proteins enriched in the postsynaptic density
                     (PSD). Proteomes 7, 2 (2019)."),
-            tags$li("Coughenour, H. D., Spaulding, R. S. & Tompson, C. M. The synaptic vesicle proteome: A comparative study in membrane protein identification. Proteomics 4(10),
+                tags$li("Coughenour, H. D., Spaulding, R. S. & Tompson, C. M. The synaptic vesicle proteome: A comparative study in membrane protein identification. Proteomics 4(10),
                     3141-3155 (2004)."),
-            tags$li("Blondeau, F. et al. Tandem MS analysis of brain clathrin-coated vesicles reveals their critical involvement in synaptic vesicle recycling. Proc. Natl. Acad. Sci.
+                tags$li("Blondeau, F. et al. Tandem MS analysis of brain clathrin-coated vesicles reveals their critical involvement in synaptic vesicle recycling. Proc. Natl. Acad. Sci.
                     U.S.A. 101(11), 3833-3838 (2004)."),
-            tags$li("Phillips, G. R. et al. Proteomic comparison of two fractions derived from the transsynaptic scafold. J. Neurosci. Res. 81(6), 762-775 (2005)."),
-            tags$li("Morciano, M. et al. Immunoisolation of two synaptic vesicle pools from synaptosomes: A proteomics analysis. J. Neurochem. 95(6), 1732-1745 (2005)."),
-            tags$li("Burre, J. et al. Analysis of the synaptic vesicle proteome using three gel-based protein separation techniques. Proteomics 6(23), 6250-6262 (2006)."),
-            tags$li("Takamori, S. et al. Molecular anatomy of a trafficking organelle. Cell 127(4), 831-846 (2006)."),
-            tags$li("Khanna, R., Zougman, A. & Stanley, E. F. A proteomic screen for presynaptic terminal N-type calcium channel (CaV2.2) binding partners. J. Biochem. Mol. 
+                tags$li("Phillips, G. R. et al. Proteomic comparison of two fractions derived from the transsynaptic scafold. J. Neurosci. Res. 81(6), 762-775 (2005)."),
+                tags$li("Morciano, M. et al. Immunoisolation of two synaptic vesicle pools from synaptosomes: A proteomics analysis. J. Neurochem. 95(6), 1732-1745 (2005)."),
+                tags$li("Burre, J. et al. Analysis of the synaptic vesicle proteome using three gel-based protein separation techniques. Proteomics 6(23), 6250-6262 (2006)."),
+                tags$li("Takamori, S. et al. Molecular anatomy of a trafficking organelle. Cell 127(4), 831-846 (2006)."),
+                tags$li("Khanna, R., Zougman, A. & Stanley, E. F. A proteomic screen for presynaptic terminal N-type calcium channel (CaV2.2) binding partners. J. Biochem. Mol. 
                     Biol. 40(3), 302-314 (2007)."),
-            tags$li("Morciano, M. et al. The proteome of the presynaptic active zone: From docked synaptic vesicles to adhesion molecules and maxichannels. J. 
+                tags$li("Morciano, M. et al. The proteome of the presynaptic active zone: From docked synaptic vesicles to adhesion molecules and maxichannels. J. 
                     Neurochem. 108(3), 662-675 (2009)."),
-            tags$li("Abul-Husn, N. S. et al. Systems approach to explore components and interactions in the presynapse. Proteomics 9(12), 3303-3315 (2009)."),
-            tags$li("Abul-Husn, N. S. et al. Chronic morphine alters the presynaptic protein profile: Identification of novel molecular targets using proteomics and network 
+                tags$li("Abul-Husn, N. S. et al. Systems approach to explore components and interactions in the presynapse. Proteomics 9(12), 3303-3315 (2009)."),
+                tags$li("Abul-Husn, N. S. et al. Chronic morphine alters the presynaptic protein profile: Identification of novel molecular targets using proteomics and network 
                     analysis. PLoS ONE 6(10), e25535 (2011)."),
-            tags$li("Gorini, G. et al. Dynamin-1 co-associates with native mouse brain BKCa channels: Proteomics analysis of synaptic protein complexes. FEBS Lett. 584(5), 845-851 (2010)."),
-            tags$li("Gronborg, M. et al. Quantitative comparison of glutamatergic and GABAergic synaptic vesicles unveils selectivity for few proteins including MAL2, a novel synaptic vesicle 
+                tags$li("Gorini, G. et al. Dynamin-1 co-associates with native mouse brain BKCa channels: Proteomics analysis of synaptic protein complexes. FEBS Lett. 584(5), 845-851 (2010)."),
+                tags$li("Gronborg, M. et al. Quantitative comparison of glutamatergic and GABAergic synaptic vesicles unveils selectivity for few proteins including MAL2, a novel synaptic vesicle 
                     protein. J. Neurosci. 30(1), 2-12 (2010)."),
-            tags$li("Boyken, J. et al. Molecular profling of synaptic vesicle docking sites reveals novel proteins but few diferences between glutamatergic and GABAergic synapses. 
+                tags$li("Boyken, J. et al. Molecular profling of synaptic vesicle docking sites reveals novel proteins but few diferences between glutamatergic and GABAergic synapses. 
                     Neuron 78(2), 285-297 (2013)."),
-            tags$li("Wilhelm, B. G. et al. Composition of isolated synaptic boutons reveals the amounts of vesicle trafficking proteins. Science 344(6187), 1023-1028 (2014)."),
-            tags$li("Brinkmalm, A. et al. Targeting synaptic pathology with a novel affinity mass spectrometry approach. Mol. Cell Proteom. 13(10), 2584-2592 (2014)."),
-            tags$li("Weingarten, J. et al. The proteome of the presynaptic active zone from mouse brain. Mol. Cell Neurosci. 59, 106-118 (2014)."),
-            tags$li("Kokotos, A. C. et al. Activity-dependent bulk endocytosis proteome reveals a key presynaptic role for the monomeric GTPase Rab11. Proc. Natl. Acad. Sci.
+                tags$li("Wilhelm, B. G. et al. Composition of isolated synaptic boutons reveals the amounts of vesicle trafficking proteins. Science 344(6187), 1023-1028 (2014)."),
+                tags$li("Brinkmalm, A. et al. Targeting synaptic pathology with a novel affinity mass spectrometry approach. Mol. Cell Proteom. 13(10), 2584-2592 (2014)."),
+                tags$li("Weingarten, J. et al. The proteome of the presynaptic active zone from mouse brain. Mol. Cell Neurosci. 59, 106-118 (2014)."),
+                tags$li("Kokotos, A. C. et al. Activity-dependent bulk endocytosis proteome reveals a key presynaptic role for the monomeric GTPase Rab11. Proc. Natl. Acad. Sci.
                     U.S.A. 115(43), E10177-e10186 (2018)."),
-            tags$li("Taoufq, Z. et al. Hidden proteome of synaptic vesicles in the mammalian brain. Proc. Natl. Acad. Sci. U.S.A. 117(52), 33586-33596 (2020)"),
-            tags$li("Filiou, M. D. et al. Profiling of mouse synaptosome proteome and phosphoproteome by IEF. Electrophoresis 31(8), 1294-1301 (2010)."),
-            tags$li("Dahlhaus, M. et al. The synaptic proteome during development and plasticity of the mouse visual cortex. Mol. Cell Proteom. 10(5),5413 (2011)."),
-            tags$li("Cohen, L. D. et al. Metabolic turnover of synaptic proteins: Kinetics, interdependencies and implications for synaptic maintenance. PLoS ONE 8(5), e63191 (2013)."),
-            tags$li("Biesemann, C. et al. Proteomic screening of glutamatergic mouse brain synaptosomes isolated by fuorescence activated sorting. Embo J. 33(2), 157-170 (2014)."),
-            tags$li("Chang, R. Y. et al. SWATH analysis of the synaptic proteome in Alzheimer's disease. Neurochem. Int. 87, 1-12 (2015)."),
-            tags$li("Liu, X. A. et al. New approach to capture and characterize synaptic proteome. Proc. Natl. Acad. Sci. U.S.A. 111(45), 16154-16159 (2014)."),
-            tags$li("Kohansal-Nodehi, M. et al. Analysis of protein phosphorylation in nerve terminal reveals extensive changes in active zone proteins upon exocytosis. Elife 5, 2 (2016)."),
-            tags$li("Gonzalez-Lozano, M. A. et al. Dynamics of the mouse brain cortical synaptic proteome during postnatal brain development. Sci. Rep. 6, 35456 (2016)."),
-            tags$li("Alfieri, A. et al. Synaptic interactome mining reveals p140Cap as a new hub for PSD proteins involved in psychiatric and neurological disorders. Front. Mol. 
+                tags$li("Taoufq, Z. et al. Hidden proteome of synaptic vesicles in the mammalian brain. Proc. Natl. Acad. Sci. U.S.A. 117(52), 33586-33596 (2020)"),
+                tags$li("Filiou, M. D. et al. Profiling of mouse synaptosome proteome and phosphoproteome by IEF. Electrophoresis 31(8), 1294-1301 (2010)."),
+                tags$li("Dahlhaus, M. et al. The synaptic proteome during development and plasticity of the mouse visual cortex. Mol. Cell Proteom. 10(5),5413 (2011)."),
+                tags$li("Cohen, L. D. et al. Metabolic turnover of synaptic proteins: Kinetics, interdependencies and implications for synaptic maintenance. PLoS ONE 8(5), e63191 (2013)."),
+                tags$li("Biesemann, C. et al. Proteomic screening of glutamatergic mouse brain synaptosomes isolated by fuorescence activated sorting. Embo J. 33(2), 157-170 (2014)."),
+                tags$li("Chang, R. Y. et al. SWATH analysis of the synaptic proteome in Alzheimer's disease. Neurochem. Int. 87, 1-12 (2015)."),
+                tags$li("Liu, X. A. et al. New approach to capture and characterize synaptic proteome. Proc. Natl. Acad. Sci. U.S.A. 111(45), 16154-16159 (2014)."),
+                tags$li("Kohansal-Nodehi, M. et al. Analysis of protein phosphorylation in nerve terminal reveals extensive changes in active zone proteins upon exocytosis. Elife 5, 2 (2016)."),
+                tags$li("Gonzalez-Lozano, M. A. et al. Dynamics of the mouse brain cortical synaptic proteome during postnatal brain development. Sci. Rep. 6, 35456 (2016)."),
+                tags$li("Alfieri, A. et al. Synaptic interactome mining reveals p140Cap as a new hub for PSD proteins involved in psychiatric and neurological disorders. Front. Mol. 
                     Neurosci. 10, 212 (2017)."),
-            tags$li("Heo, S. et al. Identification of long-lived synaptic proteins by proteomic analysis of synaptosome protein turnover. Proc. Natl. Acad. Sci. U.S.A. 115(16), 
+                tags$li("Heo, S. et al. Identification of long-lived synaptic proteins by proteomic analysis of synaptosome protein turnover. Proc. Natl. Acad. Sci. U.S.A. 115(16), 
                     E3827-e3836 (2018)."),
-            tags$li("Oughtred, R. et al. The BioGRID interaction database: 2019 update. Nucleic Acids Res. 47(D1), D529-541 (2019)."),
-            tags$li("Kerrien, S. et al. The IntAct molecular interaction database in 2012. Nucleic Acids Res. 40, 841-846 (2012)."),
-            tags$li("Xenarios, I. et al. DIP, the database of interacting proteins: A research tool for studying cellular networks of protein interactions. Nucleic Acids Res.
+                tags$li("Oughtred, R. et al. The BioGRID interaction database: 2019 update. Nucleic Acids Res. 47(D1), D529-541 (2019)."),
+                tags$li("Kerrien, S. et al. The IntAct molecular interaction database in 2012. Nucleic Acids Res. 40, 841-846 (2012)."),
+                tags$li("Xenarios, I. et al. DIP, the database of interacting proteins: A research tool for studying cellular networks of protein interactions. Nucleic Acids Res.
                     30(1), 303-305 (2002)."),
-            tags$li("Newman, M. E. Modularity and community structure in networks. Proc. Natl. Acad. Sci. U.S.A. 103(23), 8577-8582 (2006)."),
-            tags$li("McLean, C. et al. Improved functional enrichment analysis of biological networks using scalable modularity based clustering. J. Proteom. Bioinform. 9(1), 9-18 (2016)."),
-            tags$li("Han, J. D. et al. Evidence for dynamically organized modularity in the yeast protein-protein interaction network. Nature 430(6995), 88-93 (2004)."),
-            tags$li("Nepusz, T., Yu, H. & Paccanaro, A. Detecting overlapping protein complexes in protein-protein interaction networks. Nat. Methods 9(5), 471-472 (2012)."),
-            tags$li("Teschendorf, A. E. et al. Increased signaling entropy in cancer requires the scale-free property of protein interaction networks. Sci. Rep. 5, 9646 (2015)."),
-            tags$li("Menche, J. et al. Disease networks. Uncovering disease-disease relationships through the incomplete interactome. Science 347(6224), 1257601 (2015)."),
-            tags$li("Newman, M. E. & Clauset, A. Structure and inference in annotated networks. Nat. Commun. 7, 11863 (2016)."),
-            tags$li("Koopmans, F. et al. SynGO: An evidence-based, expert-curated knowledge base for the synapse. Neuron 103(2), 217-234.e4 (2019)."))
+                tags$li("Newman, M. E. Modularity and community structure in networks. Proc. Natl. Acad. Sci. U.S.A. 103(23), 8577-8582 (2006)."),
+                tags$li("McLean, C. et al. Improved functional enrichment analysis of biological networks using scalable modularity based clustering. J. Proteom. Bioinform. 9(1), 9-18 (2016)."),
+                tags$li("Han, J. D. et al. Evidence for dynamically organized modularity in the yeast protein-protein interaction network. Nature 430(6995), 88-93 (2004)."),
+                tags$li("Nepusz, T., Yu, H. & Paccanaro, A. Detecting overlapping protein complexes in protein-protein interaction networks. Nat. Methods 9(5), 471-472 (2012)."),
+                tags$li("Teschendorf, A. E. et al. Increased signaling entropy in cancer requires the scale-free property of protein interaction networks. Sci. Rep. 5, 9646 (2015)."),
+                tags$li("Menche, J. et al. Disease networks. Uncovering disease-disease relationships through the incomplete interactome. Science 347(6224), 1257601 (2015)."),
+                tags$li("Newman, M. E. & Clauset, A. Structure and inference in annotated networks. Nat. Commun. 7, 11863 (2016)."),
+                tags$li("Koopmans, F. et al. SynGO: An evidence-based, expert-curated knowledge base for the synapse. Neuron 103(2), 217-234.e4 (2019).")))
 ))
 
 server <- shinyServer(function(input, output) {
@@ -954,7 +1073,7 @@ server <- shinyServer(function(input, output) {
     )
     
     output$fig3png <- renderImage({
-        list(src = 'figures/fig3.png', height=600)}, deleteFile = FALSE
+        list(src = 'figures/fig3.png', height=570)}, deleteFile = FALSE
     )
     
     fig1a1b <- reactive({
@@ -1147,7 +1266,7 @@ server <- shinyServer(function(input, output) {
     
     fig2e <- reactive({
         data2e <- GenerateFig2e(input$LocalisationnoAll3, input$Diseases1)
-        ggplot(data2e, aes(x=log.qval, y=Disease.Pairs, colour=Localisation)) + geom_point(size=5) +
+        ggplot(data2e, aes(x=log.qval, y=reorder(Disease.Pairs, log.qval, input$order), colour=Localisation)) + geom_point(size=5) +
             xlab("-log10(q-value)") + ylab("Disease Pairs") + theme(axis.title=element_text(size=14, face="bold")) + 
             geom_vline(xintercept=-log10(input$qval), linetype=2) + xlim(NA, input$xlimit)
     })
@@ -1158,6 +1277,54 @@ server <- shinyServer(function(input, output) {
         plotOutput("fig2e", height = 80*length(input$Diseases1))
     })
     
+    getdata2f <- reactive({
+        data2f <- GenerateFig2f(input$LocalisationnoAll4, tolower(input$Cluster2), input$Diseases2)
+    })
+    
+    layout <- eventReactive({input$LocalisationnoAll4
+        input$Cluster2}, {
+        lay<-layoutByCluster(getdata2f()$graph,getdata2f()$mem.df,layout = layout_nicely)
+    })
+    
+    fig2f <- reactive({
+        data2f <- getdata2f()
+        gg <- data2f$graph
+        mem.df <- data2f$mem.df
+        
+        palette <- distinctColorPalette(max(as.numeric(mem.df$membership)))
+        lay<-layout()
+        if (input$Diseases2 == "None"){
+            vert.color = palette[as.numeric(mem.df$membership)]
+            leg.name = names(table(mem.df$membership))
+            leg.col = palette
+        }
+        else{
+            vert.color = c("red", "blue")[1+as.numeric(mem.df$disease)]
+            leg.name = names(table(mem.df$disease))
+            leg.col = c("red", "blue")
+        }
+        plot(gg,vertex.size=3,layout=lay,
+             vertex.label=NA,
+             vertex.color= vert.color,
+             edge.color='grey95')
+        legend('topright',legend=leg.name, col=leg.col, pch=19, horiz = FALSE, ncol = 2)
+    })
+    
+    output$fig2f <- renderPlot({fig2f()})
+    
+    output$diseaseTable <- renderDataTable({
+        if (input$Diseases2 != "None"){
+            mem.df <- getdata2f()$mem.df
+            pval.df <- GenerateTab2f(mem.df)
+            
+            datatable(pval.df, rownames = FALSE) %>%
+                formatStyle('p.value', target = 'row', backgroundColor = styleInterval(c(0.01, 0.05),
+                                                                                       c('lightgreen', "lightblue", "white")))
+        }
+        else{
+            datatable(data.frame("Disease" = "No disease selected"), rownames = FALSE) 
+        }
+    })
     
     
     datasetInput <- reactive({
@@ -1171,7 +1338,9 @@ server <- shinyServer(function(input, output) {
                "3c(m)" = getdata2c()$matrix,
                "3c(b)" = getdata2c()$bridge,
                "3d" = GenerateFig2d(input$LocalisationnoAll2),
-               "3e" = GenerateFig2e(input$LocalisationnoAll3, input$Diseases1)
+               "3e" = GenerateFig2e(input$LocalisationnoAll3, input$Diseases1),
+               "3f" = GenerateFig2f(input$LocalisationnoAll3, tolower(input$Cluster2), input$Diseases2)$mem.df,
+               "Table 3f" = GenerateTab2f(getdata2f()$mem.df)
         )
     })
     
