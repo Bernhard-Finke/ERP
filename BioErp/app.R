@@ -730,7 +730,7 @@ ui <- shinyUI(fluidPage(
        Some differences exist between the figures in the paper and the executable ones found here. One reason for
        this is that the graph visualisation platform 'Gephi' was used to create many of the figures in the original
        paper, while this implementation uses only R. For figures 3c and 3f, the original clustering algorithm used was
-       Spectral clustering, which is not available in this executable paper. In figures 3c and 3d, different centrality measures
+       Spectral clustering, which is not available in this executable paper. In figure 3d, different centrality measures
        are given. In figure 3c, the highlighted core genes were hand-picked in the original paper, while here they represent genes found
        in almost all of the papers. In figure 3e, postsynaptic consensus genes are not available. Figure 3f does not
        allow for annotating GO biological processes. Additionally, the authors of the original paper deemed figure 3a to
@@ -1096,7 +1096,7 @@ server <- shinyServer(function(input, output) {
                 fit <- geom_smooth(method='lm', formula= y~x, fullrange = TRUE, se = FALSE)
                 error <- round(summary(lm(Year~TotalGenes, data=data1g))$r.squared, 2)
                 ggplot(data1g, aes(x=Year, y=TotalGenes)) + geom_point() + fit + xlab("years") + 
-                    ylab("total") + geom_text(label = paste("Standard error:", error), x = 2015, y = 150, size = 5)
+                    ylab("total") + geom_text(label = paste("R-squared:", error), x = 2015, y = 150, size = 5)
             } 
             else if (input$fitType == "Logistic"){
                 check <- 0
