@@ -1,8 +1,3 @@
-# installs standard R libraries
-#list.of.packages <- c("devtools", "shiny", "dplyr", "tidyr", "ggplot2", "RSQLite", "UpSetR" , "igraph", "ggrepel", "corrplot", "DT", "randomcoloR")
-#new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-#if(length(new.packages)) install.packages(new.packages)
-
 source('AnNetFuncs.R')
 
 
@@ -71,26 +66,10 @@ SubsetNumPapers <- function(loc, reg, met, numpap){
 }
 
 
-
 # generate empty plot when selection contains no known proteins
 text <- "No proteins in current selection"
 EmptyPlot <- ggplot() + annotate("text", x = 4, y = 25, size=8, label = text) +  theme_void()
 
-
-# titles for figures
-title1a1b <- "Fig 1a and 1b: Discovery rate of new proteins across all studies, \n where the number of proteins is
-plotted against the frequency of identification"
-title1c1d <- "Fig 1c and 1d:  Contribution of each study \n to the total number of genes in each category"
-title1e1f <- "Fig 1e and 1f: Accumulation of new genes (black) \n compared to the total datasets (blue) over years"
-title1g <- "Fig 1g: Non-linear fit predicting the total size of consensus genes"
-title1h <- "Fig 1h: Overlap of three synaptic datasets: presynaptic, \n postsynaptic and synaptosomal. Bars correspond
-to the number of unique genes in each 
-\n compartment and their intersections"
-title2c <- "Fig 3c: Bridging proteins, estimated using a given clustering \n algorithm are plotted against a given centrality measure"
-title2d <- "Fig 3d:  Correlation plot for diferent centrality measures \n estimated for selected network"
-title2e <- "Fig 3e: Disease-disease relationship for selected interactome(s). Where significance q-values < selected, is delineated by the dashed line."
-title2f <- "Fig 3f: Colocalization of chosen disease on selected network"
-titletab2f <- "Table 3f: Overrepresentation analysis for chosen disease for each cluster.\n p-values < 0.01 highlighted in green, p-values < 0.05 highlighted in blue."
 
 GenerateFig1a1b <- function(loc, reg, met){
     df <- GetNumPapersSubset(loc, reg, met)
@@ -127,7 +106,6 @@ GenerateFig1e1f <- function(loc, reg, met, numpap){
     }
     return(df)
 }
-
 
 GenerateFig1h <- function(reg, met, numpap){
     df <- SubsetNumPapers("All", reg, met, numpap) %>% select(HumanEntrez, Localisation)
@@ -172,7 +150,6 @@ GenerateFig2c <- function(loc, clust){
     return(retList)
 }
 
-
 GenerateFig2d <- function(loc){
     gg <- get(paste(loc, "cluster", sep="_"))
     num_rows <- length(as.numeric(igraph::get.vertex.attribute(gg,"sdSP",V(gg))))
@@ -187,16 +164,6 @@ GenerateFig2d <- function(loc){
     cor_mat <- cor(centrality_df, use="complete.obs")
     
     return(cor_mat)
-}
-
-MapIDtoDisease <- function(id){
-    ids <- c("DOID:10652", "DOID:3312", "DOID:12849", "DOID:5419",
-             "DOID:0060041", "DOID:1826", "DOID:1059", "DOID:10763",
-             "DOID:12858", "DOID:14330", "DOID:9255", "DOID:2377")
-    dis <- c("AD", "BD", "AUT", "SC", "ASD", "Epi", "ID", "HTN",
-             "HD", "PD", "FTD", "MS")
-    indx <- match(c(id), ids)
-    return(dis[indx])
 }
 
 GenerateFig2e <- function(loc, dis){
@@ -214,6 +181,7 @@ GenerateFig2e <- function(loc, dis){
         disease_table <- rbind(disease_table, syn_table)
     }
     colnames(disease_table)[3] <- "HDO.ID2"
+    print(disease_table %>% filter(HDO.ID == HDO.ID2))
     disease_table <- disease_table %>% filter(HDO.ID != HDO.ID2)
     for (i in 1:length(disease_table$HDO.ID)){
         disease_table$HDO.Name <- MapIDtoDisease(as.character(disease_table$HDO.ID))
@@ -226,7 +194,6 @@ GenerateFig2e <- function(loc, dis){
     
 }
 
-
 GenerateFig2f <- function(loc, clust, dis){
     gg <- get(paste(loc, "cluster", sep="_"))
     if (dis == "None"){
@@ -238,7 +205,6 @@ GenerateFig2f <- function(loc, clust, dis){
     }
     return(list("graph" = gg, "mem.df" = mem.df))
 }
-
 
 GenerateTab2f <- function(mem.df){
     if ("disease" %in% colnames(mem.df)){
@@ -259,12 +225,21 @@ GenerateTab2f <- function(mem.df){
     return(pval.df)
 }
 
-
 locShorttoLong <- function(loc){
     return(switch(loc,
-           "post" = "Postsynaptic",
-           "pre" = "Presynaptic",
-           "syn" = "Synaptosome"))
+                  "post" = "Postsynaptic",
+                  "pre" = "Presynaptic",
+                  "syn" = "Synaptosome"))
+}
+
+MapIDtoDisease <- function(id){
+    ids <- c("DOID:10652", "DOID:3312", "DOID:12849", "DOID:5419",
+             "DOID:0060041", "DOID:1826", "DOID:1059", "DOID:10763",
+             "DOID:12858", "DOID:14330", "DOID:9255", "DOID:2377")
+    dis <- c("AD", "BD", "AUT", "SC", "ASD", "Epi", "ID", "HTN",
+             "HD", "PD", "FTD", "MS")
+    indx <- match(c(id), ids)
+    return(dis[indx])
 }
 
 selectClustering <- function(id, x){
@@ -448,7 +423,7 @@ ui <- shinyUI(fluidPage(
             ),
             
             mainPanel(
-                h4(title1a1b),
+                h4("Fig 1a and 1b: Discovery rate of new proteins across all studies, \n where the number of proteins is plotted against the frequency of identification"),
                 # fig1a1b goes here
                 plotOutput("fig1a1b")
             )
@@ -500,7 +475,7 @@ ui <- shinyUI(fluidPage(
             ),
             
             mainPanel(
-                h4(title1c1d),
+                h4("Fig 1c and 1d:  Contribution of each study \n to the total number of genes in each category"),
                 # fig1c1d goes here
                 plotOutput("fig1c1d")
             )
@@ -552,7 +527,7 @@ ui <- shinyUI(fluidPage(
             ),
             
             mainPanel(
-                h4(title1e1f),
+                h4("Fig 1e and 1f: Accumulation of new genes (black) \n compared to the total datasets (blue) over years"),
                 # fig1e1f goes here
                 plotOutput("fig1e1f")
             )
@@ -613,7 +588,7 @@ ui <- shinyUI(fluidPage(
             ),
             
             mainPanel(
-                h4(title1g),
+                h4("Fig 1g: Non-linear fit predicting the total size of consensus genes"),
                 # fig1g goes here
                 plotOutput("fig1g")
             )
@@ -656,7 +631,7 @@ ui <- shinyUI(fluidPage(
             ),
             
             mainPanel(
-                h4(title1h),
+                h4("Fig 1h: Overlap of three synaptic datasets: presynaptic, \n postsynaptic and synaptosomal. Bars correspond to the number of unique genes in each  \n compartment and their intersections"),
                 # fig1h goes here
                 plotOutput("fig1h")
             )
@@ -793,8 +768,8 @@ ui <- shinyUI(fluidPage(
             ),
             
             mainPanel(
-                h4(title2c),
-                plotOutput("fig2c", width = 800, height = 600)
+                h4("Fig 3c: Bridging proteins, estimated using a given clustering \n algorithm are plotted against a given centrality measure"),
+                plotOutput("fig2c", width = 600, height = 600)
             )
         ),
         
@@ -806,7 +781,7 @@ ui <- shinyUI(fluidPage(
             ),
             
             mainPanel(
-                h4(title2d),
+                h4("Fig 3d:  Correlation plot for diferent centrality measures \n estimated for selected network"),
                 plotOutput("fig2d")
             )
         ),
@@ -831,7 +806,7 @@ ui <- shinyUI(fluidPage(
                     inputId = "xlimit",
                     label = "Upper x limit",
                     value = 60,
-                    min = 10
+                    min = 1
                 ),
                 # selector for q-value threshold
                 numericInput(
@@ -852,7 +827,7 @@ ui <- shinyUI(fluidPage(
             ),
             
             mainPanel(
-                h4(title2e),
+                h4("Fig 3e: Disease-disease relationship for selected interactome(s). Where significance q-values < selected, is delineated by the dashed line."),
                 uiOutput("fig2e.ui", height = 1000)
             )
         ),
@@ -876,13 +851,13 @@ ui <- shinyUI(fluidPage(
             ),
             
             mainPanel(
-                h4(title2f),
+                h4("Fig 3f: Colocalization of chosen disease on selected network"),
                 plotOutput('fig2f', width=600, height=600)
             )
         ),
         
         fluidRow(
-            h4(titletab2f, align='center'),
+            h4("Table 3f: Overrepresentation analysis for chosen disease for each cluster.\n p-values < 0.01 highlighted in green, p-values < 0.05 highlighted in blue.", align='center'),
             column(12,
                    dataTableOutput('diseaseTable')
             )
@@ -1135,7 +1110,7 @@ server <- shinyServer(function(input, output) {
                     }
                 }
                 if (check == 1){
-                    text <- "Only one paper in current selection: \n no logistic regression can be fitted"
+                    text <- "Only one year in current selection: \n no logistic regression can be fitted"
                     ggplot() + annotate("text", x = 4, y = 25, size=8, label = text) +  theme_void()
                 }
                 else {
@@ -1186,17 +1161,14 @@ server <- shinyServer(function(input, output) {
         if (exists("data2c")){
             rm(data2c)
         }
-        if (exists("conmat")){
-            rm(conmat)
-        }
         data2c <- getdata2c()
         print("3c calculated")
         gg <- data2c$graph
-        conmat <- data2c$matrix
         bm <- data2c$bridge
-        if (input$LocalisationnoAll1 == "post"){maxPapers <- 29}
-        else if (input$LocalisationnoAll1 == "pre"){maxPapers <- 18}
-        else {maxPapers <- 11}
+        maxPapers <- switch(input$LocalisationnoAll1,
+                            "post" = 29,
+                            "pre" = 18,
+                            "syn" = 11)
         minPapers <- maxPapers - as.numeric(input$vips)
         VIP_candidates <- GetNumPapersSubset(locShorttoLong(input$LocalisationnoAll1), "All", "All") %>% select(HumanEntrez, NumPapers) %>%
             unique() %>% filter(NumPapers >= minPapers)
@@ -1205,7 +1177,7 @@ server <- shinyServer(function(input, output) {
         group <- ifelse(is.na(indx), 0,1)
         MainDivSize <- 0.8
         Xlab <- input$Centrality1
-        Ylab <- "Bridgeness"
+        Ylab <- "Bridgeness (B)"
         X <- as.numeric(igraph::get.vertex.attribute(gg,centralityInput(),V(gg)))
         X <- scale(X)
         Y <- as.numeric(as.vector(bm[,dim(bm)[2]]))
