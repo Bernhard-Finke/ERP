@@ -181,7 +181,6 @@ GenerateFig2e <- function(loc, dis){
         disease_table <- rbind(disease_table, syn_table)
     }
     colnames(disease_table)[3] <- "HDO.ID2"
-    print(disease_table %>% filter(HDO.ID == HDO.ID2))
     disease_table <- disease_table %>% filter(HDO.ID != HDO.ID2)
     for (i in 1:length(disease_table$HDO.ID)){
         disease_table$HDO.Name <- MapIDtoDisease(as.character(disease_table$HDO.ID))
