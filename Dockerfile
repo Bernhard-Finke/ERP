@@ -9,6 +9,7 @@ RUN install2.r -e shiny \
  ggrepel \
  corrplot \
  DT \
- randomcoloR\
+ randomcoloR
+
 
 ADD ./BioErp /srv/code
