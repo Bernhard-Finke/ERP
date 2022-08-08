@@ -1,3 +1,3 @@
 FROM dukegcb/openshift-shiny-verse:4.1.2
-RUN install2.r -e shiny dplyr tidyr ggplot2 RSQLite ggdag UpSetR igraph ggrepel corrplot DT randomcoloR
+RUN R -e "install.packages(c('shiny','dplyr','tidyr','ggplot2','RSQLite','UpSetR','igraph','ggrepel','corrplot','DT','randomcoloR'), dependencies = T)"
 ADD ./BioErp /srv/code
