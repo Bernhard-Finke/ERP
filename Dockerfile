@@ -10,4 +10,5 @@ RUN install2.r -e shiny \
  corrplot \
  DT \
  randomcoloR\
+
 ADD ./BioErp /srv/code
