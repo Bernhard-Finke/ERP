@@ -1,8 +1,9 @@
-Creator "igraph version 1.3.1 Tue Jun 21 16:41:22 2022"
+Creator "igraph version 1.3.1 Sat Aug 20 18:16:56 2022"
 Version 1
 graph
 [
   directed 0
+  leiden 0.480158507589379
   node
   [
     id 0
@@ -32,6 +33,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "2"
+    leiden "1"
   ]
   node
   [
@@ -62,6 +64,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "2"
+    leiden "1"
   ]
   node
   [
@@ -92,6 +95,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "2"
+    leiden "1"
   ]
   node
   [
@@ -122,6 +126,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "2"
+    leiden "1"
   ]
   node
   [
@@ -152,6 +157,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "2"
+    leiden "1"
   ]
   node
   [
@@ -182,6 +188,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "83"
+    leiden "5"
   ]
   node
   [
@@ -212,6 +219,7 @@ graph
     sgG1 "3"
     sgG2 "42"
     sgG5 "21"
+    leiden "1"
   ]
   node
   [
@@ -242,6 +250,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "40"
+    leiden "1"
   ]
   node
   [
@@ -272,6 +281,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -302,6 +312,7 @@ graph
     sgG1 "26"
     sgG2 "10"
     sgG5 "2"
+    leiden "1"
   ]
   node
   [
@@ -332,6 +343,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "2"
+    leiden "1"
   ]
   node
   [
@@ -362,6 +374,7 @@ graph
     sgG1 "17"
     sgG2 "42"
     sgG5 "42"
+    leiden "4"
   ]
   node
   [
@@ -392,6 +405,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -422,6 +436,7 @@ graph
     sgG1 "3"
     sgG2 "9"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -452,6 +467,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -482,6 +498,7 @@ graph
     sgG1 "4"
     sgG2 "47"
     sgG5 "30"
+    leiden "10"
   ]
   node
   [
@@ -512,6 +529,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -542,6 +560,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "8"
   ]
   node
   [
@@ -572,6 +591,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "4"
   ]
   node
   [
@@ -602,6 +622,7 @@ graph
     sgG1 "4"
     sgG2 "42"
     sgG5 "33"
+    leiden "10"
   ]
   node
   [
@@ -632,6 +653,7 @@ graph
     sgG1 "4"
     sgG2 "42"
     sgG5 "33"
+    leiden "1"
   ]
   node
   [
@@ -662,6 +684,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "33"
+    leiden "1"
   ]
   node
   [
@@ -692,6 +715,7 @@ graph
     sgG1 "4"
     sgG2 "42"
     sgG5 "33"
+    leiden "10"
   ]
   node
   [
@@ -722,6 +746,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "38"
+    leiden "6"
   ]
   node
   [
@@ -752,6 +777,7 @@ graph
     sgG1 "4"
     sgG2 "42"
     sgG5 "33"
+    leiden "10"
   ]
   node
   [
@@ -782,6 +808,7 @@ graph
     sgG1 "4"
     sgG2 "42"
     sgG5 "33"
+    leiden "10"
   ]
   node
   [
@@ -812,6 +839,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -842,6 +870,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "18"
+    leiden "4"
   ]
   node
   [
@@ -872,6 +901,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -902,6 +932,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "29"
+    leiden "9"
   ]
   node
   [
@@ -932,6 +963,7 @@ graph
     sgG1 "3"
     sgG2 "42"
     sgG5 "36"
+    leiden "1"
   ]
   node
   [
@@ -962,6 +994,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "50"
+    leiden "3"
   ]
   node
   [
@@ -992,6 +1025,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "50"
+    leiden "3"
   ]
   node
   [
@@ -1022,6 +1056,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -1052,6 +1087,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -1082,6 +1118,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "2"
+    leiden "1"
   ]
   node
   [
@@ -1112,6 +1149,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "93"
+    leiden "1"
   ]
   node
   [
@@ -1142,6 +1180,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -1172,6 +1211,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "1"
+    leiden "10"
   ]
   node
   [
@@ -1202,6 +1242,7 @@ graph
     sgG1 "2"
     sgG2 "44"
     sgG5 "59"
+    leiden "14"
   ]
   node
   [
@@ -1232,6 +1273,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "2"
   ]
   node
   [
@@ -1262,6 +1304,7 @@ graph
     sgG1 "2"
     sgG2 "12"
     sgG5 "66"
+    leiden "14"
   ]
   node
   [
@@ -1292,6 +1335,7 @@ graph
     sgG1 "2"
     sgG2 "44"
     sgG5 "59"
+    leiden "14"
   ]
   node
   [
@@ -1322,6 +1366,7 @@ graph
     sgG1 "13"
     sgG2 "2"
     sgG5 "17"
+    leiden "8"
   ]
   node
   [
@@ -1352,6 +1397,7 @@ graph
     sgG1 "1"
     sgG2 "47"
     sgG5 "66"
+    leiden "9"
   ]
   node
   [
@@ -1382,6 +1428,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -1412,6 +1459,7 @@ graph
     sgG1 "3"
     sgG2 "42"
     sgG5 "68"
+    leiden "1"
   ]
   node
   [
@@ -1442,6 +1490,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "84"
+    leiden "1"
   ]
   node
   [
@@ -1472,6 +1521,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -1502,6 +1552,7 @@ graph
     sgG1 "17"
     sgG2 "25"
     sgG5 "13"
+    leiden "8"
   ]
   node
   [
@@ -1532,6 +1583,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "72"
+    leiden "1"
   ]
   node
   [
@@ -1562,6 +1614,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "29"
+    leiden "6"
   ]
   node
   [
@@ -1592,6 +1645,7 @@ graph
     sgG1 "13"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -1622,6 +1676,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -1652,6 +1707,7 @@ graph
     sgG1 "3"
     sgG2 "12"
     sgG5 "38"
+    leiden "11"
   ]
   node
   [
@@ -1682,6 +1738,7 @@ graph
     sgG1 "26"
     sgG2 "10"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -1712,6 +1769,7 @@ graph
     sgG1 "26"
     sgG2 "10"
     sgG5 "71"
+    leiden "1"
   ]
   node
   [
@@ -1742,6 +1800,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -1772,6 +1831,7 @@ graph
     sgG1 "26"
     sgG2 "22"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -1802,6 +1862,7 @@ graph
     sgG1 "26"
     sgG2 "10"
     sgG5 "25"
+    leiden "1"
   ]
   node
   [
@@ -1832,6 +1893,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "44"
+    leiden "1"
   ]
   node
   [
@@ -1862,6 +1924,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -1892,6 +1955,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "18"
+    leiden "1"
   ]
   node
   [
@@ -1922,6 +1986,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "2"
+    leiden "1"
   ]
   node
   [
@@ -1952,6 +2017,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -1982,6 +2048,7 @@ graph
     sgG1 "3"
     sgG2 "12"
     sgG5 "38"
+    leiden "11"
   ]
   node
   [
@@ -2012,6 +2079,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -2042,6 +2110,7 @@ graph
     sgG1 "3"
     sgG2 "12"
     sgG5 "38"
+    leiden "2"
   ]
   node
   [
@@ -2072,6 +2141,7 @@ graph
     sgG1 "7"
     sgG2 "30"
     sgG5 "5"
+    leiden "4"
   ]
   node
   [
@@ -2102,6 +2172,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "16"
+    leiden "14"
   ]
   node
   [
@@ -2132,6 +2203,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "39"
+    leiden "10"
   ]
   node
   [
@@ -2162,6 +2234,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -2192,6 +2265,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "9"
   ]
   node
   [
@@ -2222,6 +2296,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "8"
   ]
   node
   [
@@ -2252,6 +2327,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -2282,6 +2358,7 @@ graph
     sgG1 "16"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -2312,6 +2389,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -2342,6 +2420,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -2372,6 +2451,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -2402,6 +2482,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -2432,6 +2513,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "10"
   ]
   node
   [
@@ -2462,6 +2544,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -2492,6 +2575,7 @@ graph
     sgG1 "17"
     sgG2 "42"
     sgG5 "28"
+    leiden "8"
   ]
   node
   [
@@ -2522,6 +2606,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "8"
   ]
   node
   [
@@ -2552,6 +2637,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "77"
+    leiden "4"
   ]
   node
   [
@@ -2582,6 +2668,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -2612,6 +2699,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -2642,6 +2730,7 @@ graph
     sgG1 "26"
     sgG2 "17"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -2672,6 +2761,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -2702,6 +2792,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -2732,6 +2823,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "67"
+    leiden "10"
   ]
   node
   [
@@ -2762,6 +2854,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -2792,6 +2885,7 @@ graph
     sgG1 "1"
     sgG2 "10"
     sgG5 "71"
+    leiden "13"
   ]
   node
   [
@@ -2822,6 +2916,7 @@ graph
     sgG1 "26"
     sgG2 "7"
     sgG5 "90"
+    leiden "3"
   ]
   node
   [
@@ -2852,6 +2947,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "49"
+    leiden "1"
   ]
   node
   [
@@ -2882,6 +2978,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "49"
+    leiden "1"
   ]
   node
   [
@@ -2912,6 +3009,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -2942,6 +3040,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "8"
+    leiden "1"
   ]
   node
   [
@@ -2972,6 +3071,7 @@ graph
     sgG1 "26"
     sgG2 "3"
     sgG5 "16"
+    leiden "3"
   ]
   node
   [
@@ -3002,6 +3102,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "56"
+    leiden "14"
   ]
   node
   [
@@ -3032,6 +3133,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "16"
+    leiden "3"
   ]
   node
   [
@@ -3062,6 +3164,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "76"
+    leiden "5"
   ]
   node
   [
@@ -3092,6 +3195,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "74"
+    leiden "5"
   ]
   node
   [
@@ -3122,6 +3226,7 @@ graph
     sgG1 "26"
     sgG2 "32"
     sgG5 "2"
+    leiden "1"
   ]
   node
   [
@@ -3152,6 +3257,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "71"
+    leiden "10"
   ]
   node
   [
@@ -3182,6 +3288,7 @@ graph
     sgG1 "3"
     sgG2 "3"
     sgG5 "29"
+    leiden "9"
   ]
   node
   [
@@ -3212,6 +3319,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "17"
+    leiden "2"
   ]
   node
   [
@@ -3242,6 +3350,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -3272,6 +3381,7 @@ graph
     sgG1 "17"
     sgG2 "31"
     sgG5 "79"
+    leiden "8"
   ]
   node
   [
@@ -3302,6 +3412,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "49"
+    leiden "10"
   ]
   node
   [
@@ -3332,6 +3443,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "21"
+    leiden "1"
   ]
   node
   [
@@ -3362,6 +3474,7 @@ graph
     sgG1 "17"
     sgG2 "42"
     sgG5 "21"
+    leiden "11"
   ]
   node
   [
@@ -3392,6 +3505,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "21"
+    leiden "1"
   ]
   node
   [
@@ -3422,6 +3536,7 @@ graph
     sgG1 "1"
     sgG2 "3"
     sgG5 "1"
+    leiden "3"
   ]
   node
   [
@@ -3452,6 +3567,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -3482,6 +3598,7 @@ graph
     sgG1 "3"
     sgG2 "44"
     sgG5 "36"
+    leiden "2"
   ]
   node
   [
@@ -3512,6 +3629,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "21"
+    leiden "1"
   ]
   node
   [
@@ -3542,6 +3660,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "50"
+    leiden "10"
   ]
   node
   [
@@ -3572,6 +3691,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "49"
+    leiden "10"
   ]
   node
   [
@@ -3602,6 +3722,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "49"
+    leiden "10"
   ]
   node
   [
@@ -3632,6 +3753,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "18"
+    leiden "1"
   ]
   node
   [
@@ -3662,6 +3784,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "49"
+    leiden "1"
   ]
   node
   [
@@ -3692,6 +3815,7 @@ graph
     sgG1 "17"
     sgG2 "48"
     sgG5 "88"
+    leiden "8"
   ]
   node
   [
@@ -3722,6 +3846,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "88"
+    leiden "1"
   ]
   node
   [
@@ -3752,6 +3877,7 @@ graph
     sgG1 "27"
     sgG2 "19"
     sgG5 "20"
+    leiden "11"
   ]
   node
   [
@@ -3782,6 +3908,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -3812,6 +3939,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -3842,6 +3970,7 @@ graph
     sgG1 "1"
     sgG2 "10"
     sgG5 "71"
+    leiden "7"
   ]
   node
   [
@@ -3872,6 +4001,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -3902,6 +4032,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "89"
+    leiden "8"
   ]
   node
   [
@@ -3932,6 +4063,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -3962,6 +4094,7 @@ graph
     sgG1 "1"
     sgG2 "3"
     sgG5 "16"
+    leiden "3"
   ]
   node
   [
@@ -3992,6 +4125,7 @@ graph
     sgG1 "1"
     sgG2 "3"
     sgG5 "16"
+    leiden "3"
   ]
   node
   [
@@ -4022,6 +4156,7 @@ graph
     sgG1 "1"
     sgG2 "3"
     sgG5 "16"
+    leiden "3"
   ]
   node
   [
@@ -4052,6 +4187,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -4082,6 +4218,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -4112,6 +4249,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "2"
   ]
   node
   [
@@ -4142,6 +4280,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -4172,6 +4311,7 @@ graph
     sgG1 "26"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -4202,6 +4342,7 @@ graph
     sgG1 "10"
     sgG2 "40"
     sgG5 "77"
+    leiden "4"
   ]
   node
   [
@@ -4232,6 +4373,7 @@ graph
     sgG1 "29"
     sgG2 "42"
     sgG5 "43"
+    leiden "8"
   ]
   node
   [
@@ -4262,6 +4404,7 @@ graph
     sgG1 "26"
     sgG2 "36"
     sgG5 "65"
+    leiden "1"
   ]
   node
   [
@@ -4292,6 +4435,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -4322,6 +4466,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -4352,6 +4497,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "5"
   ]
   node
   [
@@ -4382,6 +4528,7 @@ graph
     sgG1 "28"
     sgG2 "9"
     sgG5 "12"
+    leiden "5"
   ]
   node
   [
@@ -4412,6 +4559,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -4442,6 +4590,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -4472,6 +4621,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "36"
+    leiden "2"
   ]
   node
   [
@@ -4502,6 +4652,7 @@ graph
     sgG1 "4"
     sgG2 "10"
     sgG5 "90"
+    leiden "6"
   ]
   node
   [
@@ -4532,6 +4683,7 @@ graph
     sgG1 "4"
     sgG2 "10"
     sgG5 "90"
+    leiden "6"
   ]
   node
   [
@@ -4562,6 +4714,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "69"
+    leiden "8"
   ]
   node
   [
@@ -4592,6 +4745,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -4622,6 +4776,7 @@ graph
     sgG1 "26"
     sgG2 "9"
     sgG5 "71"
+    leiden "1"
   ]
   node
   [
@@ -4652,6 +4807,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "1"
   ]
   node
   [
@@ -4682,6 +4838,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -4712,6 +4869,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "18"
+    leiden "1"
   ]
   node
   [
@@ -4742,6 +4900,7 @@ graph
     sgG1 "26"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -4772,6 +4931,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -4802,6 +4962,7 @@ graph
     sgG1 "17"
     sgG2 "48"
     sgG5 "67"
+    leiden "3"
   ]
   node
   [
@@ -4832,6 +4993,7 @@ graph
     sgG1 "17"
     sgG2 "48"
     sgG5 "67"
+    leiden "3"
   ]
   node
   [
@@ -4862,6 +5024,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "24"
+    leiden "13"
   ]
   node
   [
@@ -4892,6 +5055,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -4922,6 +5086,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -4952,6 +5117,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -4982,6 +5148,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -5012,6 +5179,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -5042,6 +5210,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -5072,6 +5241,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -5102,6 +5272,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -5132,6 +5303,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -5162,6 +5334,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -5192,6 +5365,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -5222,6 +5396,7 @@ graph
     sgG1 "1"
     sgG2 "12"
     sgG5 "23"
+    leiden "2"
   ]
   node
   [
@@ -5252,6 +5427,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "2"
   ]
   node
   [
@@ -5282,6 +5458,7 @@ graph
     sgG1 "26"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -5312,6 +5489,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "76"
+    leiden "2"
   ]
   node
   [
@@ -5342,6 +5520,7 @@ graph
     sgG1 "25"
     sgG2 "46"
     sgG5 "9"
+    leiden "12"
   ]
   node
   [
@@ -5372,6 +5551,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "56"
+    leiden "3"
   ]
   node
   [
@@ -5402,6 +5582,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -5432,6 +5613,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "9"
   ]
   node
   [
@@ -5462,6 +5644,7 @@ graph
     sgG1 "1"
     sgG2 "8"
     sgG5 "16"
+    leiden "9"
   ]
   node
   [
@@ -5492,6 +5675,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "66"
+    leiden "9"
   ]
   node
   [
@@ -5522,6 +5706,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "50"
+    leiden "8"
   ]
   node
   [
@@ -5552,6 +5737,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "73"
+    leiden "2"
   ]
   node
   [
@@ -5582,6 +5768,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "56"
+    leiden "6"
   ]
   node
   [
@@ -5612,6 +5799,7 @@ graph
     sgG1 "22"
     sgG2 "22"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -5642,6 +5830,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "56"
+    leiden "3"
   ]
   node
   [
@@ -5672,6 +5861,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "67"
+    leiden "10"
   ]
   node
   [
@@ -5702,6 +5892,7 @@ graph
     sgG1 "17"
     sgG2 "44"
     sgG5 "56"
+    leiden "8"
   ]
   node
   [
@@ -5732,6 +5923,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -5762,6 +5954,7 @@ graph
     sgG1 "3"
     sgG2 "44"
     sgG5 "24"
+    leiden "14"
   ]
   node
   [
@@ -5792,6 +5985,7 @@ graph
     sgG1 "3"
     sgG2 "42"
     sgG5 "74"
+    leiden "2"
   ]
   node
   [
@@ -5822,6 +6016,7 @@ graph
     sgG1 "2"
     sgG2 "44"
     sgG5 "86"
+    leiden "14"
   ]
   node
   [
@@ -5852,6 +6047,7 @@ graph
     sgG1 "4"
     sgG2 "42"
     sgG5 "39"
+    leiden "10"
   ]
   node
   [
@@ -5882,6 +6078,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "17"
+    leiden "13"
   ]
   node
   [
@@ -5912,6 +6109,7 @@ graph
     sgG1 "1"
     sgG2 "12"
     sgG5 "38"
+    leiden "6"
   ]
   node
   [
@@ -5942,6 +6140,7 @@ graph
     sgG1 "24"
     sgG2 "12"
     sgG5 "67"
+    leiden "10"
   ]
   node
   [
@@ -5972,6 +6171,7 @@ graph
     sgG1 "22"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -6002,6 +6202,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "24"
+    leiden "14"
   ]
   node
   [
@@ -6032,6 +6233,7 @@ graph
     sgG1 "3"
     sgG2 "31"
     sgG5 "1"
+    leiden "2"
   ]
   node
   [
@@ -6062,6 +6264,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "67"
+    leiden "14"
   ]
   node
   [
@@ -6092,6 +6295,7 @@ graph
     sgG1 "10"
     sgG2 "40"
     sgG5 "77"
+    leiden "9"
   ]
   node
   [
@@ -6122,6 +6326,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -6152,6 +6357,7 @@ graph
     sgG1 "28"
     sgG2 "42"
     sgG5 "74"
+    leiden "2"
   ]
   node
   [
@@ -6182,6 +6388,7 @@ graph
     sgG1 "28"
     sgG2 "44"
     sgG5 "56"
+    leiden "5"
   ]
   node
   [
@@ -6212,6 +6419,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "56"
+    leiden "2"
   ]
   node
   [
@@ -6242,6 +6450,7 @@ graph
     sgG1 "17"
     sgG2 "25"
     sgG5 "13"
+    leiden "8"
   ]
   node
   [
@@ -6272,6 +6481,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -6302,6 +6512,7 @@ graph
     sgG1 "14"
     sgG2 "20"
     sgG5 "63"
+    leiden "12"
   ]
   node
   [
@@ -6332,6 +6543,7 @@ graph
     sgG1 "14"
     sgG2 "20"
     sgG5 "63"
+    leiden "12"
   ]
   node
   [
@@ -6362,6 +6574,7 @@ graph
     sgG1 "3"
     sgG2 "3"
     sgG5 "49"
+    leiden "1"
   ]
   node
   [
@@ -6392,6 +6605,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -6422,6 +6636,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -6452,6 +6667,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "40"
+    leiden "10"
   ]
   node
   [
@@ -6482,6 +6698,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -6512,6 +6729,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -6542,6 +6760,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "56"
+    leiden "2"
   ]
   node
   [
@@ -6572,6 +6791,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "49"
+    leiden "8"
   ]
   node
   [
@@ -6602,6 +6822,7 @@ graph
     sgG1 "30"
     sgG2 "35"
     sgG5 "55"
+    leiden "9"
   ]
   node
   [
@@ -6632,6 +6853,7 @@ graph
     sgG1 "3"
     sgG2 "7"
     sgG5 "90"
+    leiden "1"
   ]
   node
   [
@@ -6662,6 +6884,7 @@ graph
     sgG1 "11"
     sgG2 "22"
     sgG5 "66"
+    leiden "9"
   ]
   node
   [
@@ -6692,6 +6915,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "74"
+    leiden "11"
   ]
   node
   [
@@ -6722,6 +6946,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -6752,6 +6977,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "62"
+    leiden "8"
   ]
   node
   [
@@ -6782,6 +7008,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "66"
+    leiden "14"
   ]
   node
   [
@@ -6812,6 +7039,7 @@ graph
     sgG1 "30"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -6842,6 +7070,7 @@ graph
     sgG1 "3"
     sgG2 "26"
     sgG5 "89"
+    leiden "2"
   ]
   node
   [
@@ -6872,6 +7101,7 @@ graph
     sgG1 "1"
     sgG2 "21"
     sgG5 "17"
+    leiden "13"
   ]
   node
   [
@@ -6902,6 +7132,7 @@ graph
     sgG1 "4"
     sgG2 "42"
     sgG5 "67"
+    leiden "10"
   ]
   node
   [
@@ -6932,6 +7163,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "56"
+    leiden "10"
   ]
   node
   [
@@ -6962,6 +7194,7 @@ graph
     sgG1 "11"
     sgG2 "44"
     sgG5 "56"
+    leiden "9"
   ]
   node
   [
@@ -6992,6 +7225,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -7022,6 +7256,7 @@ graph
     sgG1 "3"
     sgG2 "3"
     sgG5 "29"
+    leiden "9"
   ]
   node
   [
@@ -7052,6 +7287,7 @@ graph
     sgG1 "11"
     sgG2 "43"
     sgG5 "84"
+    leiden "13"
   ]
   node
   [
@@ -7082,6 +7318,7 @@ graph
     sgG1 "3"
     sgG2 "43"
     sgG5 "84"
+    leiden "13"
   ]
   node
   [
@@ -7112,6 +7349,7 @@ graph
     sgG1 "15"
     sgG2 "3"
     sgG5 "48"
+    leiden "2"
   ]
   node
   [
@@ -7142,6 +7380,7 @@ graph
     sgG1 "1"
     sgG2 "35"
     sgG5 "41"
+    leiden "11"
   ]
   node
   [
@@ -7172,6 +7411,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "72"
+    leiden "1"
   ]
   node
   [
@@ -7202,6 +7442,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "2"
+    leiden "14"
   ]
   node
   [
@@ -7232,6 +7473,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "13"
+    leiden "10"
   ]
   node
   [
@@ -7262,6 +7504,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "78"
+    leiden "8"
   ]
   node
   [
@@ -7292,6 +7535,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -7322,6 +7566,7 @@ graph
     sgG1 "27"
     sgG2 "19"
     sgG5 "20"
+    leiden "11"
   ]
   node
   [
@@ -7352,6 +7597,7 @@ graph
     sgG1 "27"
     sgG2 "19"
     sgG5 "20"
+    leiden "11"
   ]
   node
   [
@@ -7382,6 +7628,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "2"
   ]
   node
   [
@@ -7412,6 +7659,7 @@ graph
     sgG1 "3"
     sgG2 "31"
     sgG5 "1"
+    leiden "2"
   ]
   node
   [
@@ -7442,6 +7690,7 @@ graph
     sgG1 "16"
     sgG2 "23"
     sgG5 "62"
+    leiden "3"
   ]
   node
   [
@@ -7472,6 +7721,7 @@ graph
     sgG1 "16"
     sgG2 "23"
     sgG5 "62"
+    leiden "3"
   ]
   node
   [
@@ -7502,6 +7752,7 @@ graph
     sgG1 "16"
     sgG2 "23"
     sgG5 "62"
+    leiden "3"
   ]
   node
   [
@@ -7532,6 +7783,7 @@ graph
     sgG1 "16"
     sgG2 "23"
     sgG5 "62"
+    leiden "3"
   ]
   node
   [
@@ -7562,6 +7814,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "84"
+    leiden "8"
   ]
   node
   [
@@ -7592,6 +7845,7 @@ graph
     sgG1 "1"
     sgG2 "26"
     sgG5 "89"
+    leiden "14"
   ]
   node
   [
@@ -7622,6 +7876,7 @@ graph
     sgG1 "1"
     sgG2 "21"
     sgG5 "17"
+    leiden "13"
   ]
   node
   [
@@ -7652,6 +7907,7 @@ graph
     sgG1 "26"
     sgG2 "7"
     sgG5 "90"
+    leiden "1"
   ]
   node
   [
@@ -7682,6 +7938,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -7712,6 +7969,7 @@ graph
     sgG1 "22"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -7742,6 +8000,7 @@ graph
     sgG1 "25"
     sgG2 "46"
     sgG5 "9"
+    leiden "12"
   ]
   node
   [
@@ -7772,6 +8031,7 @@ graph
     sgG1 "1"
     sgG2 "35"
     sgG5 "41"
+    leiden "11"
   ]
   node
   [
@@ -7802,6 +8062,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "6"
   ]
   node
   [
@@ -7832,6 +8093,7 @@ graph
     sgG1 "21"
     sgG2 "48"
     sgG5 "72"
+    leiden "3"
   ]
   node
   [
@@ -7862,6 +8124,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "54"
+    leiden "6"
   ]
   node
   [
@@ -7892,6 +8155,7 @@ graph
     sgG1 "3"
     sgG2 "31"
     sgG5 "1"
+    leiden "7"
   ]
   node
   [
@@ -7922,6 +8186,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -7952,6 +8217,7 @@ graph
     sgG1 "26"
     sgG2 "12"
     sgG5 "47"
+    leiden "2"
   ]
   node
   [
@@ -7982,6 +8248,7 @@ graph
     sgG1 "17"
     sgG2 "35"
     sgG5 "28"
+    leiden "8"
   ]
   node
   [
@@ -8012,6 +8279,7 @@ graph
     sgG1 "27"
     sgG2 "19"
     sgG5 "20"
+    leiden "11"
   ]
   node
   [
@@ -8042,6 +8310,7 @@ graph
     sgG1 "16"
     sgG2 "23"
     sgG5 "62"
+    leiden "3"
   ]
   node
   [
@@ -8072,6 +8341,7 @@ graph
     sgG1 "1"
     sgG2 "17"
     sgG5 "27"
+    leiden "6"
   ]
   node
   [
@@ -8102,6 +8372,7 @@ graph
     sgG1 "15"
     sgG2 "3"
     sgG5 "48"
+    leiden "2"
   ]
   node
   [
@@ -8132,6 +8403,7 @@ graph
     sgG1 "4"
     sgG2 "9"
     sgG5 "54"
+    leiden "10"
   ]
   node
   [
@@ -8162,6 +8434,7 @@ graph
     sgG1 "1"
     sgG2 "3"
     sgG5 "16"
+    leiden "3"
   ]
   node
   [
@@ -8192,6 +8465,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -8222,6 +8496,7 @@ graph
     sgG1 "26"
     sgG2 "31"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -8252,6 +8527,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -8282,6 +8558,7 @@ graph
     sgG1 "4"
     sgG2 "25"
     sgG5 "91"
+    leiden "10"
   ]
   node
   [
@@ -8312,6 +8589,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -8342,6 +8620,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -8372,6 +8651,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "43"
+    leiden "8"
   ]
   node
   [
@@ -8402,6 +8682,7 @@ graph
     sgG1 "11"
     sgG2 "31"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -8432,6 +8713,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "29"
+    leiden "9"
   ]
   node
   [
@@ -8462,6 +8744,7 @@ graph
     sgG1 "11"
     sgG2 "31"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -8492,6 +8775,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "29"
+    leiden "9"
   ]
   node
   [
@@ -8522,6 +8806,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -8552,6 +8837,7 @@ graph
     sgG1 "17"
     sgG2 "35"
     sgG5 "79"
+    leiden "8"
   ]
   node
   [
@@ -8582,6 +8868,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -8612,6 +8899,7 @@ graph
     sgG1 "4"
     sgG2 "8"
     sgG5 "61"
+    leiden "9"
   ]
   node
   [
@@ -8642,6 +8930,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "39"
+    leiden "10"
   ]
   node
   [
@@ -8672,6 +8961,7 @@ graph
     sgG1 "26"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -8702,6 +8992,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -8732,6 +9023,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "29"
+    leiden "9"
   ]
   node
   [
@@ -8762,6 +9054,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "43"
+    leiden "8"
   ]
   node
   [
@@ -8792,6 +9085,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "29"
+    leiden "9"
   ]
   node
   [
@@ -8822,6 +9116,7 @@ graph
     sgG1 "24"
     sgG2 "12"
     sgG5 "67"
+    leiden "2"
   ]
   node
   [
@@ -8852,6 +9147,7 @@ graph
     sgG1 "26"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -8882,6 +9178,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -8912,6 +9209,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "82"
+    leiden "8"
   ]
   node
   [
@@ -8942,6 +9240,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "49"
+    leiden "10"
   ]
   node
   [
@@ -8972,6 +9271,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -9002,6 +9302,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "86"
+    leiden "1"
   ]
   node
   [
@@ -9032,6 +9333,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "72"
+    leiden "1"
   ]
   node
   [
@@ -9062,6 +9364,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -9092,6 +9395,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "69"
+    leiden "8"
   ]
   node
   [
@@ -9122,6 +9426,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -9152,6 +9457,7 @@ graph
     sgG1 "4"
     sgG2 "9"
     sgG5 "54"
+    leiden "10"
   ]
   node
   [
@@ -9182,6 +9488,7 @@ graph
     sgG1 "17"
     sgG2 "35"
     sgG5 "79"
+    leiden "8"
   ]
   node
   [
@@ -9212,6 +9519,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -9242,6 +9550,7 @@ graph
     sgG1 "26"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -9272,6 +9581,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "23"
+    leiden "11"
   ]
   node
   [
@@ -9302,6 +9612,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "66"
+    leiden "14"
   ]
   node
   [
@@ -9332,6 +9643,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "40"
+    leiden "5"
   ]
   node
   [
@@ -9362,6 +9674,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -9392,6 +9705,7 @@ graph
     sgG1 "28"
     sgG2 "44"
     sgG5 "56"
+    leiden "5"
   ]
   node
   [
@@ -9422,6 +9736,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "4"
   ]
   node
   [
@@ -9452,6 +9767,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "61"
+    leiden "10"
   ]
   node
   [
@@ -9482,6 +9798,7 @@ graph
     sgG1 "22"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -9512,6 +9829,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "56"
+    leiden "14"
   ]
   node
   [
@@ -9542,6 +9860,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -9572,6 +9891,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "66"
+    leiden "14"
   ]
   node
   [
@@ -9602,6 +9922,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -9632,6 +9953,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -9662,6 +9984,7 @@ graph
     sgG1 "26"
     sgG2 "31"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -9692,6 +10015,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "1"
   ]
   node
   [
@@ -9722,6 +10046,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "42"
+    leiden "8"
   ]
   node
   [
@@ -9752,6 +10077,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -9782,6 +10108,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "50"
+    leiden "3"
   ]
   node
   [
@@ -9812,6 +10139,7 @@ graph
     sgG1 "26"
     sgG2 "3"
     sgG5 "16"
+    leiden "3"
   ]
   node
   [
@@ -9842,6 +10170,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -9872,6 +10201,7 @@ graph
     sgG1 "1"
     sgG2 "17"
     sgG5 "67"
+    leiden "6"
   ]
   node
   [
@@ -9902,6 +10232,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "44"
+    leiden "1"
   ]
   node
   [
@@ -9932,6 +10263,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "16"
+    leiden "1"
   ]
   node
   [
@@ -9962,6 +10294,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -9992,6 +10325,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "15"
+    leiden "1"
   ]
   node
   [
@@ -10022,6 +10356,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "3"
   ]
   node
   [
@@ -10052,6 +10387,7 @@ graph
     sgG1 "26"
     sgG2 "17"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -10082,6 +10418,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -10112,6 +10449,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -10142,6 +10480,7 @@ graph
     sgG1 "28"
     sgG2 "11"
     sgG5 "50"
+    leiden "10"
   ]
   node
   [
@@ -10172,6 +10511,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -10202,6 +10542,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -10232,6 +10573,7 @@ graph
     sgG1 "13"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -10262,6 +10604,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "1"
   ]
   node
   [
@@ -10292,6 +10635,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "69"
+    leiden "8"
   ]
   node
   [
@@ -10322,6 +10666,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "23"
+    leiden "2"
   ]
   node
   [
@@ -10352,6 +10697,7 @@ graph
     sgG1 "28"
     sgG2 "47"
     sgG5 "37"
+    leiden "5"
   ]
   node
   [
@@ -10382,6 +10728,7 @@ graph
     sgG1 "26"
     sgG2 "9"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -10412,6 +10759,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "88"
+    leiden "1"
   ]
   node
   [
@@ -10442,6 +10790,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "5"
+    leiden "1"
   ]
   node
   [
@@ -10472,6 +10821,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "13"
+    leiden "1"
   ]
   node
   [
@@ -10502,6 +10852,7 @@ graph
     sgG1 "4"
     sgG2 "42"
     sgG5 "33"
+    leiden "10"
   ]
   node
   [
@@ -10532,6 +10883,7 @@ graph
     sgG1 "26"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -10562,6 +10914,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -10592,6 +10945,7 @@ graph
     sgG1 "4"
     sgG2 "47"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -10622,6 +10976,7 @@ graph
     sgG1 "1"
     sgG2 "25"
     sgG5 "36"
+    leiden "2"
   ]
   node
   [
@@ -10652,6 +11007,7 @@ graph
     sgG1 "26"
     sgG2 "32"
     sgG5 "72"
+    leiden "1"
   ]
   node
   [
@@ -10682,6 +11038,7 @@ graph
     sgG1 "1"
     sgG2 "10"
     sgG5 "71"
+    leiden "6"
   ]
   node
   [
@@ -10712,6 +11069,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "8"
   ]
   node
   [
@@ -10742,6 +11100,7 @@ graph
     sgG1 "4"
     sgG2 "9"
     sgG5 "71"
+    leiden "10"
   ]
   node
   [
@@ -10772,6 +11131,7 @@ graph
     sgG1 "1"
     sgG2 "3"
     sgG5 "16"
+    leiden "3"
   ]
   node
   [
@@ -10802,6 +11162,7 @@ graph
     sgG1 "17"
     sgG2 "10"
     sgG5 "25"
+    leiden "13"
   ]
   node
   [
@@ -10832,6 +11193,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "21"
+    leiden "1"
   ]
   node
   [
@@ -10862,6 +11224,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "91"
+    leiden "8"
   ]
   node
   [
@@ -10892,6 +11255,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -10922,6 +11286,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -10952,6 +11317,7 @@ graph
     sgG1 "17"
     sgG2 "10"
     sgG5 "25"
+    leiden "13"
   ]
   node
   [
@@ -10982,6 +11348,7 @@ graph
     sgG1 "17"
     sgG2 "10"
     sgG5 "25"
+    leiden "13"
   ]
   node
   [
@@ -11012,6 +11379,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -11042,6 +11410,7 @@ graph
     sgG1 "14"
     sgG2 "20"
     sgG5 "63"
+    leiden "12"
   ]
   node
   [
@@ -11072,6 +11441,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -11102,6 +11472,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -11132,6 +11503,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -11162,6 +11534,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "67"
+    leiden "10"
   ]
   node
   [
@@ -11192,6 +11565,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -11222,6 +11596,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -11252,6 +11627,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "36"
+    leiden "1"
   ]
   node
   [
@@ -11282,6 +11658,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "49"
+    leiden "8"
   ]
   node
   [
@@ -11312,6 +11689,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -11342,6 +11720,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "12"
+    leiden "1"
   ]
   node
   [
@@ -11372,6 +11751,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -11402,6 +11782,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -11432,6 +11813,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "83"
+    leiden "9"
   ]
   node
   [
@@ -11462,6 +11844,7 @@ graph
     sgG1 "11"
     sgG2 "44"
     sgG5 "83"
+    leiden "2"
   ]
   node
   [
@@ -11492,6 +11875,7 @@ graph
     sgG1 "1"
     sgG2 "10"
     sgG5 "24"
+    leiden "13"
   ]
   node
   [
@@ -11522,6 +11906,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -11552,6 +11937,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -11582,6 +11968,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -11612,6 +11999,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -11642,6 +12030,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -11672,6 +12061,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -11702,6 +12092,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -11732,6 +12123,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -11762,6 +12154,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -11792,6 +12185,7 @@ graph
     sgG1 "1"
     sgG2 "21"
     sgG5 "21"
+    leiden "13"
   ]
   node
   [
@@ -11822,6 +12216,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -11852,6 +12247,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -11882,6 +12278,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -11912,6 +12309,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -11942,6 +12340,7 @@ graph
     sgG1 "17"
     sgG2 "10"
     sgG5 "4"
+    leiden "8"
   ]
   node
   [
@@ -11972,6 +12371,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -12002,6 +12402,7 @@ graph
     sgG1 "26"
     sgG2 "10"
     sgG5 "71"
+    leiden "1"
   ]
   node
   [
@@ -12032,6 +12433,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "44"
+    leiden "1"
   ]
   node
   [
@@ -12062,6 +12464,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -12092,6 +12495,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -12122,6 +12526,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -12152,6 +12557,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -12182,6 +12588,7 @@ graph
     sgG1 "20"
     sgG2 "50"
     sgG5 "74"
+    leiden "9"
   ]
   node
   [
@@ -12212,6 +12619,7 @@ graph
     sgG1 "23"
     sgG2 "8"
     sgG5 "58"
+    leiden "5"
   ]
   node
   [
@@ -12242,6 +12650,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "29"
+    leiden "6"
   ]
   node
   [
@@ -12272,6 +12681,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "5"
+    leiden "1"
   ]
   node
   [
@@ -12302,6 +12712,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -12332,6 +12743,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "88"
+    leiden "1"
   ]
   node
   [
@@ -12362,6 +12774,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -12392,6 +12805,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -12422,6 +12836,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "44"
+    leiden "1"
   ]
   node
   [
@@ -12452,6 +12867,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -12482,6 +12898,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "29"
+    leiden "9"
   ]
   node
   [
@@ -12512,6 +12929,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "9"
   ]
   node
   [
@@ -12542,6 +12960,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -12572,6 +12991,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -12602,6 +13022,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "91"
+    leiden "8"
   ]
   node
   [
@@ -12632,6 +13053,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "4"
   ]
   node
   [
@@ -12662,6 +13084,7 @@ graph
     sgG1 "11"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -12692,6 +13115,7 @@ graph
     sgG1 "26"
     sgG2 "10"
     sgG5 "25"
+    leiden "1"
   ]
   node
   [
@@ -12722,6 +13146,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -12752,6 +13177,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -12782,6 +13208,7 @@ graph
     sgG1 "2"
     sgG2 "44"
     sgG5 "86"
+    leiden "14"
   ]
   node
   [
@@ -12812,6 +13239,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "9"
   ]
   node
   [
@@ -12842,6 +13270,7 @@ graph
     sgG1 "28"
     sgG2 "6"
     sgG5 "47"
+    leiden "5"
   ]
   node
   [
@@ -12872,6 +13301,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -12902,6 +13332,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "44"
+    leiden "1"
   ]
   node
   [
@@ -12932,6 +13363,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -12962,6 +13394,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "82"
+    leiden "3"
   ]
   node
   [
@@ -12992,6 +13425,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "36"
+    leiden "2"
   ]
   node
   [
@@ -13022,6 +13456,7 @@ graph
     sgG1 "6"
     sgG2 "25"
     sgG5 "36"
+    leiden "2"
   ]
   node
   [
@@ -13052,6 +13487,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "23"
+    leiden "11"
   ]
   node
   [
@@ -13082,6 +13518,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -13112,6 +13549,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -13142,6 +13580,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "86"
+    leiden "8"
   ]
   node
   [
@@ -13172,6 +13611,7 @@ graph
     sgG1 "4"
     sgG2 "7"
     sgG5 "90"
+    leiden "6"
   ]
   node
   [
@@ -13202,6 +13642,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -13232,6 +13673,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -13262,6 +13704,7 @@ graph
     sgG1 "17"
     sgG2 "42"
     sgG5 "28"
+    leiden "8"
   ]
   node
   [
@@ -13292,6 +13735,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -13322,6 +13766,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "39"
+    leiden "10"
   ]
   node
   [
@@ -13352,6 +13797,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "27"
+    leiden "1"
   ]
   node
   [
@@ -13382,6 +13828,7 @@ graph
     sgG1 "4"
     sgG2 "9"
     sgG5 "39"
+    leiden "10"
   ]
   node
   [
@@ -13412,6 +13859,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -13442,6 +13890,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -13472,6 +13921,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -13502,6 +13952,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -13532,6 +13983,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -13562,6 +14014,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "13"
   ]
   node
   [
@@ -13592,6 +14045,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "24"
+    leiden "13"
   ]
   node
   [
@@ -13622,6 +14076,7 @@ graph
     sgG1 "16"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -13652,6 +14107,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "6"
+    leiden "9"
   ]
   node
   [
@@ -13682,6 +14138,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -13712,6 +14169,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -13742,6 +14200,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "8"
+    leiden "1"
   ]
   node
   [
@@ -13772,6 +14231,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "18"
+    leiden "1"
   ]
   node
   [
@@ -13802,6 +14262,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "2"
+    leiden "1"
   ]
   node
   [
@@ -13832,6 +14293,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -13862,6 +14324,7 @@ graph
     sgG1 "17"
     sgG2 "10"
     sgG5 "25"
+    leiden "13"
   ]
   node
   [
@@ -13892,6 +14355,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "21"
+    leiden "1"
   ]
   node
   [
@@ -13922,6 +14386,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "9"
   ]
   node
   [
@@ -13952,6 +14417,7 @@ graph
     sgG1 "4"
     sgG2 "9"
     sgG5 "54"
+    leiden "10"
   ]
   node
   [
@@ -13982,6 +14448,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -14012,6 +14479,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -14042,6 +14510,7 @@ graph
     sgG1 "6"
     sgG2 "11"
     sgG5 "79"
+    leiden "12"
   ]
   node
   [
@@ -14072,6 +14541,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "9"
   ]
   node
   [
@@ -14102,6 +14572,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -14132,6 +14603,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -14162,6 +14634,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -14192,6 +14665,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "15"
+    leiden "8"
   ]
   node
   [
@@ -14222,6 +14696,7 @@ graph
     sgG1 "21"
     sgG2 "42"
     sgG5 "72"
+    leiden "12"
   ]
   node
   [
@@ -14252,6 +14727,7 @@ graph
     sgG1 "3"
     sgG2 "3"
     sgG5 "29"
+    leiden "9"
   ]
   node
   [
@@ -14282,6 +14758,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "79"
+    leiden "7"
   ]
   node
   [
@@ -14312,6 +14789,7 @@ graph
     sgG1 "28"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -14342,6 +14820,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -14372,6 +14851,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -14402,6 +14882,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -14432,6 +14913,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "44"
+    leiden "1"
   ]
   node
   [
@@ -14462,6 +14944,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -14492,6 +14975,7 @@ graph
     sgG1 "26"
     sgG2 "32"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -14522,6 +15006,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -14552,6 +15037,7 @@ graph
     sgG1 "23"
     sgG2 "47"
     sgG5 "45"
+    leiden "11"
   ]
   node
   [
@@ -14582,6 +15068,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -14612,6 +15099,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -14642,6 +15130,7 @@ graph
     sgG1 "3"
     sgG2 "48"
     sgG5 "88"
+    leiden "7"
   ]
   node
   [
@@ -14672,6 +15161,7 @@ graph
     sgG1 "4"
     sgG2 "48"
     sgG5 "49"
+    leiden "3"
   ]
   node
   [
@@ -14702,6 +15192,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "73"
+    leiden "3"
   ]
   node
   [
@@ -14732,6 +15223,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -14762,6 +15254,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "2"
+    leiden "10"
   ]
   node
   [
@@ -14792,6 +15285,7 @@ graph
     sgG1 "3"
     sgG2 "42"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -14822,6 +15316,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -14852,6 +15347,7 @@ graph
     sgG1 "6"
     sgG2 "3"
     sgG5 "70"
+    leiden "3"
   ]
   node
   [
@@ -14882,6 +15378,7 @@ graph
     sgG1 "6"
     sgG2 "3"
     sgG5 "70"
+    leiden "3"
   ]
   node
   [
@@ -14912,6 +15409,7 @@ graph
     sgG1 "28"
     sgG2 "7"
     sgG5 "90"
+    leiden "6"
   ]
   node
   [
@@ -14942,6 +15440,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -14972,6 +15471,7 @@ graph
     sgG1 "4"
     sgG2 "25"
     sgG5 "27"
+    leiden "10"
   ]
   node
   [
@@ -15002,6 +15502,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -15032,6 +15533,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "38"
+    leiden "3"
   ]
   node
   [
@@ -15062,6 +15564,7 @@ graph
     sgG1 "26"
     sgG2 "10"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -15092,6 +15595,7 @@ graph
     sgG1 "26"
     sgG2 "31"
     sgG5 "1"
+    leiden "10"
   ]
   node
   [
@@ -15122,6 +15626,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "29"
+    leiden "9"
   ]
   node
   [
@@ -15152,6 +15657,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -15182,6 +15688,7 @@ graph
     sgG1 "4"
     sgG2 "42"
     sgG5 "33"
+    leiden "10"
   ]
   node
   [
@@ -15212,6 +15719,7 @@ graph
     sgG1 "4"
     sgG2 "42"
     sgG5 "33"
+    leiden "10"
   ]
   node
   [
@@ -15242,6 +15750,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "33"
+    leiden "8"
   ]
   node
   [
@@ -15272,6 +15781,7 @@ graph
     sgG1 "4"
     sgG2 "42"
     sgG5 "33"
+    leiden "10"
   ]
   node
   [
@@ -15302,6 +15812,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -15332,6 +15843,7 @@ graph
     sgG1 "11"
     sgG2 "44"
     sgG5 "18"
+    leiden "9"
   ]
   node
   [
@@ -15362,6 +15874,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "83"
+    leiden "4"
   ]
   node
   [
@@ -15392,6 +15905,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "77"
+    leiden "4"
   ]
   node
   [
@@ -15422,6 +15936,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -15452,6 +15967,7 @@ graph
     sgG1 "26"
     sgG2 "3"
     sgG5 "16"
+    leiden "8"
   ]
   node
   [
@@ -15482,6 +15998,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "38"
+    leiden "2"
   ]
   node
   [
@@ -15512,6 +16029,7 @@ graph
     sgG1 "26"
     sgG2 "29"
     sgG5 "79"
+    leiden "1"
   ]
   node
   [
@@ -15542,6 +16060,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -15572,6 +16091,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -15602,6 +16122,7 @@ graph
     sgG1 "26"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -15632,6 +16153,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "21"
+    leiden "14"
   ]
   node
   [
@@ -15662,6 +16184,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "1"
   ]
   node
   [
@@ -15692,6 +16215,7 @@ graph
     sgG1 "7"
     sgG2 "30"
     sgG5 "5"
+    leiden "4"
   ]
   node
   [
@@ -15722,6 +16246,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "18"
+    leiden "4"
   ]
   node
   [
@@ -15752,6 +16277,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "9"
   ]
   node
   [
@@ -15782,6 +16308,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -15812,6 +16339,7 @@ graph
     sgG1 "11"
     sgG2 "44"
     sgG5 "18"
+    leiden "9"
   ]
   node
   [
@@ -15842,6 +16370,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "18"
+    leiden "13"
   ]
   node
   [
@@ -15872,6 +16401,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -15902,6 +16432,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "11"
+    leiden "14"
   ]
   node
   [
@@ -15932,6 +16463,7 @@ graph
     sgG1 "27"
     sgG2 "19"
     sgG5 "20"
+    leiden "9"
   ]
   node
   [
@@ -15962,6 +16494,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "12"
   ]
   node
   [
@@ -15992,6 +16525,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -16022,6 +16556,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -16052,6 +16587,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -16082,6 +16618,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -16112,6 +16649,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "24"
+    leiden "14"
   ]
   node
   [
@@ -16142,6 +16680,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "40"
+    leiden "10"
   ]
   node
   [
@@ -16172,6 +16711,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -16202,6 +16742,7 @@ graph
     sgG1 "4"
     sgG2 "31"
     sgG5 "1"
+    leiden "2"
   ]
   node
   [
@@ -16232,6 +16773,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "83"
+    leiden "7"
   ]
   node
   [
@@ -16262,6 +16804,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "49"
+    leiden "10"
   ]
   node
   [
@@ -16292,6 +16835,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -16322,6 +16866,7 @@ graph
     sgG1 "16"
     sgG2 "17"
     sgG5 "44"
+    leiden "2"
   ]
   node
   [
@@ -16352,6 +16897,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -16382,6 +16928,7 @@ graph
     sgG1 "25"
     sgG2 "46"
     sgG5 "9"
+    leiden "12"
   ]
   node
   [
@@ -16412,6 +16959,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "44"
+    leiden "1"
   ]
   node
   [
@@ -16442,6 +16990,7 @@ graph
     sgG1 "26"
     sgG2 "7"
     sgG5 "90"
+    leiden "1"
   ]
   node
   [
@@ -16472,6 +17021,7 @@ graph
     sgG1 "17"
     sgG2 "25"
     sgG5 "13"
+    leiden "8"
   ]
   node
   [
@@ -16502,6 +17052,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -16532,6 +17083,7 @@ graph
     sgG1 "1"
     sgG2 "9"
     sgG5 "73"
+    leiden "8"
   ]
   node
   [
@@ -16562,6 +17114,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -16592,6 +17145,7 @@ graph
     sgG1 "4"
     sgG2 "34"
     sgG5 "64"
+    leiden "10"
   ]
   node
   [
@@ -16622,6 +17176,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "23"
+    leiden "8"
   ]
   node
   [
@@ -16652,6 +17207,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -16682,6 +17238,7 @@ graph
     sgG1 "22"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -16712,6 +17269,7 @@ graph
     sgG1 "28"
     sgG2 "27"
     sgG5 "19"
+    leiden "5"
   ]
   node
   [
@@ -16742,6 +17300,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "64"
+    leiden "1"
   ]
   node
   [
@@ -16772,6 +17331,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "1"
   ]
   node
   [
@@ -16802,6 +17362,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -16832,6 +17393,7 @@ graph
     sgG1 "28"
     sgG2 "21"
     sgG5 "81"
+    leiden "5"
   ]
   node
   [
@@ -16862,6 +17424,7 @@ graph
     sgG1 "17"
     sgG2 "2"
     sgG5 "27"
+    leiden "12"
   ]
   node
   [
@@ -16892,6 +17455,7 @@ graph
     sgG1 "4"
     sgG2 "8"
     sgG5 "61"
+    leiden "9"
   ]
   node
   [
@@ -16922,6 +17486,7 @@ graph
     sgG1 "23"
     sgG2 "4"
     sgG5 "34"
+    leiden "4"
   ]
   node
   [
@@ -16952,6 +17517,7 @@ graph
     sgG1 "28"
     sgG2 "33"
     sgG5 "3"
+    leiden "6"
   ]
   node
   [
@@ -16982,6 +17548,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -17012,6 +17579,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "9"
   ]
   node
   [
@@ -17042,6 +17610,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "79"
+    leiden "8"
   ]
   node
   [
@@ -17072,6 +17641,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -17102,6 +17672,7 @@ graph
     sgG1 "28"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -17132,6 +17703,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -17162,6 +17734,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -17192,6 +17765,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "83"
+    leiden "1"
   ]
   node
   [
@@ -17222,6 +17796,7 @@ graph
     sgG1 "1"
     sgG2 "21"
     sgG5 "41"
+    leiden "14"
   ]
   node
   [
@@ -17252,6 +17827,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "17"
+    leiden "4"
   ]
   node
   [
@@ -17282,6 +17858,7 @@ graph
     sgG1 "26"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -17312,6 +17889,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "17"
+    leiden "8"
   ]
   node
   [
@@ -17342,6 +17920,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -17372,6 +17951,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "24"
+    leiden "10"
   ]
   node
   [
@@ -17402,6 +17982,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -17432,6 +18013,7 @@ graph
     sgG1 "7"
     sgG2 "30"
     sgG5 "5"
+    leiden "4"
   ]
   node
   [
@@ -17462,6 +18044,7 @@ graph
     sgG1 "27"
     sgG2 "12"
     sgG5 "60"
+    leiden "11"
   ]
   node
   [
@@ -17492,6 +18075,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -17522,6 +18106,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -17552,6 +18137,7 @@ graph
     sgG1 "6"
     sgG2 "40"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -17582,6 +18168,7 @@ graph
     sgG1 "23"
     sgG2 "8"
     sgG5 "58"
+    leiden "5"
   ]
   node
   [
@@ -17612,6 +18199,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "17"
+    leiden "4"
   ]
   node
   [
@@ -17642,6 +18230,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "1"
   ]
   node
   [
@@ -17672,6 +18261,7 @@ graph
     sgG1 "19"
     sgG2 "1"
     sgG5 "78"
+    leiden "7"
   ]
   node
   [
@@ -17702,6 +18292,7 @@ graph
     sgG1 "6"
     sgG2 "3"
     sgG5 "70"
+    leiden "3"
   ]
   node
   [
@@ -17732,6 +18323,7 @@ graph
     sgG1 "26"
     sgG2 "16"
     sgG5 "23"
+    leiden "2"
   ]
   node
   [
@@ -17762,6 +18354,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "79"
+    leiden "8"
   ]
   node
   [
@@ -17792,6 +18385,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -17822,6 +18416,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -17852,6 +18447,7 @@ graph
     sgG1 "6"
     sgG2 "25"
     sgG5 "36"
+    leiden "2"
   ]
   node
   [
@@ -17882,6 +18478,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "17"
+    leiden "12"
   ]
   node
   [
@@ -17912,6 +18509,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -17942,6 +18540,7 @@ graph
     sgG1 "30"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -17972,6 +18571,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -18002,6 +18602,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "33"
+    leiden "2"
   ]
   node
   [
@@ -18032,6 +18633,7 @@ graph
     sgG1 "3"
     sgG2 "15"
     sgG5 "59"
+    leiden "10"
   ]
   node
   [
@@ -18062,6 +18664,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -18092,6 +18695,7 @@ graph
     sgG1 "28"
     sgG2 "15"
     sgG5 "59"
+    leiden "5"
   ]
   node
   [
@@ -18122,6 +18726,7 @@ graph
     sgG1 "24"
     sgG2 "15"
     sgG5 "59"
+    leiden "12"
   ]
   node
   [
@@ -18152,6 +18757,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "54"
+    leiden "10"
   ]
   node
   [
@@ -18182,6 +18788,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -18212,6 +18819,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -18242,6 +18850,7 @@ graph
     sgG1 "26"
     sgG2 "44"
     sgG5 "56"
+    leiden "14"
   ]
   node
   [
@@ -18272,6 +18881,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "40"
+    leiden "10"
   ]
   node
   [
@@ -18302,6 +18912,7 @@ graph
     sgG1 "30"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -18332,6 +18943,7 @@ graph
     sgG1 "11"
     sgG2 "17"
     sgG5 "83"
+    leiden "2"
   ]
   node
   [
@@ -18362,6 +18974,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -18392,6 +19005,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -18422,6 +19036,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "44"
+    leiden "1"
   ]
   node
   [
@@ -18452,6 +19067,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "17"
+    leiden "4"
   ]
   node
   [
@@ -18482,6 +19098,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "17"
+    leiden "4"
   ]
   node
   [
@@ -18512,6 +19129,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "29"
+    leiden "8"
   ]
   node
   [
@@ -18542,6 +19160,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -18572,6 +19191,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -18602,6 +19222,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -18632,6 +19253,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -18662,6 +19284,7 @@ graph
     sgG1 "22"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -18692,6 +19315,7 @@ graph
     sgG1 "20"
     sgG2 "50"
     sgG5 "74"
+    leiden "9"
   ]
   node
   [
@@ -18722,6 +19346,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "12"
+    leiden "1"
   ]
   node
   [
@@ -18752,6 +19377,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "15"
+    leiden "8"
   ]
   node
   [
@@ -18782,6 +19408,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "56"
+    leiden "14"
   ]
   node
   [
@@ -18812,6 +19439,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "50"
+    leiden "9"
   ]
   node
   [
@@ -18842,6 +19470,7 @@ graph
     sgG1 "14"
     sgG2 "20"
     sgG5 "63"
+    leiden "12"
   ]
   node
   [
@@ -18872,6 +19501,7 @@ graph
     sgG1 "11"
     sgG2 "44"
     sgG5 "56"
+    leiden "14"
   ]
   node
   [
@@ -18902,6 +19532,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -18932,6 +19563,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -18962,6 +19594,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -18992,6 +19625,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "16"
+    leiden "14"
   ]
   node
   [
@@ -19022,6 +19656,7 @@ graph
     sgG1 "11"
     sgG2 "13"
     sgG5 "93"
+    leiden "14"
   ]
   node
   [
@@ -19052,6 +19687,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "17"
+    leiden "5"
   ]
   node
   [
@@ -19082,6 +19718,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -19112,6 +19749,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "40"
+    leiden "8"
   ]
   node
   [
@@ -19142,6 +19780,7 @@ graph
     sgG1 "4"
     sgG2 "24"
     sgG5 "54"
+    leiden "7"
   ]
   node
   [
@@ -19172,6 +19811,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "73"
+    leiden "2"
   ]
   node
   [
@@ -19202,6 +19842,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "2"
   ]
   node
   [
@@ -19232,6 +19873,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "2"
   ]
   node
   [
@@ -19262,6 +19904,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "12"
+    leiden "7"
   ]
   node
   [
@@ -19292,6 +19935,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "17"
+    leiden "5"
   ]
   node
   [
@@ -19322,6 +19966,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "11"
+    leiden "8"
   ]
   node
   [
@@ -19352,6 +19997,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "11"
+    leiden "8"
   ]
   node
   [
@@ -19382,6 +20028,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -19412,6 +20059,7 @@ graph
     sgG1 "15"
     sgG2 "3"
     sgG5 "11"
+    leiden "2"
   ]
   node
   [
@@ -19442,6 +20090,7 @@ graph
     sgG1 "3"
     sgG2 "10"
     sgG5 "11"
+    leiden "2"
   ]
   node
   [
@@ -19472,6 +20121,7 @@ graph
     sgG1 "28"
     sgG2 "44"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -19502,6 +20152,7 @@ graph
     sgG1 "10"
     sgG2 "40"
     sgG5 "77"
+    leiden "4"
   ]
   node
   [
@@ -19532,6 +20183,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -19562,6 +20214,7 @@ graph
     sgG1 "20"
     sgG2 "50"
     sgG5 "74"
+    leiden "9"
   ]
   node
   [
@@ -19592,6 +20245,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -19622,6 +20276,7 @@ graph
     sgG1 "17"
     sgG2 "44"
     sgG5 "45"
+    leiden "8"
   ]
   node
   [
@@ -19652,6 +20307,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -19682,6 +20338,7 @@ graph
     sgG1 "3"
     sgG2 "30"
     sgG5 "5"
+    leiden "1"
   ]
   node
   [
@@ -19712,6 +20369,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -19742,6 +20400,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "69"
+    leiden "8"
   ]
   node
   [
@@ -19772,6 +20431,7 @@ graph
     sgG1 "11"
     sgG2 "32"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -19802,6 +20462,7 @@ graph
     sgG1 "3"
     sgG2 "12"
     sgG5 "38"
+    leiden "2"
   ]
   node
   [
@@ -19832,6 +20493,7 @@ graph
     sgG1 "17"
     sgG2 "12"
     sgG5 "38"
+    leiden "8"
   ]
   node
   [
@@ -19862,6 +20524,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -19892,6 +20555,7 @@ graph
     sgG1 "17"
     sgG2 "10"
     sgG5 "49"
+    leiden "8"
   ]
   node
   [
@@ -19922,6 +20586,7 @@ graph
     sgG1 "1"
     sgG2 "9"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -19952,6 +20617,7 @@ graph
     sgG1 "1"
     sgG2 "9"
     sgG5 "24"
+    leiden "13"
   ]
   node
   [
@@ -19982,6 +20648,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "24"
+    leiden "13"
   ]
   node
   [
@@ -20012,6 +20679,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "24"
+    leiden "13"
   ]
   node
   [
@@ -20042,6 +20710,7 @@ graph
     sgG1 "28"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -20072,6 +20741,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "14"
   ]
   node
   [
@@ -20102,6 +20772,7 @@ graph
     sgG1 "19"
     sgG2 "1"
     sgG5 "78"
+    leiden "7"
   ]
   node
   [
@@ -20132,6 +20803,7 @@ graph
     sgG1 "19"
     sgG2 "1"
     sgG5 "78"
+    leiden "4"
   ]
   node
   [
@@ -20162,6 +20834,7 @@ graph
     sgG1 "19"
     sgG2 "1"
     sgG5 "78"
+    leiden "7"
   ]
   node
   [
@@ -20192,6 +20865,7 @@ graph
     sgG1 "11"
     sgG2 "12"
     sgG5 "84"
+    leiden "13"
   ]
   node
   [
@@ -20222,6 +20896,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "87"
+    leiden "2"
   ]
   node
   [
@@ -20252,6 +20927,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "8"
   ]
   node
   [
@@ -20282,6 +20958,7 @@ graph
     sgG1 "17"
     sgG2 "32"
     sgG5 "2"
+    leiden "8"
   ]
   node
   [
@@ -20312,6 +20989,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -20342,6 +21020,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -20372,6 +21051,7 @@ graph
     sgG1 "26"
     sgG2 "31"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -20402,6 +21082,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "6"
   ]
   node
   [
@@ -20432,6 +21113,7 @@ graph
     sgG1 "26"
     sgG2 "37"
     sgG5 "82"
+    leiden "3"
   ]
   node
   [
@@ -20462,6 +21144,7 @@ graph
     sgG1 "23"
     sgG2 "8"
     sgG5 "58"
+    leiden "10"
   ]
   node
   [
@@ -20492,6 +21175,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -20522,6 +21206,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "6"
   ]
   node
   [
@@ -20552,6 +21237,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "31"
+    leiden "10"
   ]
   node
   [
@@ -20582,6 +21268,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -20612,6 +21299,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -20642,6 +21330,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -20672,6 +21361,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -20702,6 +21392,7 @@ graph
     sgG1 "1"
     sgG2 "5"
     sgG5 "24"
+    leiden "8"
   ]
   node
   [
@@ -20732,6 +21423,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "61"
+    leiden "10"
   ]
   node
   [
@@ -20762,6 +21454,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -20792,6 +21485,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -20822,6 +21516,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -20852,6 +21547,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -20882,6 +21578,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -20912,6 +21609,7 @@ graph
     sgG1 "11"
     sgG2 "31"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -20942,6 +21640,7 @@ graph
     sgG1 "11"
     sgG2 "31"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -20972,6 +21671,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "9"
   ]
   node
   [
@@ -21002,6 +21702,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "54"
+    leiden "6"
   ]
   node
   [
@@ -21032,6 +21733,7 @@ graph
     sgG1 "26"
     sgG2 "8"
     sgG5 "68"
+    leiden "1"
   ]
   node
   [
@@ -21062,6 +21764,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "1"
   ]
   node
   [
@@ -21092,6 +21795,7 @@ graph
     sgG1 "2"
     sgG2 "44"
     sgG5 "59"
+    leiden "14"
   ]
   node
   [
@@ -21122,6 +21826,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -21152,6 +21857,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "44"
+    leiden "4"
   ]
   node
   [
@@ -21182,6 +21888,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "13"
+    leiden "1"
   ]
   node
   [
@@ -21212,6 +21919,7 @@ graph
     sgG1 "3"
     sgG2 "15"
     sgG5 "59"
+    leiden "10"
   ]
   node
   [
@@ -21242,6 +21950,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "82"
+    leiden "3"
   ]
   node
   [
@@ -21272,6 +21981,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "82"
+    leiden "3"
   ]
   node
   [
@@ -21302,6 +22012,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -21332,6 +22043,7 @@ graph
     sgG1 "26"
     sgG2 "36"
     sgG5 "65"
+    leiden "1"
   ]
   node
   [
@@ -21362,6 +22074,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "54"
+    leiden "1"
   ]
   node
   [
@@ -21392,6 +22105,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "86"
+    leiden "1"
   ]
   node
   [
@@ -21422,6 +22136,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "16"
+    leiden "14"
   ]
   node
   [
@@ -21452,6 +22167,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "40"
+    leiden "5"
   ]
   node
   [
@@ -21482,6 +22198,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "37"
+    leiden "8"
   ]
   node
   [
@@ -21512,6 +22229,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "77"
+    leiden "4"
   ]
   node
   [
@@ -21542,6 +22260,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "77"
+    leiden "4"
   ]
   node
   [
@@ -21572,6 +22291,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -21602,6 +22322,7 @@ graph
     sgG1 "17"
     sgG2 "11"
     sgG5 "54"
+    leiden "12"
   ]
   node
   [
@@ -21632,6 +22353,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -21662,6 +22384,7 @@ graph
     sgG1 "26"
     sgG2 "32"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -21692,6 +22415,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -21722,6 +22446,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "14"
+    leiden "8"
   ]
   node
   [
@@ -21752,6 +22477,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -21782,6 +22508,7 @@ graph
     sgG1 "26"
     sgG2 "25"
     sgG5 "36"
+    leiden "1"
   ]
   node
   [
@@ -21812,6 +22539,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "54"
+    leiden "6"
   ]
   node
   [
@@ -21842,6 +22570,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "9"
   ]
   node
   [
@@ -21872,6 +22601,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "9"
   ]
   node
   [
@@ -21902,6 +22632,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "54"
+    leiden "6"
   ]
   node
   [
@@ -21932,6 +22663,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "9"
   ]
   node
   [
@@ -21962,6 +22694,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -21992,6 +22725,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -22022,6 +22756,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -22052,6 +22787,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -22082,6 +22818,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -22112,6 +22849,7 @@ graph
     sgG1 "28"
     sgG2 "7"
     sgG5 "27"
+    leiden "13"
   ]
   node
   [
@@ -22142,6 +22880,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -22172,6 +22911,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -22202,6 +22942,7 @@ graph
     sgG1 "3"
     sgG2 "10"
     sgG5 "25"
+    leiden "13"
   ]
   node
   [
@@ -22232,6 +22973,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -22262,6 +23004,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "9"
   ]
   node
   [
@@ -22292,6 +23035,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "32"
+    leiden "9"
   ]
   node
   [
@@ -22322,6 +23066,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -22352,6 +23097,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -22382,6 +23128,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -22412,6 +23159,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -22442,6 +23190,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -22472,6 +23221,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -22502,6 +23252,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -22532,6 +23283,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -22562,6 +23314,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "32"
+    leiden "8"
   ]
   node
   [
@@ -22592,6 +23345,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "55"
+    leiden "9"
   ]
   node
   [
@@ -22622,6 +23376,7 @@ graph
     sgG1 "17"
     sgG2 "10"
     sgG5 "34"
+    leiden "11"
   ]
   node
   [
@@ -22652,6 +23407,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -22682,6 +23438,7 @@ graph
     sgG1 "8"
     sgG2 "18"
     sgG5 "52"
+    leiden "13"
   ]
   node
   [
@@ -22712,6 +23469,7 @@ graph
     sgG1 "8"
     sgG2 "18"
     sgG5 "52"
+    leiden "13"
   ]
   node
   [
@@ -22742,6 +23500,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "52"
+    leiden "8"
   ]
   node
   [
@@ -22772,6 +23531,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "91"
+    leiden "8"
   ]
   node
   [
@@ -22802,6 +23562,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "58"
+    leiden "8"
   ]
   node
   [
@@ -22832,6 +23593,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "69"
+    leiden "8"
   ]
   node
   [
@@ -22862,6 +23624,7 @@ graph
     sgG1 "11"
     sgG2 "17"
     sgG5 "44"
+    leiden "4"
   ]
   node
   [
@@ -22892,6 +23655,7 @@ graph
     sgG1 "24"
     sgG2 "17"
     sgG5 "44"
+    leiden "1"
   ]
   node
   [
@@ -22922,6 +23686,7 @@ graph
     sgG1 "17"
     sgG2 "42"
     sgG5 "54"
+    leiden "11"
   ]
   node
   [
@@ -22952,6 +23717,7 @@ graph
     sgG1 "27"
     sgG2 "19"
     sgG5 "20"
+    leiden "11"
   ]
   node
   [
@@ -22982,6 +23748,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "5"
   ]
   node
   [
@@ -23012,6 +23779,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -23042,6 +23810,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "29"
+    leiden "13"
   ]
   node
   [
@@ -23072,6 +23841,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -23102,6 +23872,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "32"
+    leiden "8"
   ]
   node
   [
@@ -23132,6 +23903,7 @@ graph
     sgG1 "1"
     sgG2 "32"
     sgG5 "72"
+    leiden "6"
   ]
   node
   [
@@ -23162,6 +23934,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -23192,6 +23965,7 @@ graph
     sgG1 "11"
     sgG2 "2"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -23222,6 +23996,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -23252,6 +24027,7 @@ graph
     sgG1 "19"
     sgG2 "1"
     sgG5 "78"
+    leiden "7"
   ]
   node
   [
@@ -23282,6 +24058,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -23312,6 +24089,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -23342,6 +24120,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -23372,6 +24151,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -23402,6 +24182,7 @@ graph
     sgG1 "17"
     sgG2 "32"
     sgG5 "78"
+    leiden "8"
   ]
   node
   [
@@ -23432,6 +24213,7 @@ graph
     sgG1 "4"
     sgG2 "8"
     sgG5 "68"
+    leiden "9"
   ]
   node
   [
@@ -23462,6 +24244,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -23492,6 +24275,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -23522,6 +24306,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -23552,6 +24337,7 @@ graph
     sgG1 "4"
     sgG2 "48"
     sgG5 "49"
+    leiden "3"
   ]
   node
   [
@@ -23582,6 +24368,7 @@ graph
     sgG1 "11"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -23612,6 +24399,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -23642,6 +24430,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "81"
+    leiden "8"
   ]
   node
   [
@@ -23672,6 +24461,7 @@ graph
     sgG1 "3"
     sgG2 "15"
     sgG5 "59"
+    leiden "10"
   ]
   node
   [
@@ -23702,6 +24492,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -23732,6 +24523,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -23762,6 +24554,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -23792,6 +24585,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -23822,6 +24616,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "61"
+    leiden "10"
   ]
   node
   [
@@ -23852,6 +24647,7 @@ graph
     sgG1 "4"
     sgG2 "41"
     sgG5 "13"
+    leiden "1"
   ]
   node
   [
@@ -23882,6 +24678,7 @@ graph
     sgG1 "11"
     sgG2 "31"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -23912,6 +24709,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -23942,6 +24740,7 @@ graph
     sgG1 "26"
     sgG2 "32"
     sgG5 "72"
+    leiden "1"
   ]
   node
   [
@@ -23972,6 +24771,7 @@ graph
     sgG1 "1"
     sgG2 "3"
     sgG5 "44"
+    leiden "3"
   ]
   node
   [
@@ -24002,6 +24802,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "18"
+    leiden "4"
   ]
   node
   [
@@ -24032,6 +24833,7 @@ graph
     sgG1 "4"
     sgG2 "44"
     sgG5 "56"
+    leiden "10"
   ]
   node
   [
@@ -24062,6 +24864,7 @@ graph
     sgG1 "2"
     sgG2 "44"
     sgG5 "86"
+    leiden "14"
   ]
   node
   [
@@ -24092,6 +24895,7 @@ graph
     sgG1 "16"
     sgG2 "17"
     sgG5 "44"
+    leiden "6"
   ]
   node
   [
@@ -24122,6 +24926,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "58"
+    leiden "8"
   ]
   node
   [
@@ -24152,6 +24957,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -24182,6 +24988,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -24212,6 +25019,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "69"
+    leiden "8"
   ]
   node
   [
@@ -24242,6 +25050,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -24272,6 +25081,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -24302,6 +25112,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -24332,6 +25143,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "69"
+    leiden "8"
   ]
   node
   [
@@ -24362,6 +25174,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -24392,6 +25205,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -24422,6 +25236,7 @@ graph
     sgG1 "22"
     sgG2 "11"
     sgG5 "64"
+    leiden "12"
   ]
   node
   [
@@ -24452,6 +25267,7 @@ graph
     sgG1 "1"
     sgG2 "42"
     sgG5 "54"
+    leiden "6"
   ]
   node
   [
@@ -24482,6 +25298,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "37"
+    leiden "8"
   ]
   node
   [
@@ -24512,6 +25329,7 @@ graph
     sgG1 "26"
     sgG2 "10"
     sgG5 "2"
+    leiden "9"
   ]
   node
   [
@@ -24542,6 +25360,7 @@ graph
     sgG1 "6"
     sgG2 "3"
     sgG5 "70"
+    leiden "3"
   ]
   node
   [
@@ -24572,6 +25391,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -24602,6 +25422,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -24632,6 +25453,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -24662,6 +25484,7 @@ graph
     sgG1 "4"
     sgG2 "28"
     sgG5 "61"
+    leiden "10"
   ]
   node
   [
@@ -24692,6 +25515,7 @@ graph
     sgG1 "6"
     sgG2 "3"
     sgG5 "70"
+    leiden "3"
   ]
   node
   [
@@ -24722,6 +25546,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -24752,6 +25577,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "67"
+    leiden "10"
   ]
   node
   [
@@ -24782,6 +25608,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "88"
+    leiden "1"
   ]
   node
   [
@@ -24812,6 +25639,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "44"
+    leiden "1"
   ]
   node
   [
@@ -24842,6 +25670,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -24872,6 +25701,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "61"
+    leiden "10"
   ]
   node
   [
@@ -24902,6 +25732,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -24932,6 +25763,7 @@ graph
     sgG1 "26"
     sgG2 "10"
     sgG5 "40"
+    leiden "1"
   ]
   node
   [
@@ -24962,6 +25794,7 @@ graph
     sgG1 "28"
     sgG2 "25"
     sgG5 "13"
+    leiden "5"
   ]
   node
   [
@@ -24992,6 +25825,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -25022,6 +25856,7 @@ graph
     sgG1 "4"
     sgG2 "3"
     sgG5 "74"
+    leiden "10"
   ]
   node
   [
@@ -25052,6 +25887,7 @@ graph
     sgG1 "3"
     sgG2 "15"
     sgG5 "59"
+    leiden "8"
   ]
   node
   [
@@ -25082,6 +25918,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -25112,6 +25949,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -25142,6 +25980,7 @@ graph
     sgG1 "23"
     sgG2 "36"
     sgG5 "65"
+    leiden "5"
   ]
   node
   [
@@ -25172,6 +26011,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -25202,6 +26042,7 @@ graph
     sgG1 "3"
     sgG2 "39"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -25232,6 +26073,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "33"
+    leiden "1"
   ]
   node
   [
@@ -25262,6 +26104,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -25292,6 +26135,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "39"
+    leiden "10"
   ]
   node
   [
@@ -25322,6 +26166,7 @@ graph
     sgG1 "26"
     sgG2 "17"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -25352,6 +26197,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "4"
+    leiden "8"
   ]
   node
   [
@@ -25382,6 +26228,7 @@ graph
     sgG1 "17"
     sgG2 "10"
     sgG5 "4"
+    leiden "8"
   ]
   node
   [
@@ -25412,6 +26259,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -25442,6 +26290,7 @@ graph
     sgG1 "26"
     sgG2 "31"
     sgG5 "78"
+    leiden "1"
   ]
   node
   [
@@ -25472,6 +26321,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -25502,6 +26352,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -25532,6 +26383,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "8"
+    leiden "7"
   ]
   node
   [
@@ -25562,6 +26414,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "40"
+    leiden "10"
   ]
   node
   [
@@ -25592,6 +26445,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -25622,6 +26476,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -25652,6 +26507,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "50"
+    leiden "11"
   ]
   node
   [
@@ -25682,6 +26538,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "40"
+    leiden "10"
   ]
   node
   [
@@ -25712,6 +26569,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -25742,6 +26600,7 @@ graph
     sgG1 "3"
     sgG2 "15"
     sgG5 "59"
+    leiden "5"
   ]
   node
   [
@@ -25772,6 +26631,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "79"
+    leiden "8"
   ]
   node
   [
@@ -25802,6 +26662,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "81"
+    leiden "7"
   ]
   node
   [
@@ -25832,6 +26693,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -25862,6 +26724,7 @@ graph
     sgG1 "17"
     sgG2 "42"
     sgG5 "69"
+    leiden "8"
   ]
   node
   [
@@ -25892,6 +26755,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "26"
+    leiden "10"
   ]
   node
   [
@@ -25922,6 +26786,7 @@ graph
     sgG1 "19"
     sgG2 "1"
     sgG5 "78"
+    leiden "7"
   ]
   node
   [
@@ -25952,6 +26817,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "71"
+    leiden "10"
   ]
   node
   [
@@ -25982,6 +26848,7 @@ graph
     sgG1 "4"
     sgG2 "7"
     sgG5 "50"
+    leiden "6"
   ]
   node
   [
@@ -26012,6 +26879,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -26042,6 +26910,7 @@ graph
     sgG1 "4"
     sgG2 "28"
     sgG5 "59"
+    leiden "10"
   ]
   node
   [
@@ -26072,6 +26941,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "55"
+    leiden "1"
   ]
   node
   [
@@ -26102,6 +26972,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "24"
+    leiden "14"
   ]
   node
   [
@@ -26132,6 +27003,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -26162,6 +27034,7 @@ graph
     sgG1 "18"
     sgG2 "39"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -26192,6 +27065,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "49"
+    leiden "10"
   ]
   node
   [
@@ -26222,6 +27096,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -26252,6 +27127,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -26282,6 +27158,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -26312,6 +27189,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "87"
+    leiden "5"
   ]
   node
   [
@@ -26342,6 +27220,7 @@ graph
     sgG1 "6"
     sgG2 "3"
     sgG5 "70"
+    leiden "3"
   ]
   node
   [
@@ -26372,6 +27251,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -26402,6 +27282,7 @@ graph
     sgG1 "18"
     sgG2 "39"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -26432,6 +27313,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -26462,6 +27344,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "33"
+    leiden "10"
   ]
   node
   [
@@ -26492,6 +27375,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -26522,6 +27406,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "40"
+    leiden "10"
   ]
   node
   [
@@ -26552,6 +27437,7 @@ graph
     sgG1 "27"
     sgG2 "19"
     sgG5 "20"
+    leiden "11"
   ]
   node
   [
@@ -26582,6 +27468,7 @@ graph
     sgG1 "18"
     sgG2 "39"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -26612,6 +27499,7 @@ graph
     sgG1 "18"
     sgG2 "39"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -26642,6 +27530,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -26672,6 +27561,7 @@ graph
     sgG1 "4"
     sgG2 "12"
     sgG5 "50"
+    leiden "2"
   ]
   node
   [
@@ -26702,6 +27592,7 @@ graph
     sgG1 "18"
     sgG2 "39"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -26732,6 +27623,7 @@ graph
     sgG1 "4"
     sgG2 "29"
     sgG5 "36"
+    leiden "3"
   ]
   node
   [
@@ -26762,6 +27654,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "58"
+    leiden "5"
   ]
   node
   [
@@ -26792,6 +27685,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -26822,6 +27716,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -26852,6 +27747,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -26882,6 +27778,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -26912,6 +27809,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -26942,6 +27840,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -26972,6 +27871,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -27002,6 +27902,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -27032,6 +27933,7 @@ graph
     sgG1 "4"
     sgG2 "8"
     sgG5 "39"
+    leiden "10"
   ]
   node
   [
@@ -27062,6 +27964,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -27092,6 +27995,7 @@ graph
     sgG1 "4"
     sgG2 "28"
     sgG5 "61"
+    leiden "10"
   ]
   node
   [
@@ -27122,6 +28026,7 @@ graph
     sgG1 "4"
     sgG2 "28"
     sgG5 "61"
+    leiden "10"
   ]
   node
   [
@@ -27152,6 +28057,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -27182,6 +28088,7 @@ graph
     sgG1 "1"
     sgG2 "35"
     sgG5 "87"
+    leiden "6"
   ]
   node
   [
@@ -27212,6 +28119,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -27242,6 +28150,7 @@ graph
     sgG1 "3"
     sgG2 "31"
     sgG5 "1"
+    leiden "10"
   ]
   node
   [
@@ -27272,6 +28181,7 @@ graph
     sgG1 "22"
     sgG2 "34"
     sgG5 "8"
+    leiden "7"
   ]
   node
   [
@@ -27302,6 +28212,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -27332,6 +28243,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -27362,6 +28274,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -27392,6 +28305,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -27422,6 +28336,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -27452,6 +28367,7 @@ graph
     sgG1 "12"
     sgG2 "27"
     sgG5 "75"
+    leiden "14"
   ]
   node
   [
@@ -27482,6 +28398,7 @@ graph
     sgG1 "4"
     sgG2 "28"
     sgG5 "61"
+    leiden "10"
   ]
   node
   [
@@ -27512,6 +28429,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -27542,6 +28460,7 @@ graph
     sgG1 "22"
     sgG2 "35"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -27572,6 +28491,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "33"
+    leiden "10"
   ]
   node
   [
@@ -27602,6 +28522,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "37"
+    leiden "4"
   ]
   node
   [
@@ -27632,6 +28553,7 @@ graph
     sgG1 "23"
     sgG2 "47"
     sgG5 "45"
+    leiden "11"
   ]
   node
   [
@@ -27662,6 +28584,7 @@ graph
     sgG1 "30"
     sgG2 "35"
     sgG5 "55"
+    leiden "9"
   ]
   node
   [
@@ -27692,6 +28615,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -27722,6 +28646,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -27752,6 +28677,7 @@ graph
     sgG1 "18"
     sgG2 "39"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -27782,6 +28708,7 @@ graph
     sgG1 "28"
     sgG2 "29"
     sgG5 "79"
+    leiden "5"
   ]
   node
   [
@@ -27812,6 +28739,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -27842,6 +28770,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -27872,6 +28801,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -27902,6 +28832,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "79"
+    leiden "8"
   ]
   node
   [
@@ -27932,6 +28863,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -27962,6 +28894,7 @@ graph
     sgG1 "4"
     sgG2 "34"
     sgG5 "50"
+    leiden "7"
   ]
   node
   [
@@ -27992,6 +28925,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -28022,6 +28956,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -28052,6 +28987,7 @@ graph
     sgG1 "26"
     sgG2 "7"
     sgG5 "90"
+    leiden "3"
   ]
   node
   [
@@ -28082,6 +29018,7 @@ graph
     sgG1 "22"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -28112,6 +29049,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "58"
+    leiden "8"
   ]
   node
   [
@@ -28142,6 +29080,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "41"
+    leiden "8"
   ]
   node
   [
@@ -28172,6 +29111,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -28202,6 +29142,7 @@ graph
     sgG1 "6"
     sgG2 "3"
     sgG5 "70"
+    leiden "3"
   ]
   node
   [
@@ -28232,6 +29173,7 @@ graph
     sgG1 "30"
     sgG2 "35"
     sgG5 "55"
+    leiden "9"
   ]
   node
   [
@@ -28262,6 +29204,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -28292,6 +29235,7 @@ graph
     sgG1 "18"
     sgG2 "39"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -28322,6 +29266,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "61"
+    leiden "10"
   ]
   node
   [
@@ -28352,6 +29297,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -28382,6 +29328,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -28412,6 +29359,7 @@ graph
     sgG1 "18"
     sgG2 "39"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -28442,6 +29390,7 @@ graph
     sgG1 "8"
     sgG2 "18"
     sgG5 "52"
+    leiden "13"
   ]
   node
   [
@@ -28472,6 +29421,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "40"
+    leiden "10"
   ]
   node
   [
@@ -28502,6 +29452,7 @@ graph
     sgG1 "11"
     sgG2 "22"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -28532,6 +29483,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "55"
+    leiden "8"
   ]
   node
   [
@@ -28562,6 +29514,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -28592,6 +29545,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "49"
+    leiden "10"
   ]
   node
   [
@@ -28622,6 +29576,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "55"
+    leiden "8"
   ]
   node
   [
@@ -28652,6 +29607,7 @@ graph
     sgG1 "18"
     sgG2 "39"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -28682,6 +29638,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -28712,6 +29669,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -28742,6 +29700,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -28772,6 +29731,7 @@ graph
     sgG1 "23"
     sgG2 "29"
     sgG5 "34"
+    leiden "11"
   ]
   node
   [
@@ -28802,6 +29762,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "79"
+    leiden "8"
   ]
   node
   [
@@ -28832,6 +29793,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -28862,6 +29824,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -28892,6 +29855,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "77"
+    leiden "4"
   ]
   node
   [
@@ -28922,6 +29886,7 @@ graph
     sgG1 "3"
     sgG2 "12"
     sgG5 "26"
+    leiden "2"
   ]
   node
   [
@@ -28952,6 +29917,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -28982,6 +29948,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -29012,6 +29979,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -29042,6 +30010,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -29072,6 +30041,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "26"
+    leiden "8"
   ]
   node
   [
@@ -29102,6 +30072,7 @@ graph
     sgG1 "3"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -29132,6 +30103,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "50"
+    leiden "10"
   ]
   node
   [
@@ -29162,6 +30134,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -29192,6 +30165,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "54"
+    leiden "6"
   ]
   node
   [
@@ -29222,6 +30196,7 @@ graph
     sgG1 "17"
     sgG2 "48"
     sgG5 "91"
+    leiden "8"
   ]
   node
   [
@@ -29252,6 +30227,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -29282,6 +30258,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -29312,6 +30289,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -29342,6 +30320,7 @@ graph
     sgG1 "28"
     sgG2 "5"
     sgG5 "10"
+    leiden "5"
   ]
   node
   [
@@ -29372,6 +30351,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -29402,6 +30382,7 @@ graph
     sgG1 "28"
     sgG2 "33"
     sgG5 "3"
+    leiden "6"
   ]
   node
   [
@@ -29432,6 +30413,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -29462,6 +30444,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "83"
+    leiden "4"
   ]
   node
   [
@@ -29492,6 +30475,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -29522,6 +30506,7 @@ graph
     sgG1 "11"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -29552,6 +30537,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -29582,6 +30568,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -29612,6 +30599,7 @@ graph
     sgG1 "4"
     sgG2 "17"
     sgG5 "61"
+    leiden "10"
   ]
   node
   [
@@ -29642,6 +30630,7 @@ graph
     sgG1 "28"
     sgG2 "40"
     sgG5 "18"
+    leiden "5"
   ]
   node
   [
@@ -29672,6 +30661,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "81"
+    leiden "8"
   ]
   node
   [
@@ -29702,6 +30692,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "44"
+    leiden "1"
   ]
   node
   [
@@ -29732,6 +30723,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "44"
+    leiden "1"
   ]
   node
   [
@@ -29762,6 +30754,7 @@ graph
     sgG1 "6"
     sgG2 "24"
     sgG5 "6"
+    leiden "6"
   ]
   node
   [
@@ -29792,6 +30785,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -29822,6 +30816,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -29852,6 +30847,7 @@ graph
     sgG1 "30"
     sgG2 "8"
     sgG5 "70"
+    leiden "1"
   ]
   node
   [
@@ -29882,6 +30878,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -29912,6 +30909,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -29942,6 +30940,7 @@ graph
     sgG1 "26"
     sgG2 "17"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -29972,6 +30971,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "9"
   ]
   node
   [
@@ -30002,6 +31002,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -30032,6 +31033,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -30062,6 +31064,7 @@ graph
     sgG1 "3"
     sgG2 "35"
     sgG5 "79"
+    leiden "9"
   ]
   node
   [
@@ -30092,6 +31095,7 @@ graph
     sgG1 "23"
     sgG2 "4"
     sgG5 "34"
+    leiden "11"
   ]
   node
   [
@@ -30122,6 +31126,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "49"
+    leiden "10"
   ]
   node
   [
@@ -30152,6 +31157,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -30182,6 +31188,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -30212,6 +31219,7 @@ graph
     sgG1 "4"
     sgG2 "17"
     sgG5 "50"
+    leiden "10"
   ]
   node
   [
@@ -30242,6 +31250,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -30272,6 +31281,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -30302,6 +31312,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "79"
+    leiden "8"
   ]
   node
   [
@@ -30332,6 +31343,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -30362,6 +31374,7 @@ graph
     sgG1 "28"
     sgG2 "7"
     sgG5 "27"
+    leiden "13"
   ]
   node
   [
@@ -30392,6 +31405,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -30422,6 +31436,7 @@ graph
     sgG1 "27"
     sgG2 "19"
     sgG5 "20"
+    leiden "11"
   ]
   node
   [
@@ -30452,6 +31467,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "27"
+    leiden "1"
   ]
   node
   [
@@ -30482,6 +31498,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -30512,6 +31529,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -30542,6 +31560,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "49"
+    leiden "10"
   ]
   node
   [
@@ -30572,6 +31591,7 @@ graph
     sgG1 "27"
     sgG2 "19"
     sgG5 "20"
+    leiden "11"
   ]
   node
   [
@@ -30602,6 +31622,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "50"
+    leiden "8"
   ]
   node
   [
@@ -30632,6 +31653,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -30662,6 +31684,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "84"
+    leiden "8"
   ]
   node
   [
@@ -30692,6 +31715,7 @@ graph
     sgG1 "4"
     sgG2 "29"
     sgG5 "40"
+    leiden "10"
   ]
   node
   [
@@ -30722,6 +31746,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "49"
+    leiden "10"
   ]
   node
   [
@@ -30752,6 +31777,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -30782,6 +31808,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -30812,6 +31839,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -30842,6 +31870,7 @@ graph
     sgG1 "3"
     sgG2 "7"
     sgG5 "90"
+    leiden "1"
   ]
   node
   [
@@ -30872,6 +31901,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "4"
   ]
   node
   [
@@ -30902,6 +31932,7 @@ graph
     sgG1 "17"
     sgG2 "42"
     sgG5 "72"
+    leiden "8"
   ]
   node
   [
@@ -30932,6 +31963,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -30962,6 +31994,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -30992,6 +32025,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -31022,6 +32056,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -31052,6 +32087,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "77"
+    leiden "4"
   ]
   node
   [
@@ -31082,6 +32118,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "37"
+    leiden "5"
   ]
   node
   [
@@ -31112,6 +32149,7 @@ graph
     sgG1 "28"
     sgG2 "29"
     sgG5 "35"
+    leiden "5"
   ]
   node
   [
@@ -31142,6 +32180,7 @@ graph
     sgG1 "22"
     sgG2 "34"
     sgG5 "8"
+    leiden "7"
   ]
   node
   [
@@ -31172,6 +32211,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "77"
+    leiden "4"
   ]
   node
   [
@@ -31202,6 +32242,7 @@ graph
     sgG1 "24"
     sgG2 "12"
     sgG5 "66"
+    leiden "9"
   ]
   node
   [
@@ -31232,6 +32273,7 @@ graph
     sgG1 "26"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -31262,6 +32304,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -31292,6 +32335,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -31322,6 +32366,7 @@ graph
     sgG1 "28"
     sgG2 "33"
     sgG5 "3"
+    leiden "6"
   ]
   node
   [
@@ -31352,6 +32397,7 @@ graph
     sgG1 "28"
     sgG2 "12"
     sgG5 "60"
+    leiden "5"
   ]
   node
   [
@@ -31382,6 +32428,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "26"
+    leiden "8"
   ]
   node
   [
@@ -31412,6 +32459,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -31442,6 +32490,7 @@ graph
     sgG1 "9"
     sgG2 "45"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -31472,6 +32521,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -31502,6 +32552,7 @@ graph
     sgG1 "24"
     sgG2 "49"
     sgG5 "66"
+    leiden "9"
   ]
   node
   [
@@ -31532,6 +32583,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -31562,6 +32614,7 @@ graph
     sgG1 "1"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -31592,6 +32645,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -31622,6 +32676,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -31652,6 +32707,7 @@ graph
     sgG1 "30"
     sgG2 "35"
     sgG5 "55"
+    leiden "9"
   ]
   node
   [
@@ -31682,6 +32738,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -31712,6 +32769,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "29"
+    leiden "9"
   ]
   node
   [
@@ -31742,6 +32800,7 @@ graph
     sgG1 "4"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -31772,6 +32831,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -31802,6 +32862,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -31832,6 +32893,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "38"
+    leiden "1"
   ]
   node
   [
@@ -31862,6 +32924,7 @@ graph
     sgG1 "26"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -31892,6 +32955,7 @@ graph
     sgG1 "9"
     sgG2 "45"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -31922,6 +32986,7 @@ graph
     sgG1 "3"
     sgG2 "10"
     sgG5 "71"
+    leiden "13"
   ]
   node
   [
@@ -31952,6 +33017,7 @@ graph
     sgG1 "21"
     sgG2 "42"
     sgG5 "72"
+    leiden "12"
   ]
   node
   [
@@ -31982,6 +33048,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -32012,6 +33079,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -32042,6 +33110,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -32072,6 +33141,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "61"
+    leiden "10"
   ]
   node
   [
@@ -32102,6 +33172,7 @@ graph
     sgG1 "3"
     sgG2 "10"
     sgG5 "71"
+    leiden "13"
   ]
   node
   [
@@ -32132,6 +33203,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -32162,6 +33234,7 @@ graph
     sgG1 "23"
     sgG2 "40"
     sgG5 "58"
+    leiden "4"
   ]
   node
   [
@@ -32192,6 +33265,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -32222,6 +33296,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -32252,6 +33327,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -32282,6 +33358,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -32312,6 +33389,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "37"
+    leiden "8"
   ]
   node
   [
@@ -32342,6 +33420,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "77"
+    leiden "4"
   ]
   node
   [
@@ -32372,6 +33451,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "40"
+    leiden "5"
   ]
   node
   [
@@ -32402,6 +33482,7 @@ graph
     sgG1 "9"
     sgG2 "45"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -32432,6 +33513,7 @@ graph
     sgG1 "28"
     sgG2 "45"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -32462,6 +33544,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -32492,6 +33575,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "91"
+    leiden "6"
   ]
   node
   [
@@ -32522,6 +33606,7 @@ graph
     sgG1 "28"
     sgG2 "2"
     sgG5 "37"
+    leiden "5"
   ]
   node
   [
@@ -32552,6 +33637,7 @@ graph
     sgG1 "28"
     sgG2 "47"
     sgG5 "77"
+    leiden "5"
   ]
   node
   [
@@ -32582,6 +33668,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -32612,6 +33699,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -32642,6 +33730,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -32672,6 +33761,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -32702,6 +33792,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -32732,6 +33823,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -32762,6 +33854,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -32792,6 +33885,7 @@ graph
     sgG1 "28"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -32822,6 +33916,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -32852,6 +33947,7 @@ graph
     sgG1 "4"
     sgG2 "47"
     sgG5 "66"
+    leiden "10"
   ]
   node
   [
@@ -32882,6 +33978,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "25"
+    leiden "13"
   ]
   node
   [
@@ -32912,6 +34009,7 @@ graph
     sgG1 "3"
     sgG2 "48"
     sgG5 "91"
+    leiden "2"
   ]
   node
   [
@@ -32942,6 +34040,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -32972,6 +34071,7 @@ graph
     sgG1 "17"
     sgG2 "12"
     sgG5 "38"
+    leiden "8"
   ]
   node
   [
@@ -33002,6 +34102,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -33032,6 +34133,7 @@ graph
     sgG1 "3"
     sgG2 "3"
     sgG5 "29"
+    leiden "9"
   ]
   node
   [
@@ -33062,6 +34164,7 @@ graph
     sgG1 "28"
     sgG2 "45"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -33092,6 +34195,7 @@ graph
     sgG1 "23"
     sgG2 "4"
     sgG5 "34"
+    leiden "11"
   ]
   node
   [
@@ -33122,6 +34226,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -33152,6 +34257,7 @@ graph
     sgG1 "11"
     sgG2 "21"
     sgG5 "77"
+    leiden "13"
   ]
   node
   [
@@ -33182,6 +34288,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -33212,6 +34319,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "37"
+    leiden "3"
   ]
   node
   [
@@ -33242,6 +34350,7 @@ graph
     sgG1 "1"
     sgG2 "10"
     sgG5 "71"
+    leiden "13"
   ]
   node
   [
@@ -33272,6 +34381,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -33302,6 +34412,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -33332,6 +34443,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -33362,6 +34474,7 @@ graph
     sgG1 "1"
     sgG2 "10"
     sgG5 "71"
+    leiden "13"
   ]
   node
   [
@@ -33392,6 +34505,7 @@ graph
     sgG1 "3"
     sgG2 "15"
     sgG5 "59"
+    leiden "7"
   ]
   node
   [
@@ -33422,6 +34536,7 @@ graph
     sgG1 "23"
     sgG2 "4"
     sgG5 "34"
+    leiden "11"
   ]
   node
   [
@@ -33452,6 +34567,7 @@ graph
     sgG1 "17"
     sgG2 "10"
     sgG5 "71"
+    leiden "8"
   ]
   node
   [
@@ -33482,6 +34598,7 @@ graph
     sgG1 "26"
     sgG2 "19"
     sgG5 "65"
+    leiden "1"
   ]
   node
   [
@@ -33512,6 +34629,7 @@ graph
     sgG1 "3"
     sgG2 "26"
     sgG5 "89"
+    leiden "2"
   ]
   node
   [
@@ -33542,6 +34660,7 @@ graph
     sgG1 "17"
     sgG2 "42"
     sgG5 "72"
+    leiden "8"
   ]
   node
   [
@@ -33572,6 +34691,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -33602,6 +34722,7 @@ graph
     sgG1 "1"
     sgG2 "3"
     sgG5 "16"
+    leiden "3"
   ]
   node
   [
@@ -33632,6 +34753,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "69"
+    leiden "8"
   ]
   node
   [
@@ -33662,6 +34784,7 @@ graph
     sgG1 "5"
     sgG2 "38"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -33692,6 +34815,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "11"
   ]
   node
   [
@@ -33722,6 +34846,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -33752,6 +34877,7 @@ graph
     sgG1 "4"
     sgG2 "33"
     sgG5 "3"
+    leiden "10"
   ]
   node
   [
@@ -33782,6 +34908,7 @@ graph
     sgG1 "17"
     sgG2 "10"
     sgG5 "25"
+    leiden "13"
   ]
   node
   [
@@ -33812,6 +34939,7 @@ graph
     sgG1 "5"
     sgG2 "38"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -33842,6 +34970,7 @@ graph
     sgG1 "25"
     sgG2 "46"
     sgG5 "9"
+    leiden "12"
   ]
   node
   [
@@ -33872,6 +35001,7 @@ graph
     sgG1 "11"
     sgG2 "36"
     sgG5 "66"
+    leiden "4"
   ]
   node
   [
@@ -33902,6 +35032,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -33932,6 +35063,7 @@ graph
     sgG1 "30"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -33962,6 +35094,7 @@ graph
     sgG1 "2"
     sgG2 "12"
     sgG5 "66"
+    leiden "14"
   ]
   node
   [
@@ -33992,6 +35125,7 @@ graph
     sgG1 "26"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -34022,6 +35156,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "45"
+    leiden "8"
   ]
   node
   [
@@ -34052,6 +35187,7 @@ graph
     sgG1 "1"
     sgG2 "9"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -34082,6 +35218,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "92"
+    leiden "5"
   ]
   node
   [
@@ -34112,6 +35249,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "1"
   ]
   node
   [
@@ -34142,6 +35280,7 @@ graph
     sgG1 "29"
     sgG2 "42"
     sgG5 "43"
+    leiden "8"
   ]
   node
   [
@@ -34172,6 +35311,7 @@ graph
     sgG1 "28"
     sgG2 "19"
     sgG5 "4"
+    leiden "5"
   ]
   node
   [
@@ -34202,6 +35342,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "24"
+    leiden "14"
   ]
   node
   [
@@ -34232,6 +35373,7 @@ graph
     sgG1 "17"
     sgG2 "11"
     sgG5 "55"
+    leiden "8"
   ]
   node
   [
@@ -34262,6 +35404,7 @@ graph
     sgG1 "17"
     sgG2 "40"
     sgG5 "62"
+    leiden "10"
   ]
   node
   [
@@ -34292,6 +35435,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "45"
+    leiden "8"
   ]
   node
   [
@@ -34322,6 +35466,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -34352,6 +35497,7 @@ graph
     sgG1 "1"
     sgG2 "30"
     sgG5 "5"
+    leiden "6"
   ]
   node
   [
@@ -34382,6 +35528,7 @@ graph
     sgG1 "26"
     sgG2 "10"
     sgG5 "25"
+    leiden "1"
   ]
   node
   [
@@ -34412,6 +35559,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -34442,6 +35590,7 @@ graph
     sgG1 "1"
     sgG2 "10"
     sgG5 "71"
+    leiden "11"
   ]
   node
   [
@@ -34472,6 +35621,7 @@ graph
     sgG1 "6"
     sgG2 "10"
     sgG5 "90"
+    leiden "6"
   ]
   node
   [
@@ -34502,6 +35652,7 @@ graph
     sgG1 "1"
     sgG2 "21"
     sgG5 "25"
+    leiden "13"
   ]
   node
   [
@@ -34532,6 +35683,7 @@ graph
     sgG1 "17"
     sgG2 "10"
     sgG5 "25"
+    leiden "8"
   ]
   node
   [
@@ -34562,6 +35714,7 @@ graph
     sgG1 "1"
     sgG2 "3"
     sgG5 "16"
+    leiden "3"
   ]
   node
   [
@@ -34592,6 +35745,7 @@ graph
     sgG1 "11"
     sgG2 "10"
     sgG5 "25"
+    leiden "13"
   ]
   node
   [
@@ -34622,6 +35776,7 @@ graph
     sgG1 "1"
     sgG2 "10"
     sgG5 "38"
+    leiden "3"
   ]
   node
   [
@@ -34652,6 +35807,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -34682,6 +35838,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "9"
   ]
   node
   [
@@ -34712,6 +35869,7 @@ graph
     sgG1 "26"
     sgG2 "29"
     sgG5 "79"
+    leiden "7"
   ]
   node
   [
@@ -34742,6 +35900,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -34772,6 +35931,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "9"
   ]
   node
   [
@@ -34802,6 +35962,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "56"
+    leiden "3"
   ]
   node
   [
@@ -34832,6 +35993,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "29"
+    leiden "9"
   ]
   node
   [
@@ -34862,6 +36024,7 @@ graph
     sgG1 "11"
     sgG2 "17"
     sgG5 "83"
+    leiden "2"
   ]
   node
   [
@@ -34892,6 +36055,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "37"
+    leiden "8"
   ]
   node
   [
@@ -34922,6 +36086,7 @@ graph
     sgG1 "28"
     sgG2 "40"
     sgG5 "18"
+    leiden "5"
   ]
   node
   [
@@ -34952,6 +36117,7 @@ graph
     sgG1 "16"
     sgG2 "11"
     sgG5 "76"
+    leiden "2"
   ]
   node
   [
@@ -34982,6 +36148,7 @@ graph
     sgG1 "1"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -35012,6 +36179,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -35042,6 +36210,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "49"
+    leiden "10"
   ]
   node
   [
@@ -35072,6 +36241,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "2"
   ]
   node
   [
@@ -35102,6 +36272,7 @@ graph
     sgG1 "4"
     sgG2 "42"
     sgG5 "33"
+    leiden "10"
   ]
   node
   [
@@ -35132,6 +36303,7 @@ graph
     sgG1 "25"
     sgG2 "46"
     sgG5 "9"
+    leiden "12"
   ]
   node
   [
@@ -35162,6 +36334,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -35192,6 +36365,7 @@ graph
     sgG1 "2"
     sgG2 "34"
     sgG5 "59"
+    leiden "14"
   ]
   node
   [
@@ -35222,6 +36396,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "29"
+    leiden "6"
   ]
   node
   [
@@ -35252,6 +36427,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -35282,6 +36458,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "65"
+    leiden "8"
   ]
   node
   [
@@ -35312,6 +36489,7 @@ graph
     sgG1 "17"
     sgG2 "17"
     sgG5 "27"
+    leiden "1"
   ]
   node
   [
@@ -35342,6 +36520,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "29"
+    leiden "13"
   ]
   node
   [
@@ -35372,6 +36551,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -35402,6 +36582,7 @@ graph
     sgG1 "21"
     sgG2 "42"
     sgG5 "72"
+    leiden "12"
   ]
   node
   [
@@ -35432,6 +36613,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -35462,6 +36644,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -35492,6 +36675,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "12"
+    leiden "1"
   ]
   node
   [
@@ -35522,6 +36706,7 @@ graph
     sgG1 "26"
     sgG2 "7"
     sgG5 "90"
+    leiden "8"
   ]
   node
   [
@@ -35552,6 +36737,7 @@ graph
     sgG1 "26"
     sgG2 "12"
     sgG5 "38"
+    leiden "2"
   ]
   node
   [
@@ -35582,6 +36768,7 @@ graph
     sgG1 "28"
     sgG2 "33"
     sgG5 "3"
+    leiden "6"
   ]
   node
   [
@@ -35612,6 +36799,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "88"
+    leiden "1"
   ]
   node
   [
@@ -35642,6 +36830,7 @@ graph
     sgG1 "4"
     sgG2 "25"
     sgG5 "91"
+    leiden "10"
   ]
   node
   [
@@ -35672,6 +36861,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -35702,6 +36892,7 @@ graph
     sgG1 "11"
     sgG2 "21"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -35732,6 +36923,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -35762,6 +36954,7 @@ graph
     sgG1 "17"
     sgG2 "35"
     sgG5 "58"
+    leiden "8"
   ]
   node
   [
@@ -35792,6 +36985,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -35822,6 +37016,7 @@ graph
     sgG1 "7"
     sgG2 "30"
     sgG5 "5"
+    leiden "4"
   ]
   node
   [
@@ -35852,6 +37047,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -35882,6 +37078,7 @@ graph
     sgG1 "26"
     sgG2 "9"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -35912,6 +37109,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -35942,6 +37140,7 @@ graph
     sgG1 "4"
     sgG2 "12"
     sgG5 "38"
+    leiden "2"
   ]
   node
   [
@@ -35972,6 +37171,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "44"
+    leiden "1"
   ]
   node
   [
@@ -36002,6 +37202,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "73"
+    leiden "8"
   ]
   node
   [
@@ -36032,6 +37233,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -36062,6 +37264,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -36092,6 +37295,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -36122,6 +37326,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -36152,6 +37357,7 @@ graph
     sgG1 "17"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -36182,6 +37388,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -36212,6 +37419,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "4"
   ]
   node
   [
@@ -36242,6 +37450,7 @@ graph
     sgG1 "26"
     sgG2 "31"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -36272,6 +37481,7 @@ graph
     sgG1 "11"
     sgG2 "13"
     sgG5 "93"
+    leiden "14"
   ]
   node
   [
@@ -36302,6 +37512,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -36332,6 +37543,7 @@ graph
     sgG1 "1"
     sgG2 "9"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -36362,6 +37574,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -36392,6 +37605,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "2"
   ]
   node
   [
@@ -36422,6 +37636,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -36452,6 +37667,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "12"
+    leiden "1"
   ]
   node
   [
@@ -36482,6 +37698,7 @@ graph
     sgG1 "11"
     sgG2 "31"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -36512,6 +37729,7 @@ graph
     sgG1 "11"
     sgG2 "31"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -36542,6 +37760,7 @@ graph
     sgG1 "11"
     sgG2 "31"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -36572,6 +37791,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "1"
   ]
   node
   [
@@ -36602,6 +37822,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -36632,6 +37853,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "21"
+    leiden "1"
   ]
   node
   [
@@ -36662,6 +37884,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "36"
+    leiden "2"
   ]
   node
   [
@@ -36692,6 +37915,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "17"
+    leiden "8"
   ]
   node
   [
@@ -36722,6 +37946,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -36752,6 +37977,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "72"
+    leiden "1"
   ]
   node
   [
@@ -36782,6 +38008,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "72"
+    leiden "1"
   ]
   node
   [
@@ -36812,6 +38039,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -36842,6 +38070,7 @@ graph
     sgG1 "12"
     sgG2 "27"
     sgG5 "75"
+    leiden "14"
   ]
   node
   [
@@ -36872,6 +38101,7 @@ graph
     sgG1 "23"
     sgG2 "47"
     sgG5 "45"
+    leiden "11"
   ]
   node
   [
@@ -36902,6 +38132,7 @@ graph
     sgG1 "23"
     sgG2 "47"
     sgG5 "45"
+    leiden "11"
   ]
   node
   [
@@ -36932,6 +38163,7 @@ graph
     sgG1 "23"
     sgG2 "47"
     sgG5 "45"
+    leiden "11"
   ]
   node
   [
@@ -36962,6 +38194,7 @@ graph
     sgG1 "23"
     sgG2 "47"
     sgG5 "45"
+    leiden "11"
   ]
   node
   [
@@ -36992,6 +38225,7 @@ graph
     sgG1 "4"
     sgG2 "47"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -37022,6 +38256,7 @@ graph
     sgG1 "28"
     sgG2 "10"
     sgG5 "12"
+    leiden "5"
   ]
   node
   [
@@ -37052,6 +38287,7 @@ graph
     sgG1 "11"
     sgG2 "31"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -37082,6 +38318,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "8"
   ]
   node
   [
@@ -37112,6 +38349,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -37142,6 +38380,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "67"
+    leiden "3"
   ]
   node
   [
@@ -37172,6 +38411,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -37202,6 +38442,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -37232,6 +38473,7 @@ graph
     sgG1 "17"
     sgG2 "22"
     sgG5 "79"
+    leiden "8"
   ]
   node
   [
@@ -37262,6 +38504,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -37292,6 +38535,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -37322,6 +38566,7 @@ graph
     sgG1 "16"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -37352,6 +38597,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "37"
+    leiden "8"
   ]
   node
   [
@@ -37382,6 +38628,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -37412,6 +38659,7 @@ graph
     sgG1 "22"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -37442,6 +38690,7 @@ graph
     sgG1 "22"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -37472,6 +38721,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "1"
   ]
   node
   [
@@ -37502,6 +38752,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -37532,6 +38783,7 @@ graph
     sgG1 "28"
     sgG2 "47"
     sgG5 "37"
+    leiden "5"
   ]
   node
   [
@@ -37562,6 +38814,7 @@ graph
     sgG1 "22"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -37592,6 +38845,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -37622,6 +38876,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -37652,6 +38907,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -37682,6 +38938,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -37712,6 +38969,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "24"
+    leiden "12"
   ]
   node
   [
@@ -37742,6 +39000,7 @@ graph
     sgG1 "1"
     sgG2 "3"
     sgG5 "16"
+    leiden "3"
   ]
   node
   [
@@ -37772,6 +39031,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "39"
+    leiden "10"
   ]
   node
   [
@@ -37802,6 +39062,7 @@ graph
     sgG1 "1"
     sgG2 "11"
     sgG5 "29"
+    leiden "12"
   ]
   node
   [
@@ -37832,6 +39093,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "33"
+    leiden "12"
   ]
   node
   [
@@ -37862,6 +39124,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "6"
   ]
   node
   [
@@ -37892,6 +39155,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -37922,6 +39186,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -37952,6 +39217,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -37982,6 +39248,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -38012,6 +39279,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -38042,6 +39310,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -38072,6 +39341,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -38102,6 +39372,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "54"
+    leiden "6"
   ]
   node
   [
@@ -38132,6 +39403,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -38162,6 +39434,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -38192,6 +39465,7 @@ graph
     sgG1 "28"
     sgG2 "33"
     sgG5 "3"
+    leiden "6"
   ]
   node
   [
@@ -38222,6 +39496,7 @@ graph
     sgG1 "26"
     sgG2 "7"
     sgG5 "90"
+    leiden "3"
   ]
   node
   [
@@ -38252,6 +39527,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "37"
+    leiden "8"
   ]
   node
   [
@@ -38282,6 +39558,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -38312,6 +39589,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -38342,6 +39620,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -38372,6 +39651,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "45"
+    leiden "8"
   ]
   node
   [
@@ -38402,6 +39682,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "29"
+    leiden "6"
   ]
   node
   [
@@ -38432,6 +39713,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -38462,6 +39744,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -38492,6 +39775,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "14"
+    leiden "8"
   ]
   node
   [
@@ -38522,6 +39806,7 @@ graph
     sgG1 "2"
     sgG2 "48"
     sgG5 "86"
+    leiden "14"
   ]
   node
   [
@@ -38552,6 +39837,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -38582,6 +39868,7 @@ graph
     sgG1 "17"
     sgG2 "31"
     sgG5 "42"
+    leiden "8"
   ]
   node
   [
@@ -38612,6 +39899,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "64"
+    leiden "8"
   ]
   node
   [
@@ -38642,6 +39930,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -38672,6 +39961,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -38702,6 +39992,7 @@ graph
     sgG1 "28"
     sgG2 "21"
     sgG5 "73"
+    leiden "13"
   ]
   node
   [
@@ -38732,6 +40023,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -38762,6 +40054,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "84"
+    leiden "8"
   ]
   node
   [
@@ -38792,6 +40085,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "2"
+    leiden "1"
   ]
   node
   [
@@ -38822,6 +40116,7 @@ graph
     sgG1 "30"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -38852,6 +40147,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -38882,6 +40178,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "32"
+    leiden "8"
   ]
   node
   [
@@ -38912,6 +40209,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -38942,6 +40240,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "8"
+    leiden "8"
   ]
   node
   [
@@ -38972,6 +40271,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "24"
+    leiden "8"
   ]
   node
   [
@@ -39002,6 +40302,7 @@ graph
     sgG1 "17"
     sgG2 "16"
     sgG5 "61"
+    leiden "10"
   ]
   node
   [
@@ -39032,6 +40333,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "45"
+    leiden "8"
   ]
   node
   [
@@ -39062,6 +40364,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -39092,6 +40395,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "45"
+    leiden "8"
   ]
   node
   [
@@ -39122,6 +40426,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -39152,6 +40457,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -39182,6 +40488,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -39212,6 +40519,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -39242,6 +40550,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "6"
+    leiden "11"
   ]
   node
   [
@@ -39272,6 +40581,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -39302,6 +40612,7 @@ graph
     sgG1 "11"
     sgG2 "13"
     sgG5 "93"
+    leiden "14"
   ]
   node
   [
@@ -39332,6 +40643,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "64"
+    leiden "8"
   ]
   node
   [
@@ -39362,6 +40674,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -39392,6 +40705,7 @@ graph
     sgG1 "1"
     sgG2 "42"
     sgG5 "33"
+    leiden "6"
   ]
   node
   [
@@ -39422,6 +40736,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -39452,6 +40767,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -39482,6 +40798,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -39512,6 +40829,7 @@ graph
     sgG1 "1"
     sgG2 "3"
     sgG5 "16"
+    leiden "3"
   ]
   node
   [
@@ -39542,6 +40860,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -39572,6 +40891,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "58"
+    leiden "8"
   ]
   node
   [
@@ -39602,6 +40922,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -39632,6 +40953,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -39662,6 +40984,7 @@ graph
     sgG1 "12"
     sgG2 "27"
     sgG5 "75"
+    leiden "14"
   ]
   node
   [
@@ -39692,6 +41015,7 @@ graph
     sgG1 "1"
     sgG2 "42"
     sgG5 "74"
+    leiden "14"
   ]
   node
   [
@@ -39722,6 +41046,7 @@ graph
     sgG1 "3"
     sgG2 "42"
     sgG5 "74"
+    leiden "2"
   ]
   node
   [
@@ -39752,6 +41077,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "74"
+    leiden "1"
   ]
   node
   [
@@ -39782,6 +41108,7 @@ graph
     sgG1 "3"
     sgG2 "42"
     sgG5 "74"
+    leiden "2"
   ]
   node
   [
@@ -39812,6 +41139,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -39842,6 +41170,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "40"
+    leiden "8"
   ]
   node
   [
@@ -39872,6 +41201,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -39902,6 +41232,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "45"
+    leiden "8"
   ]
   node
   [
@@ -39932,6 +41263,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -39962,6 +41294,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "28"
+    leiden "8"
   ]
   node
   [
@@ -39992,6 +41325,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "54"
+    leiden "6"
   ]
   node
   [
@@ -40022,6 +41356,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -40052,6 +41387,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -40082,6 +41418,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -40112,6 +41449,7 @@ graph
     sgG1 "17"
     sgG2 "8"
     sgG5 "91"
+    leiden "9"
   ]
   node
   [
@@ -40142,6 +41480,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "5"
+    leiden "1"
   ]
   node
   [
@@ -40172,6 +41511,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40202,6 +41542,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -40232,6 +41573,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40262,6 +41604,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40292,6 +41635,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40322,6 +41666,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40352,6 +41697,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40382,6 +41728,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40412,6 +41759,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40442,6 +41790,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40472,6 +41821,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -40502,6 +41852,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40532,6 +41883,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -40562,6 +41914,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "83"
+    leiden "5"
   ]
   node
   [
@@ -40592,6 +41945,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40622,6 +41976,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40652,6 +42007,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -40682,6 +42038,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40712,6 +42069,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -40742,6 +42100,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40772,6 +42131,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40802,6 +42162,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -40832,6 +42193,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -40862,6 +42224,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -40892,6 +42255,7 @@ graph
     sgG1 "28"
     sgG2 "29"
     sgG5 "35"
+    leiden "5"
   ]
   node
   [
@@ -40922,6 +42286,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -40952,6 +42317,7 @@ graph
     sgG1 "14"
     sgG2 "20"
     sgG5 "63"
+    leiden "12"
   ]
   node
   [
@@ -40982,6 +42348,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -41012,6 +42379,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "37"
+    leiden "8"
   ]
   node
   [
@@ -41042,6 +42410,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -41072,6 +42441,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -41102,6 +42472,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "11"
   ]
   node
   [
@@ -41132,6 +42503,7 @@ graph
     sgG1 "1"
     sgG2 "3"
     sgG5 "16"
+    leiden "3"
   ]
   node
   [
@@ -41162,6 +42534,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "45"
+    leiden "8"
   ]
   node
   [
@@ -41192,6 +42565,7 @@ graph
     sgG1 "28"
     sgG2 "47"
     sgG5 "37"
+    leiden "5"
   ]
   node
   [
@@ -41222,6 +42596,7 @@ graph
     sgG1 "28"
     sgG2 "47"
     sgG5 "37"
+    leiden "5"
   ]
   node
   [
@@ -41252,6 +42627,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -41282,6 +42658,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "24"
+    leiden "14"
   ]
   node
   [
@@ -41312,6 +42689,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "24"
+    leiden "14"
   ]
   node
   [
@@ -41342,6 +42720,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -41372,6 +42751,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -41402,6 +42782,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -41432,6 +42813,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "37"
+    leiden "8"
   ]
   node
   [
@@ -41462,6 +42844,7 @@ graph
     sgG1 "28"
     sgG2 "5"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -41492,6 +42875,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "37"
+    leiden "8"
   ]
   node
   [
@@ -41522,6 +42906,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "37"
+    leiden "8"
   ]
   node
   [
@@ -41552,6 +42937,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "37"
+    leiden "8"
   ]
   node
   [
@@ -41582,6 +42968,7 @@ graph
     sgG1 "28"
     sgG2 "47"
     sgG5 "37"
+    leiden "13"
   ]
   node
   [
@@ -41612,6 +42999,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "37"
+    leiden "8"
   ]
   node
   [
@@ -41642,6 +43030,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -41672,6 +43061,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "2"
   ]
   node
   [
@@ -41702,6 +43092,7 @@ graph
     sgG1 "23"
     sgG2 "47"
     sgG5 "45"
+    leiden "11"
   ]
   node
   [
@@ -41732,6 +43123,7 @@ graph
     sgG1 "28"
     sgG2 "21"
     sgG5 "52"
+    leiden "13"
   ]
   node
   [
@@ -41762,6 +43154,7 @@ graph
     sgG1 "22"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -41792,6 +43185,7 @@ graph
     sgG1 "28"
     sgG2 "12"
     sgG5 "38"
+    leiden "13"
   ]
   node
   [
@@ -41822,6 +43216,7 @@ graph
     sgG1 "28"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -41852,6 +43247,7 @@ graph
     sgG1 "26"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -41882,6 +43278,7 @@ graph
     sgG1 "6"
     sgG2 "21"
     sgG5 "6"
+    leiden "13"
   ]
   node
   [
@@ -41912,6 +43309,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -41942,6 +43340,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "24"
+    leiden "14"
   ]
   node
   [
@@ -41972,6 +43371,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "24"
+    leiden "14"
   ]
   node
   [
@@ -42002,6 +43402,7 @@ graph
     sgG1 "28"
     sgG2 "47"
     sgG5 "37"
+    leiden "5"
   ]
   node
   [
@@ -42032,6 +43433,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "45"
+    leiden "8"
   ]
   node
   [
@@ -42062,6 +43464,7 @@ graph
     sgG1 "28"
     sgG2 "44"
     sgG5 "56"
+    leiden "5"
   ]
   node
   [
@@ -42092,6 +43495,7 @@ graph
     sgG1 "27"
     sgG2 "19"
     sgG5 "20"
+    leiden "11"
   ]
   node
   [
@@ -42122,6 +43526,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42152,6 +43557,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42182,6 +43588,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42212,6 +43619,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42242,6 +43650,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42272,6 +43681,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42302,6 +43712,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42332,6 +43743,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42362,6 +43774,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42392,6 +43805,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42422,6 +43836,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42452,6 +43867,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42482,6 +43898,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42512,6 +43929,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42542,6 +43960,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42572,6 +43991,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -42602,6 +44022,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -42632,6 +44053,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -42662,6 +44084,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -42692,6 +44115,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -42722,6 +44146,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -42752,6 +44177,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -42782,6 +44208,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -42812,6 +44239,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -42842,6 +44270,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "65"
+    leiden "5"
   ]
   node
   [
@@ -42872,6 +44301,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -42902,6 +44332,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "67"
+    leiden "10"
   ]
   node
   [
@@ -42932,6 +44363,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -42962,6 +44394,7 @@ graph
     sgG1 "25"
     sgG2 "46"
     sgG5 "9"
+    leiden "12"
   ]
   node
   [
@@ -42992,6 +44425,7 @@ graph
     sgG1 "25"
     sgG2 "46"
     sgG5 "9"
+    leiden "12"
   ]
   node
   [
@@ -43022,6 +44456,7 @@ graph
     sgG1 "25"
     sgG2 "46"
     sgG5 "9"
+    leiden "12"
   ]
   node
   [
@@ -43052,6 +44487,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -43082,6 +44518,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -43112,6 +44549,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "82"
+    leiden "14"
   ]
   node
   [
@@ -43142,6 +44580,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -43172,6 +44611,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -43202,6 +44642,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -43232,6 +44673,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -43262,6 +44704,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -43292,6 +44735,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -43322,6 +44766,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -43352,6 +44797,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -43382,6 +44828,7 @@ graph
     sgG1 "4"
     sgG2 "36"
     sgG5 "91"
+    leiden "14"
   ]
   node
   [
@@ -43412,6 +44859,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -43442,6 +44890,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -43472,6 +44921,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -43502,6 +44952,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -43532,6 +44983,7 @@ graph
     sgG1 "12"
     sgG2 "27"
     sgG5 "75"
+    leiden "14"
   ]
   node
   [
@@ -43562,6 +45014,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -43592,6 +45045,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -43622,6 +45076,7 @@ graph
     sgG1 "6"
     sgG2 "24"
     sgG5 "6"
+    leiden "6"
   ]
   node
   [
@@ -43652,6 +45107,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -43682,6 +45138,7 @@ graph
     sgG1 "3"
     sgG2 "31"
     sgG5 "1"
+    leiden "2"
   ]
   node
   [
@@ -43712,6 +45169,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -43742,6 +45200,7 @@ graph
     sgG1 "6"
     sgG2 "3"
     sgG5 "70"
+    leiden "3"
   ]
   node
   [
@@ -43772,6 +45231,7 @@ graph
     sgG1 "4"
     sgG2 "42"
     sgG5 "33"
+    leiden "1"
   ]
   node
   [
@@ -43802,6 +45262,7 @@ graph
     sgG1 "1"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -43832,6 +45293,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "58"
+    leiden "8"
   ]
   node
   [
@@ -43862,6 +45324,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -43892,6 +45355,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "4"
   ]
   node
   [
@@ -43922,6 +45386,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -43952,6 +45417,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -43982,6 +45448,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -44012,6 +45479,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -44042,6 +45510,7 @@ graph
     sgG1 "2"
     sgG2 "44"
     sgG5 "59"
+    leiden "14"
   ]
   node
   [
@@ -44072,6 +45541,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -44102,6 +45572,7 @@ graph
     sgG1 "26"
     sgG2 "10"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -44132,6 +45603,7 @@ graph
     sgG1 "28"
     sgG2 "42"
     sgG5 "33"
+    leiden "5"
   ]
   node
   [
@@ -44162,6 +45634,7 @@ graph
     sgG1 "7"
     sgG2 "30"
     sgG5 "5"
+    leiden "4"
   ]
   node
   [
@@ -44192,6 +45665,7 @@ graph
     sgG1 "11"
     sgG2 "25"
     sgG5 "81"
+    leiden "2"
   ]
   node
   [
@@ -44222,6 +45696,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -44252,6 +45727,7 @@ graph
     sgG1 "1"
     sgG2 "10"
     sgG5 "71"
+    leiden "13"
   ]
   node
   [
@@ -44282,6 +45758,7 @@ graph
     sgG1 "26"
     sgG2 "7"
     sgG5 "90"
+    leiden "3"
   ]
   node
   [
@@ -44312,6 +45789,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "34"
+    leiden "6"
   ]
   node
   [
@@ -44342,6 +45820,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -44372,6 +45851,7 @@ graph
     sgG1 "3"
     sgG2 "15"
     sgG5 "59"
+    leiden "7"
   ]
   node
   [
@@ -44402,6 +45882,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -44432,6 +45913,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -44462,6 +45944,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -44492,6 +45975,7 @@ graph
     sgG1 "10"
     sgG2 "40"
     sgG5 "74"
+    leiden "4"
   ]
   node
   [
@@ -44522,6 +46006,7 @@ graph
     sgG1 "4"
     sgG2 "31"
     sgG5 "90"
+    leiden "4"
   ]
   node
   [
@@ -44552,6 +46037,7 @@ graph
     sgG1 "28"
     sgG2 "9"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -44582,6 +46068,7 @@ graph
     sgG1 "4"
     sgG2 "28"
     sgG5 "61"
+    leiden "10"
   ]
   node
   [
@@ -44612,6 +46099,7 @@ graph
     sgG1 "25"
     sgG2 "46"
     sgG5 "9"
+    leiden "12"
   ]
   node
   [
@@ -44642,6 +46130,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "74"
+    leiden "10"
   ]
   node
   [
@@ -44672,6 +46161,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "56"
+    leiden "3"
   ]
   node
   [
@@ -44702,6 +46192,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "5"
+    leiden "10"
   ]
   node
   [
@@ -44732,6 +46223,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "16"
+    leiden "3"
   ]
   node
   [
@@ -44762,6 +46254,7 @@ graph
     sgG1 "11"
     sgG2 "43"
     sgG5 "84"
+    leiden "13"
   ]
   node
   [
@@ -44792,6 +46285,7 @@ graph
     sgG1 "4"
     sgG2 "44"
     sgG5 "36"
+    leiden "3"
   ]
   node
   [
@@ -44822,6 +46316,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "56"
+    leiden "2"
   ]
   node
   [
@@ -44852,6 +46347,7 @@ graph
     sgG1 "2"
     sgG2 "44"
     sgG5 "86"
+    leiden "14"
   ]
   node
   [
@@ -44882,6 +46378,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "56"
+    leiden "14"
   ]
   node
   [
@@ -44912,6 +46409,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "61"
+    leiden "1"
   ]
   node
   [
@@ -44942,6 +46440,7 @@ graph
     sgG1 "14"
     sgG2 "20"
     sgG5 "63"
+    leiden "12"
   ]
   node
   [
@@ -44972,6 +46471,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -45002,6 +46502,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "79"
+    leiden "7"
   ]
   node
   [
@@ -45032,6 +46533,7 @@ graph
     sgG1 "2"
     sgG2 "44"
     sgG5 "86"
+    leiden "14"
   ]
   node
   [
@@ -45062,6 +46564,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "13"
+    leiden "2"
   ]
   node
   [
@@ -45092,6 +46595,7 @@ graph
     sgG1 "28"
     sgG2 "11"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -45122,6 +46626,7 @@ graph
     sgG1 "15"
     sgG2 "3"
     sgG5 "48"
+    leiden "2"
   ]
   node
   [
@@ -45152,6 +46657,7 @@ graph
     sgG1 "26"
     sgG2 "7"
     sgG5 "90"
+    leiden "1"
   ]
   node
   [
@@ -45182,6 +46688,7 @@ graph
     sgG1 "25"
     sgG2 "46"
     sgG5 "9"
+    leiden "12"
   ]
   node
   [
@@ -45212,6 +46719,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "28"
+    leiden "8"
   ]
   node
   [
@@ -45242,6 +46750,7 @@ graph
     sgG1 "16"
     sgG2 "11"
     sgG5 "76"
+    leiden "2"
   ]
   node
   [
@@ -45272,6 +46781,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -45302,6 +46812,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "40"
+    leiden "12"
   ]
   node
   [
@@ -45332,6 +46843,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "36"
+    leiden "2"
   ]
   node
   [
@@ -45362,6 +46874,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "82"
+    leiden "10"
   ]
   node
   [
@@ -45392,6 +46905,7 @@ graph
     sgG1 "4"
     sgG2 "24"
     sgG5 "49"
+    leiden "6"
   ]
   node
   [
@@ -45422,6 +46936,7 @@ graph
     sgG1 "17"
     sgG2 "35"
     sgG5 "37"
+    leiden "8"
   ]
   node
   [
@@ -45452,6 +46967,7 @@ graph
     sgG1 "17"
     sgG2 "35"
     sgG5 "79"
+    leiden "8"
   ]
   node
   [
@@ -45482,6 +46998,7 @@ graph
     sgG1 "27"
     sgG2 "19"
     sgG5 "20"
+    leiden "11"
   ]
   node
   [
@@ -45512,6 +47029,7 @@ graph
     sgG1 "27"
     sgG2 "19"
     sgG5 "20"
+    leiden "11"
   ]
   node
   [
@@ -45542,6 +47060,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "1"
   ]
   node
   [
@@ -45572,6 +47091,7 @@ graph
     sgG1 "1"
     sgG2 "10"
     sgG5 "71"
+    leiden "13"
   ]
   node
   [
@@ -45602,6 +47122,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "2"
+    leiden "1"
   ]
   node
   [
@@ -45632,6 +47153,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -45662,6 +47184,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "27"
+    leiden "1"
   ]
   node
   [
@@ -45692,6 +47215,7 @@ graph
     sgG1 "17"
     sgG2 "10"
     sgG5 "25"
+    leiden "13"
   ]
   node
   [
@@ -45722,6 +47246,7 @@ graph
     sgG1 "4"
     sgG2 "34"
     sgG5 "21"
+    leiden "7"
   ]
   node
   [
@@ -45752,6 +47277,7 @@ graph
     sgG1 "28"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -45782,6 +47308,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -45812,6 +47339,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -45842,6 +47370,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "47"
+    leiden "8"
   ]
   node
   [
@@ -45872,6 +47401,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -45902,6 +47432,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -45932,6 +47463,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -45962,6 +47494,7 @@ graph
     sgG1 "30"
     sgG2 "8"
     sgG5 "70"
+    leiden "1"
   ]
   node
   [
@@ -45992,6 +47525,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -46022,6 +47556,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -46052,6 +47587,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -46082,6 +47618,7 @@ graph
     sgG1 "3"
     sgG2 "31"
     sgG5 "1"
+    leiden "2"
   ]
   node
   [
@@ -46112,6 +47649,7 @@ graph
     sgG1 "17"
     sgG2 "8"
     sgG5 "91"
+    leiden "9"
   ]
   node
   [
@@ -46142,6 +47680,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -46172,6 +47711,7 @@ graph
     sgG1 "2"
     sgG2 "44"
     sgG5 "86"
+    leiden "14"
   ]
   node
   [
@@ -46202,6 +47742,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -46232,6 +47773,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "29"
+    leiden "7"
   ]
   node
   [
@@ -46262,6 +47804,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "36"
+    leiden "2"
   ]
   node
   [
@@ -46292,6 +47835,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "23"
+    leiden "11"
   ]
   node
   [
@@ -46322,6 +47866,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -46352,6 +47897,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -46382,6 +47928,7 @@ graph
     sgG1 "1"
     sgG2 "12"
     sgG5 "38"
+    leiden "2"
   ]
   node
   [
@@ -46412,6 +47959,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "9"
   ]
   node
   [
@@ -46442,6 +47990,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "47"
+    leiden "1"
   ]
   node
   [
@@ -46472,6 +48021,7 @@ graph
     sgG1 "26"
     sgG2 "42"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -46502,6 +48052,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -46532,6 +48083,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -46562,6 +48114,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -46592,6 +48145,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "9"
   ]
   node
   [
@@ -46622,6 +48176,7 @@ graph
     sgG1 "23"
     sgG2 "4"
     sgG5 "34"
+    leiden "4"
   ]
   node
   [
@@ -46652,6 +48207,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "83"
+    leiden "9"
   ]
   node
   [
@@ -46682,6 +48238,7 @@ graph
     sgG1 "3"
     sgG2 "32"
     sgG5 "36"
+    leiden "1"
   ]
   node
   [
@@ -46712,6 +48269,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -46742,6 +48300,7 @@ graph
     sgG1 "28"
     sgG2 "27"
     sgG5 "19"
+    leiden "5"
   ]
   node
   [
@@ -46772,6 +48331,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -46802,6 +48362,7 @@ graph
     sgG1 "11"
     sgG2 "31"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -46832,6 +48393,7 @@ graph
     sgG1 "28"
     sgG2 "33"
     sgG5 "3"
+    leiden "6"
   ]
   node
   [
@@ -46862,6 +48424,7 @@ graph
     sgG1 "1"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -46892,6 +48455,7 @@ graph
     sgG1 "6"
     sgG2 "31"
     sgG5 "6"
+    leiden "2"
   ]
   node
   [
@@ -46922,6 +48486,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -46952,6 +48517,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -46982,6 +48548,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -47012,6 +48579,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "17"
+    leiden "5"
   ]
   node
   [
@@ -47042,6 +48610,7 @@ graph
     sgG1 "1"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -47072,6 +48641,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -47102,6 +48672,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "74"
+    leiden "5"
   ]
   node
   [
@@ -47132,6 +48703,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "73"
+    leiden "2"
   ]
   node
   [
@@ -47162,6 +48734,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "2"
   ]
   node
   [
@@ -47192,6 +48765,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "2"
   ]
   node
   [
@@ -47222,6 +48796,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "11"
+    leiden "8"
   ]
   node
   [
@@ -47252,6 +48827,7 @@ graph
     sgG1 "15"
     sgG2 "3"
     sgG5 "11"
+    leiden "2"
   ]
   node
   [
@@ -47282,6 +48858,7 @@ graph
     sgG1 "22"
     sgG2 "34"
     sgG5 "64"
+    leiden "7"
   ]
   node
   [
@@ -47312,6 +48889,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "17"
+    leiden "13"
   ]
   node
   [
@@ -47342,6 +48920,7 @@ graph
     sgG1 "11"
     sgG2 "44"
     sgG5 "56"
+    leiden "14"
   ]
   node
   [
@@ -47372,6 +48951,7 @@ graph
     sgG1 "1"
     sgG2 "48"
     sgG5 "54"
+    leiden "3"
   ]
   node
   [
@@ -47402,6 +48982,7 @@ graph
     sgG1 "17"
     sgG2 "12"
     sgG5 "38"
+    leiden "8"
   ]
   node
   [
@@ -47432,6 +49013,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "38"
+    leiden "2"
   ]
   node
   [
@@ -47462,6 +49044,7 @@ graph
     sgG1 "3"
     sgG2 "3"
     sgG5 "49"
+    leiden "1"
   ]
   node
   [
@@ -47492,6 +49075,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -47522,6 +49106,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -47552,6 +49137,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "40"
+    leiden "1"
   ]
   node
   [
@@ -47582,6 +49168,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "1"
   ]
   node
   [
@@ -47612,6 +49199,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "1"
   ]
   node
   [
@@ -47642,6 +49230,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "1"
   ]
   node
   [
@@ -47672,6 +49261,7 @@ graph
     sgG1 "26"
     sgG2 "32"
     sgG5 "2"
+    leiden "8"
   ]
   node
   [
@@ -47702,6 +49292,7 @@ graph
     sgG1 "6"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -47732,6 +49323,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "2"
+    leiden "6"
   ]
   node
   [
@@ -47762,6 +49354,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "54"
+    leiden "6"
   ]
   node
   [
@@ -47792,6 +49385,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -47822,6 +49416,7 @@ graph
     sgG1 "23"
     sgG2 "4"
     sgG5 "34"
+    leiden "11"
   ]
   node
   [
@@ -47852,6 +49447,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -47882,6 +49478,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "68"
+    leiden "9"
   ]
   node
   [
@@ -47912,6 +49509,7 @@ graph
     sgG1 "17"
     sgG2 "37"
     sgG5 "61"
+    leiden "8"
   ]
   node
   [
@@ -47942,6 +49540,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -47972,6 +49571,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -48002,6 +49602,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -48032,6 +49633,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "17"
+    leiden "4"
   ]
   node
   [
@@ -48062,6 +49664,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "23"
+    leiden "14"
   ]
   node
   [
@@ -48092,6 +49695,7 @@ graph
     sgG1 "8"
     sgG2 "18"
     sgG5 "52"
+    leiden "13"
   ]
   node
   [
@@ -48122,6 +49726,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "12"
+    leiden "5"
   ]
   node
   [
@@ -48152,6 +49757,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -48182,6 +49788,7 @@ graph
     sgG1 "16"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -48212,6 +49819,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -48242,6 +49850,7 @@ graph
     sgG1 "11"
     sgG2 "31"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -48272,6 +49881,7 @@ graph
     sgG1 "3"
     sgG2 "15"
     sgG5 "59"
+    leiden "10"
   ]
   node
   [
@@ -48302,6 +49912,7 @@ graph
     sgG1 "11"
     sgG2 "31"
     sgG5 "78"
+    leiden "4"
   ]
   node
   [
@@ -48332,6 +49943,7 @@ graph
     sgG1 "11"
     sgG2 "31"
     sgG5 "81"
+    leiden "4"
   ]
   node
   [
@@ -48362,6 +49974,7 @@ graph
     sgG1 "4"
     sgG2 "29"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -48392,6 +50005,7 @@ graph
     sgG1 "26"
     sgG2 "48"
     sgG5 "88"
+    leiden "3"
   ]
   node
   [
@@ -48422,6 +50036,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -48452,6 +50067,7 @@ graph
     sgG1 "17"
     sgG2 "32"
     sgG5 "2"
+    leiden "8"
   ]
   node
   [
@@ -48482,6 +50098,7 @@ graph
     sgG1 "28"
     sgG2 "7"
     sgG5 "27"
+    leiden "13"
   ]
   node
   [
@@ -48512,6 +50129,7 @@ graph
     sgG1 "26"
     sgG2 "17"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -48542,6 +50160,7 @@ graph
     sgG1 "11"
     sgG2 "17"
     sgG5 "13"
+    leiden "9"
   ]
   node
   [
@@ -48572,6 +50191,7 @@ graph
     sgG1 "26"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -48602,6 +50222,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "48"
+    leiden "10"
   ]
   node
   [
@@ -48632,6 +50253,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -48662,6 +50284,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -48692,6 +50315,7 @@ graph
     sgG1 "28"
     sgG2 "6"
     sgG5 "47"
+    leiden "5"
   ]
   node
   [
@@ -48722,6 +50346,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "40"
+    leiden "10"
   ]
   node
   [
@@ -48752,6 +50377,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "40"
+    leiden "10"
   ]
   node
   [
@@ -48782,6 +50408,7 @@ graph
     sgG1 "6"
     sgG2 "3"
     sgG5 "70"
+    leiden "3"
   ]
   node
   [
@@ -48812,6 +50439,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -48842,6 +50470,7 @@ graph
     sgG1 "18"
     sgG2 "39"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -48872,6 +50501,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -48902,6 +50532,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -48932,6 +50563,7 @@ graph
     sgG1 "14"
     sgG2 "20"
     sgG5 "63"
+    leiden "12"
   ]
   node
   [
@@ -48962,6 +50594,7 @@ graph
     sgG1 "18"
     sgG2 "39"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -48992,6 +50625,7 @@ graph
     sgG1 "13"
     sgG2 "35"
     sgG5 "87"
+    leiden "8"
   ]
   node
   [
@@ -49022,6 +50656,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -49052,6 +50687,7 @@ graph
     sgG1 "17"
     sgG2 "42"
     sgG5 "42"
+    leiden "8"
   ]
   node
   [
@@ -49082,6 +50718,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -49112,6 +50749,7 @@ graph
     sgG1 "23"
     sgG2 "29"
     sgG5 "34"
+    leiden "11"
   ]
   node
   [
@@ -49142,6 +50780,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -49172,6 +50811,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "75"
+    leiden "8"
   ]
   node
   [
@@ -49202,6 +50842,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -49232,6 +50873,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "79"
+    leiden "8"
   ]
   node
   [
@@ -49262,6 +50904,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "40"
+    leiden "10"
   ]
   node
   [
@@ -49292,6 +50935,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -49322,6 +50966,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -49352,6 +50997,7 @@ graph
     sgG1 "11"
     sgG2 "5"
     sgG5 "84"
+    leiden "8"
   ]
   node
   [
@@ -49382,6 +51028,7 @@ graph
     sgG1 "14"
     sgG2 "20"
     sgG5 "63"
+    leiden "12"
   ]
   node
   [
@@ -49412,6 +51059,7 @@ graph
     sgG1 "18"
     sgG2 "39"
     sgG5 "46"
+    leiden "10"
   ]
   node
   [
@@ -49442,6 +51090,7 @@ graph
     sgG1 "28"
     sgG2 "27"
     sgG5 "19"
+    leiden "5"
   ]
   node
   [
@@ -49472,6 +51121,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "49"
+    leiden "10"
   ]
   node
   [
@@ -49502,6 +51152,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "40"
+    leiden "10"
   ]
   node
   [
@@ -49532,6 +51183,7 @@ graph
     sgG1 "23"
     sgG2 "29"
     sgG5 "34"
+    leiden "11"
   ]
   node
   [
@@ -49562,6 +51214,7 @@ graph
     sgG1 "22"
     sgG2 "34"
     sgG5 "8"
+    leiden "7"
   ]
   node
   [
@@ -49592,6 +51245,7 @@ graph
     sgG1 "30"
     sgG2 "35"
     sgG5 "55"
+    leiden "9"
   ]
   node
   [
@@ -49622,6 +51276,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "77"
+    leiden "8"
   ]
   node
   [
@@ -49652,6 +51307,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -49682,6 +51338,7 @@ graph
     sgG1 "11"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -49712,6 +51369,7 @@ graph
     sgG1 "17"
     sgG2 "10"
     sgG5 "34"
+    leiden "11"
   ]
   node
   [
@@ -49742,6 +51400,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -49772,6 +51431,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "83"
+    leiden "1"
   ]
   node
   [
@@ -49802,6 +51462,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "27"
+    leiden "1"
   ]
   node
   [
@@ -49832,6 +51493,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -49862,6 +51524,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "4"
   ]
   node
   [
@@ -49892,6 +51555,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "4"
   ]
   node
   [
@@ -49922,6 +51586,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "72"
+    leiden "8"
   ]
   node
   [
@@ -49952,6 +51617,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -49982,6 +51648,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -50012,6 +51679,7 @@ graph
     sgG1 "28"
     sgG2 "33"
     sgG5 "3"
+    leiden "6"
   ]
   node
   [
@@ -50042,6 +51710,7 @@ graph
     sgG1 "24"
     sgG2 "12"
     sgG5 "66"
+    leiden "9"
   ]
   node
   [
@@ -50072,6 +51741,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -50102,6 +51772,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "77"
+    leiden "4"
   ]
   node
   [
@@ -50132,6 +51803,7 @@ graph
     sgG1 "1"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -50162,6 +51834,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -50192,6 +51865,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -50222,6 +51896,7 @@ graph
     sgG1 "24"
     sgG2 "49"
     sgG5 "66"
+    leiden "9"
   ]
   node
   [
@@ -50252,6 +51927,7 @@ graph
     sgG1 "30"
     sgG2 "35"
     sgG5 "55"
+    leiden "9"
   ]
   node
   [
@@ -50282,6 +51958,7 @@ graph
     sgG1 "24"
     sgG2 "49"
     sgG5 "66"
+    leiden "9"
   ]
   node
   [
@@ -50312,6 +51989,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "83"
+    leiden "5"
   ]
   node
   [
@@ -50342,6 +52020,7 @@ graph
     sgG1 "11"
     sgG2 "40"
     sgG5 "62"
+    leiden "4"
   ]
   node
   [
@@ -50372,6 +52051,7 @@ graph
     sgG1 "24"
     sgG2 "49"
     sgG5 "66"
+    leiden "9"
   ]
   node
   [
@@ -50402,6 +52082,7 @@ graph
     sgG1 "9"
     sgG2 "45"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -50432,6 +52113,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -50462,6 +52144,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -50492,6 +52175,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -50522,6 +52206,7 @@ graph
     sgG1 "28"
     sgG2 "45"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -50552,6 +52237,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -50582,6 +52268,7 @@ graph
     sgG1 "26"
     sgG2 "31"
     sgG5 "73"
+    leiden "2"
   ]
   node
   [
@@ -50612,6 +52299,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -50642,6 +52330,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -50672,6 +52361,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -50702,6 +52392,7 @@ graph
     sgG1 "28"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -50732,6 +52423,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "49"
+    leiden "10"
   ]
   node
   [
@@ -50762,6 +52454,7 @@ graph
     sgG1 "19"
     sgG2 "1"
     sgG5 "78"
+    leiden "7"
   ]
   node
   [
@@ -50792,6 +52485,7 @@ graph
     sgG1 "26"
     sgG2 "19"
     sgG5 "65"
+    leiden "1"
   ]
   node
   [
@@ -50822,6 +52516,7 @@ graph
     sgG1 "23"
     sgG2 "4"
     sgG5 "34"
+    leiden "11"
   ]
   node
   [
@@ -50852,6 +52547,7 @@ graph
     sgG1 "28"
     sgG2 "15"
     sgG5 "59"
+    leiden "5"
   ]
   node
   [
@@ -50882,6 +52578,7 @@ graph
     sgG1 "5"
     sgG2 "38"
     sgG5 "93"
+    leiden "8"
   ]
   node
   [
@@ -50912,6 +52609,7 @@ graph
     sgG1 "1"
     sgG2 "44"
     sgG5 "73"
+    leiden "2"
   ]
   node
   [
@@ -50942,6 +52640,7 @@ graph
     sgG1 "3"
     sgG2 "3"
     sgG5 "29"
+    leiden "9"
   ]
   node
   [
@@ -50972,6 +52671,7 @@ graph
     sgG1 "30"
     sgG2 "37"
     sgG5 "7"
+    leiden "13"
   ]
   node
   [
@@ -51002,6 +52702,7 @@ graph
     sgG1 "26"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -51032,6 +52733,7 @@ graph
     sgG1 "16"
     sgG2 "12"
     sgG5 "60"
+    leiden "2"
   ]
   node
   [
@@ -51062,6 +52764,7 @@ graph
     sgG1 "23"
     sgG2 "47"
     sgG5 "45"
+    leiden "11"
   ]
   node
   [
@@ -51092,6 +52795,7 @@ graph
     sgG1 "26"
     sgG2 "10"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -51122,6 +52826,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "45"
+    leiden "8"
   ]
   node
   [
@@ -51152,6 +52857,7 @@ graph
     sgG1 "26"
     sgG2 "10"
     sgG5 "71"
+    leiden "1"
   ]
   node
   [
@@ -51182,6 +52888,7 @@ graph
     sgG1 "11"
     sgG2 "48"
     sgG5 "91"
+    leiden "4"
   ]
   node
   [
@@ -51212,6 +52919,7 @@ graph
     sgG1 "26"
     sgG2 "10"
     sgG5 "2"
+    leiden "1"
   ]
   node
   [
@@ -51242,6 +52950,7 @@ graph
     sgG1 "26"
     sgG2 "29"
     sgG5 "47"
+    leiden "8"
   ]
   node
   [
@@ -51272,6 +52981,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -51302,6 +53012,7 @@ graph
     sgG1 "26"
     sgG2 "29"
     sgG5 "79"
+    leiden "7"
   ]
   node
   [
@@ -51332,6 +53043,7 @@ graph
     sgG1 "23"
     sgG2 "36"
     sgG5 "65"
+    leiden "5"
   ]
   node
   [
@@ -51362,6 +53074,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -51392,6 +53105,7 @@ graph
     sgG1 "3"
     sgG2 "12"
     sgG5 "38"
+    leiden "2"
   ]
   node
   [
@@ -51422,6 +53136,7 @@ graph
     sgG1 "3"
     sgG2 "15"
     sgG5 "59"
+    leiden "5"
   ]
   node
   [
@@ -51452,6 +53167,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "9"
   ]
   node
   [
@@ -51482,6 +53198,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -51512,6 +53229,7 @@ graph
     sgG1 "28"
     sgG2 "40"
     sgG5 "18"
+    leiden "5"
   ]
   node
   [
@@ -51542,6 +53260,7 @@ graph
     sgG1 "3"
     sgG2 "9"
     sgG5 "73"
+    leiden "1"
   ]
   node
   [
@@ -51572,6 +53291,7 @@ graph
     sgG1 "26"
     sgG2 "41"
     sgG5 "48"
+    leiden "1"
   ]
   node
   [
@@ -51602,6 +53322,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -51632,6 +53353,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -51662,6 +53384,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "61"
+    leiden "10"
   ]
   node
   [
@@ -51692,6 +53415,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "4"
   ]
   node
   [
@@ -51722,6 +53446,7 @@ graph
     sgG1 "24"
     sgG2 "2"
     sgG5 "26"
+    leiden "12"
   ]
   node
   [
@@ -51752,6 +53477,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "4"
   ]
   node
   [
@@ -51782,6 +53508,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "9"
   ]
   node
   [
@@ -51812,6 +53539,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "84"
+    leiden "4"
   ]
   node
   [
@@ -51842,6 +53570,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "9"
   ]
   node
   [
@@ -51872,6 +53601,7 @@ graph
     sgG1 "3"
     sgG2 "12"
     sgG5 "38"
+    leiden "2"
   ]
   node
   [
@@ -51902,6 +53632,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "79"
+    leiden "11"
   ]
   node
   [
@@ -51932,6 +53663,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "42"
+    leiden "9"
   ]
   node
   [
@@ -51962,6 +53694,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -51992,6 +53725,7 @@ graph
     sgG1 "3"
     sgG2 "42"
     sgG5 "72"
+    leiden "1"
   ]
   node
   [
@@ -52022,6 +53756,7 @@ graph
     sgG1 "28"
     sgG2 "10"
     sgG5 "4"
+    leiden "5"
   ]
   node
   [
@@ -52052,6 +53787,7 @@ graph
     sgG1 "1"
     sgG2 "12"
     sgG5 "38"
+    leiden "6"
   ]
   node
   [
@@ -52082,6 +53818,7 @@ graph
     sgG1 "24"
     sgG2 "11"
     sgG5 "76"
+    leiden "12"
   ]
   node
   [
@@ -52112,6 +53849,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "54"
+    leiden "6"
   ]
   node
   [
@@ -52142,6 +53880,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "54"
+    leiden "6"
   ]
   node
   [
@@ -52172,6 +53911,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "54"
+    leiden "6"
   ]
   node
   [
@@ -52202,6 +53942,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -52232,6 +53973,7 @@ graph
     sgG1 "3"
     sgG2 "8"
     sgG5 "22"
+    leiden "9"
   ]
   node
   [
@@ -52262,6 +54004,7 @@ graph
     sgG1 "3"
     sgG2 "34"
     sgG5 "85"
+    leiden "7"
   ]
   node
   [
@@ -52292,6 +54035,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "45"
+    leiden "8"
   ]
   node
   [
@@ -52322,6 +54066,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -52352,6 +54097,7 @@ graph
     sgG1 "11"
     sgG2 "12"
     sgG5 "84"
+    leiden "13"
   ]
   node
   [
@@ -52382,6 +54128,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -52412,6 +54159,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -52442,6 +54190,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "30"
+    leiden "8"
   ]
   node
   [
@@ -52472,6 +54221,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -52502,6 +54252,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -52532,6 +54283,7 @@ graph
     sgG1 "4"
     sgG2 "32"
     sgG5 "53"
+    leiden "10"
   ]
   node
   [
@@ -52562,6 +54314,7 @@ graph
     sgG1 "28"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -52592,6 +54345,7 @@ graph
     sgG1 "28"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -52622,6 +54376,7 @@ graph
     sgG1 "28"
     sgG2 "21"
     sgG5 "41"
+    leiden "13"
   ]
   node
   [
@@ -52652,6 +54407,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "37"
+    leiden "8"
   ]
   node
   [
@@ -52682,6 +54438,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -52712,6 +54469,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -52742,6 +54500,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -52772,6 +54531,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -52802,6 +54562,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -52832,6 +54593,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "31"
+    leiden "5"
   ]
   node
   [
@@ -52862,6 +54624,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "32"
+    leiden "5"
   ]
   node
   [
@@ -52892,6 +54655,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -52922,6 +54686,7 @@ graph
     sgG1 "28"
     sgG2 "14"
     sgG5 "51"
+    leiden "5"
   ]
   node
   [
@@ -52952,6 +54717,7 @@ graph
     sgG1 "3"
     sgG2 "12"
     sgG5 "38"
+    leiden "2"
   ]
   node
   [
@@ -52982,6 +54748,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -53012,6 +54779,7 @@ graph
     sgG1 "1"
     sgG2 "22"
     sgG5 "14"
+    leiden "11"
   ]
   node
   [
@@ -53042,6 +54810,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -53072,6 +54841,7 @@ graph
     sgG1 "3"
     sgG2 "12"
     sgG5 "38"
+    leiden "2"
   ]
   node
   [
@@ -53102,6 +54872,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -53132,6 +54903,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -53162,6 +54934,7 @@ graph
     sgG1 "17"
     sgG2 "5"
     sgG5 "10"
+    leiden "8"
   ]
   node
   [
@@ -53192,6 +54965,7 @@ graph
     sgG1 "1"
     sgG2 "24"
     sgG5 "80"
+    leiden "6"
   ]
   node
   [
@@ -53222,6 +54996,7 @@ graph
     sgG1 "3"
     sgG2 "25"
     sgG5 "57"
+    leiden "1"
   ]
   node
   [
@@ -53252,6 +55027,7 @@ graph
     sgG1 "6"
     sgG2 "3"
     sgG5 "70"
+    leiden "3"
   ]
   node
   [
@@ -53282,6 +55058,7 @@ graph
     sgG1 "17"
     sgG2 "29"
     sgG5 "35"
+    leiden "8"
   ]
   node
   [
@@ -53312,6 +55089,7 @@ graph
     sgG1 "4"
     sgG2 "16"
     sgG5 "92"
+    leiden "10"
   ]
   node
   [
@@ -53342,6 +55120,7 @@ graph
     sgG1 "11"
     sgG2 "9"
     sgG5 "15"
+    leiden "4"
   ]
   node
   [
@@ -53372,6 +55151,7 @@ graph
     sgG1 "3"
     sgG2 "17"
     sgG5 "44"
+    leiden "1"
   ]
   node
   [
@@ -53402,6 +55182,7 @@ graph
     sgG1 "28"
     sgG2 "19"
     sgG5 "4"
+    leiden "5"
   ]
   edge
   [
