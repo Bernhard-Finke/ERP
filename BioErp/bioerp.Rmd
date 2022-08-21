@@ -1217,7 +1217,7 @@ inputPanel(
   selectInput(
     inputId = "down3f",
     label = "Choose download",
-    choices = c("Figure (proteins by cluster and disease association)" = "Figure","Table (p-value by cluster)" = "Table"),
+    choices = c("Figure (proteins with clusters and disease association)" = "Figure","Table (p-value by cluster)" = "Table"),
     selected = "Graph",
     multiple = FALSE
   ),
