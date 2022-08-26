@@ -1,5 +1,2 @@
-This software package contains the Executable Research Paper described in the dissertation.
-The ERP is contained in the app.R file. It can be run easily in RStudio.
-It requires the data folders containing saved graph files, disease pair datasets,
-consensus matrices, and figures from the original paper, as well as the SQLite database, found on EdDataShare.
-The AnNetFuncs.R function contains helper functions from the AnNet package.
+To run the ERP on your local computer, simply open the bioerp.RMD file in RStudio and run it.
+The document was build under R version 3.6, but has also been tested in R version 4.2.

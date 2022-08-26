@@ -780,6 +780,8 @@ h1("Executable Implementations of Figure 3")
         
 h4("This section contains executable and interactive versions of the plots contained above in figure 3. Some differences exist between the figures in the paper and the executable ones found here. One reason for this is that the graph visualisation platform 'Gephi' was used to create many of the figures in the original paper, while this implementation uses only R. For figures 3c and 3f, the original clustering algorithm used was Spectral clustering, which is not available in this executable paper. In figure 3c, the highlighted core genes were hand-picked in the original paper, while here they represent genes found in almost all of the papers. In figure 3d, different centrality measures are given.  In figure 3e, postsynaptic consensus genes are not available. Figure 3f does not allow for annotating GO biological processes. Additionally, the authors of the original paper deemed figure 3a to be infeasible to include in the executable paper, while figure 3b is not included as replicating the figure was determined to be superfluous. Additionally, as figure 3c can take up to 30 seconds to load, it does not auto-load with the webpage, but can be loaded by the user using the supplied button.")
 
+h4(HTML("The analysis in these figures was made possible by the 'AnNet' package, developed by Anatoly Sorokin, Colin Mclean, and Oksana Sorokina. It can be found on Github using the following link: <a href='https://github.com/lptolik/AnNet'>https://github.com/lptolik/AnNet</a>"))
+
 ```
 
 
@@ -795,7 +797,7 @@ pre_cluster <- read.graph("clusters/pre_cluster.gml", format=c("gml"))
 post_cluster <- read.graph("clusters/post_cluster.gml", format=c("gml"))
 syn_cluster <- read.graph("clusters/syn_cluster.gml", format=c("gml"))
 
-# to calculate these graphs from scratch please install the package "AnNet" available from https://github.com/lptolik/AnNet/ and follow these steps (example given for presynaptic graph):
+# to calculate these graphs from scratch please install the 'AnNet' package and follow these steps (example given for presynaptic graph):
 
 # cid<-match('Presynaptic',getCompartments()$Name) 
 # t<-getAllGenes4Compartment(cid)
@@ -1020,8 +1022,8 @@ h3("Fig 3e: Disease-disease relationship for selected interactome(s). Where sign
 ```{r fig3e}
 # Again calculating disease pair q-values takes a long time, so we have saved these files instead of recalculating from scratch.
 
-# To recalculate disease interactions, for a given cluster graph (gg), use the following command from AnNet (this 
-# specific command includes the diseases AD, BD, AUT, and Epi):
+# To recalculate disease interactions, for a given cluster graph (gg), use the following command from AnNet
+# (the example command given here includes the diseases AD, BD, AUT, and Epi):
 
 # r <- runPermDisease(
 #  gg,
@@ -1154,6 +1156,7 @@ getdata3f <- reactive({
     
 layout <- eventReactive({input$LocalisationnoAll4
   input$Cluster2}, {
+    # the layoutByCluster function is taken from the package AnNet
     lay<-layoutByCluster(getdata3f()$graph,getdata3f()$mem.df,layout = layout_nicely)
   })
     
